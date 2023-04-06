@@ -3,12 +3,15 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   mode: 'production',
-  entry: './src/components/IkLoaderCircle/index.ts',
+  entry: {
+    IkLoaderCircle: './src/components/IkLoaderCircle/index.ts',
+    IkIcon: './src/components/IkIcon/index.ts',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     library: {
-      name: 'bundle',
+      name: '[name]',
       type: 'commonjs-static',
     },
   },
