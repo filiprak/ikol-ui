@@ -9,6 +9,8 @@
         "baseUrl": ".",
         "target": "ESNext",
         "module": "ESNext",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
         "allowJs": false,
         "jsx": "preserve",
         "declaration": true,
