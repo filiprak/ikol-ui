@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.js', '.vue'],
+    extensions: ['.ts', '.json', '.js', '.vue', '.css'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
