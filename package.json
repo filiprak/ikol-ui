@@ -1,0 +1,22 @@
+{
+  "name": "ikol-js-sdk",
+  "version": "0.0.1",
+  "description": "IKOL JavaScript Software Development Kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiprak/ikol-js-sdk.git"
+  },
+  "keywords": [
+    "ikol"
+  ],
+  "author": "IKOL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filiprak/ikol-js-sdk/issues"
+  },
+  "homepage": "https://github.com/filiprak/ikol-js-sdk#readme"
+}
