@@ -1,25 +1,22 @@
 {
-  "name": "ikol-js-sdk",
+  "name": "ikol-api",
+  "version": "0.0.1",
   "author": "IKOL",
   "license": "MIT",
-  "version": "0.0.1",
-  "workspaces": [
-    "packages/*"
-  ],
-  "description": "IKOL JavaScript Software Development Kit",
+  "description": "IKOL JavaScript Software Development Kit API clients",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/filiprak/ikol-js-sdk.git"
+    "url": "git+https://github.com/filiprak/ikol-js-sdk.git",
+    "directory": "packages/ikol-api"
   },
   "keywords": [
     "ikol"
   ],
   "bugs": {
     "url": "https://github.com/filiprak/ikol-js-sdk/issues"
-  },
-  "homepage": "https://github.com/filiprak/ikol-js-sdk#readme"
+  }
 }
