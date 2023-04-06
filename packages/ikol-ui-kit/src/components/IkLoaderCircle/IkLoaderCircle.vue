@@ -1,35 +1,30 @@
 <template>
-    <div :class="rootClass"
+    <div :class="root_class"
          class="ik-loader-circle"
          role="progressbar"
-         :style="{ height: sizeCss, width: sizeCss }"
-         v-on="$listeners">
-        <svg v-if="isSvg"
-             :style="{ transform: `rotate(${rotate}deg)` }"
-             :viewBox="viewBox">
+         :style="{ height: size_css, width: size_css }">
+        <svg :style="{ transform: `rotate(${rotate}deg)` }"
+             :viewBox="view_box">
             <circle class="ik-loader-circle__bckg"
                     fill="transparent"
                     :cx="center"
                     :cy="center"
                     :r="radius"
-                    :stroke-width="strokeWidth"
-                    :stroke-dasharray="strokeDashArray" />
+                    :stroke-width="stroke_width"
+                    :stroke-dasharray="stroke_dash_array" />
             <circle class="ik-loader-circle__bar"
                     fill="transparent"
                     :cx="center"
                     :cy="center"
                     :r="radius"
-                    :stroke-width="strokeWidth"
-                    :stroke-dasharray="strokeDashArray"
-                    :stroke-dashoffset="strokeDashOffset" />
+                    :stroke-width="stroke_width"
+                    :stroke-dasharray="stroke_dash_array"
+                    :stroke-dashoffset="stroke_dash_offset" />
         </svg>
-        <i v-else
-           class="ik-loader-circle fas fa-spinner fa-spin"
-           role="progressbar" />
     </div>
 </template>
-  
 <script lang="ts">
+import 'IkLoaderCircle.css';
 import { defineComponent, computed } from 'vue';
 import { formatCssValue, clamp } from '@/utils/helpers';
 
@@ -61,40 +56,37 @@ export default defineComponent({
             default: null,
         },
     },
-    setup(props: any) {
+    setup(props) {
         const radius = 20;
         const center = 2 * radius;
-        const strokeWidth = computed(() => Number(props.thickness) / Number(props.size) * viewBoxSize.value * 2);
-        const viewBoxSize = computed(() => radius / (1 - Number(props.thickness) / Number(props.size)));
-        const circleLen = computed(() => 2 * Math.PI * radius);
-        const computedValue = computed(() => clamp(Number(props.value), 0, 100));
-        const strokeDashArray = computed(() => Math.round(circleLen.value * 1000) / 1000);
-        const strokeDashOffset = computed(() => ((100 - computedValue.value) / 100) * circleLen.value + 'px');
-        const sizeCss = computed(() => formatCssValue(props.size, 'px'));
+        const stroke_width = computed(() => Number(props.thickness) / Number(props.size) * view_box_size.value * 2);
+        const view_box_size = computed(() => radius / (1 - Number(props.thickness) / Number(props.size)));
+        const circle_len = computed(() => 2 * Math.PI * radius);
+        const computed_value = computed(() => clamp(Number(props.value), 0, 100));
+        const stroke_dash_array = computed(() => Math.round(circle_len.value * 1000) / 1000);
+        const stroke_dash_offset = computed(() => ((100 - computed_value.value) / 100) * circle_len.value + 'px');
+        const size_css = computed(() => formatCssValue(Number(props.size), 'px'));
 
-        const isSvg = computed(() => Boolean(props.design));
-        const rootClass = computed(() => ({
+        const root_class = computed(() => ({
             'ik-loader-circle--indeterminate': props.indeterminate,
             [`ik-loader-circle--${props.design}`]: Boolean(props.design),
         }));
 
-        const viewBox = computed(() => `${viewBoxSize.value} ${viewBoxSize.value} ${2 * viewBoxSize.value} ${2 * viewBoxSize.value}`);
+        const view_box = computed(() => `${view_box_size.value} ${view_box_size.value} ${2 * view_box_size.value} ${2 * view_box_size.value}`);
 
         return {
             radius,
             center,
-            strokeWidth,
-            viewBoxSize,
-            circleLen,
-            computedValue,
-            strokeDashArray,
-            strokeDashOffset,
-            sizeCss,
-            isSvg,
-            rootClass,
-            viewBox,
+            stroke_width,
+            view_box_size,
+            circle_len,
+            computed_value,
+            stroke_dash_array,
+            stroke_dash_offset,
+            size_css,
+            root_class,
+            view_box,
         };
     },
 });
 </script>
-  
