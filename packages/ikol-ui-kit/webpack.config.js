@@ -15,6 +15,9 @@ module.exports = {
       type: 'commonjs-static',
     },
   },
+  optimization: {
+    // minimize: false
+  },
   resolve: {
     extensions: ['.ts', '.json', '.js', '.vue', '.css'],
     alias: {
