@@ -2,11 +2,15 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.ts',
+  mode: 'production',
+  entry: './src/components/IkLoaderCircle/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    library: {
+      name: 'bundle',
+      type: 'commonjs-static',
+    },
   },
   resolve: {
     extensions: ['.ts', '.json', '.js', '.vue', '.css'],
