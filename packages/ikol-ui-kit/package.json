@@ -6,7 +6,7 @@
   "description": "IKOL JavaScript Software Development Kit UI framework",
   "main": "index.js",
   "scripts": {
-    "tsc": "vue-tsc",
+    "tsc": "vue-tsc --noEmit",
     "build": "npm run build:lib",
     "build:lib": "webpack",
     "build:types": "tsc --pretty --emitDeclarationOnly -p tsconfig.dist.json"
