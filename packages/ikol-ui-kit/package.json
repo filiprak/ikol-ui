@@ -18,5 +18,8 @@
   ],
   "bugs": {
     "url": "https://github.com/filiprak/ikol-js-sdk/issues"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
   }
 }
