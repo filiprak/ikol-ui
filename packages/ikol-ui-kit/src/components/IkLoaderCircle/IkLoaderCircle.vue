@@ -3,7 +3,7 @@
          class="ik-loader-circle"
          role="progressbar"
          :style="{ height: sizeCss, width: sizeCss }"
-         @...$listeners>
+         v-on="$listeners">
         <svg v-if="isSvg"
              :style="{ transform: `rotate(${rotate}deg)` }"
              :viewBox="viewBox">
@@ -31,7 +31,7 @@
   
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
-import { formatCssPixels, clamp } from '@ikol/src/common/classes/ik_utils';
+import { formatCssValue, clamp } from '@/utils/helpers';
 
 export default defineComponent({
     name: 'IkLoaderCircle',
@@ -61,7 +61,7 @@ export default defineComponent({
             default: null,
         },
     },
-    setup(props) {
+    setup(props: any) {
         const radius = 20;
         const center = 2 * radius;
         const strokeWidth = computed(() => Number(props.thickness) / Number(props.size) * viewBoxSize.value * 2);
@@ -70,7 +70,7 @@ export default defineComponent({
         const computedValue = computed(() => clamp(Number(props.value), 0, 100));
         const strokeDashArray = computed(() => Math.round(circleLen.value * 1000) / 1000);
         const strokeDashOffset = computed(() => ((100 - computedValue.value) / 100) * circleLen.value + 'px');
-        const sizeCss = computed(() => formatCssPixels(props.size));
+        const sizeCss = computed(() => formatCssValue(props.size, 'px'));
 
         const isSvg = computed(() => Boolean(props.design));
         const rootClass = computed(() => ({

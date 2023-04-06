@@ -1,18 +1,18 @@
 {
     "compilerOptions": {
-        "target": "ESNext", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-        "module": "ESNext", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-        "allowJs": false, /* Allow javascript files to be compiled. */
-        "jsx": "preserve", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
-        "declaration": true, /* Generates corresponding '.d.ts' file. */
+        "target": "ES6",
+        "module": "ES5",
+        "allowJs": false,
+        "jsx": "preserve",
+        "declaration": true,
         "declarationMap": true,
-        "sourceMap": true, /* Generates corresponding '.map' file. */
-        "outDir": "./dist", /* Redirect output structure to the directory. */
-        "strict": true, /* Enable all strict type-checking options. */
+        "sourceMap": true,
+        "outDir": "./dist",
+        "strict": true,
         "noUnusedLocals": true,
         "noImplicitReturns": true,
-        "experimentalDecorators": true, /* Enables experimental support for ES7 decorators. */
-        "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "exclude": [
         "node_modules"
