@@ -24,12 +24,11 @@
     </div>
 </template>
 <script lang="ts">
-import 'IkLoaderCircle.css';
+import './IkLoaderCircle.css';
 import { defineComponent, computed } from 'vue';
 import { formatCssValue, clamp } from '@/utils/helpers';
 
 export default defineComponent({
-    name: 'IkLoaderCircle',
     props: {
         value: {
             type: [Number, String],

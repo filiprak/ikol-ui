@@ -1,10 +1,22 @@
 {
-    "extends": "../../tsconfig.json",
     "include": [
         "src"
     ],
     "compilerOptions": {
         "baseUrl": ".",
+        "target": "ESNext",
+        "module": "ESNext",
+        "allowJs": false,
+        "jsx": "preserve",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "paths": {
             "@/*": [
                 "src/*"
