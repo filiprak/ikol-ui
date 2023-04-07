@@ -4,8 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   mode: 'production',
   entry: {
-    IkLoaderCircle: './src/components/IkLoaderCircle/index.ts',
-    IkIcon: './src/components/IkIcon/index.ts',
+    app: './src/index.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

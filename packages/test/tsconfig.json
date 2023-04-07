@@ -1,0 +1,31 @@
+{
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "allowJs": false,
+        "jsx": "preserve",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
+    }
+}

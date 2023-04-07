@@ -8,7 +8,7 @@ export default {
     lib: {
       name: 'abcde',
       entry: './src/index.ts',
-      formats: ['es'],
+      formats: ['esm'],
     },
   },
   rollupOptions: {
