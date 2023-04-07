@@ -1,18 +1,22 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  target: 'web',
   entry: {
     app: './src/index.ts',
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    port: 9000,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    library: {
-      name: '[name]',
-      type: 'commonjs-static',
-    },
   },
   optimization: {
     // minimize: false
@@ -41,6 +45,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
   ]
 };
