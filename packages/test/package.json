@@ -13,6 +13,7 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "ikol-ui-kit": "file:../ikol-ui-kit",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.2",
