@@ -8,8 +8,9 @@
   "scripts": {
     "tsc": "vue-tsc --declaration --emitDeclarationOnly",
     "build": "npm run build:types && npm run build:lib",
-    "build:lib": "webpack",
-    "build:types": "npm run tsc"
+    "build:lib": "npm run build:clean && rollup --config rollup.config.js --bundleConfigAsCjs",
+    "build:types": "npm run tsc",
+    "build:clean": "rm -rf lib/"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,17 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "babel-plugin-module-resolver": "^5.0.0",
     "css-loader": "^6.7.3",
+    "rollup": "^3.20.2",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-import-css": "^3.2.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-vue": "^6.0.0",
     "ts-loader": "^9.4.2",
     "vue-loader": "^17.0.1",
     "vue-tsc": "^1.2.0",
