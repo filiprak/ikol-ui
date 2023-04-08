@@ -16,6 +16,8 @@
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "ikol-ui-kit": "file:../ikol-ui-kit",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
     "ts-loader": "^9.4.2",
     "vue-loader": "^17.0.1",
     "vue-tsc": "^1.2.0",
