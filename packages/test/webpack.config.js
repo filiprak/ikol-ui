@@ -19,7 +19,7 @@ module.exports = {
     filename: '[name].js',
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
   resolve: {
     extensions: ['.ts', '.json', '.js', '.vue', '.css'],
