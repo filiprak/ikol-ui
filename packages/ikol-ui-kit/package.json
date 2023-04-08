@@ -26,7 +26,10 @@
   "exports": {
     ".": "./dist/index.mjs",
     "./components/*": "./dist/components/*/index.mjs",
-    "./utils/*": "./dist/utils/*.mjs"
+    "./utils/*": "./dist/utils/*.mjs",
+    "./styles": {
+      "default": "./dist/styles/variables.css"
+    }
   },
   "types": "./dist/index.d.ts",
   "typesVersions": {

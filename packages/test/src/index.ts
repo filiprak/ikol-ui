@@ -1,3 +1,4 @@
+import 'ikol-ui-kit/styles'
 import { createApp } from 'vue'
 import App from './App.vue'
 
