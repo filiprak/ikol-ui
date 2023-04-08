@@ -25,7 +25,8 @@
   "main": "./dist/index.mjs",
   "exports": {
     ".": "./dist/index.mjs",
-    "./components/*": "./dist/components/*/index.mjs"
+    "./components/*": "./dist/components/*/index.mjs",
+    "./utils/*": "./dist/utils/*.mjs"
   },
   "types": "./dist/index.d.ts",
   "typesVersions": {

@@ -9,6 +9,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
+import { clamp } from 'ikol-ui-kit/utils/helpers';
 
 export default defineComponent({
     components: {
@@ -26,7 +27,7 @@ export default defineComponent({
     },
     computed: {
         greeting(): string {
-            return `Hello, ${this.name}!`;
+            return `Hello, ${this.name}! ${clamp(23, 0, 10)}`;
         },
     },
 });
