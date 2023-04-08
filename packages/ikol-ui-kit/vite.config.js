@@ -1,5 +1,6 @@
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
+import css from './build/plugins/rollup-plugin-css';
 import path from 'path';
 import { defineConfig } from 'vite'
 
@@ -9,6 +10,7 @@ export default defineConfig({
       entry: './src/index.ts',
       formats: ['es'],
       fileName: (format, entryAlias) => {
+        console.log(entryAlias)
         return `${entryAlias}.mjs`;
       },
     },
@@ -24,13 +26,13 @@ export default defineConfig({
       external: ['vue'],
       output: {
         dir: './dist',
-        exports: 'named',
         preserveModules: true,
       },
     },
   },
   plugins: [
     vue(),
+    css(),
     dts({
       beforeWriteFile: (filePath, content) => {
         return { filePath: `${filePath}`, content };
