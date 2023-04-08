@@ -16,7 +16,11 @@ export default defineConfig({
     minify: false,
     target: 'esnext',
     rollupOptions: {
-      input: './src/index.ts',
+      input: [
+        './src/index.ts',
+        './src/components/IkIcon/index.ts',
+        './src/components/IkLoaderCircle/index.ts',
+      ],
       external: ['vue'],
       output: {
         dir: './dist',
