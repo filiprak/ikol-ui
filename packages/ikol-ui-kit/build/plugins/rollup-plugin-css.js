@@ -1,30 +1,35 @@
 import { createFilter } from '@rollup/pluginutils'
+import { writeFile } from 'fs';
 
 export default function css(options = {}) {
     const styles = {};
     const filter = createFilter(["**/*.css"]);
-    return {
-        // enforce: 'pre',
-        // apply: 'build',
 
-        transform(code, path) {
-            if (!filter(path)) {
-                return;
-            } else {
-                styles[path] = code;
-                console.log(path)
-                return 'body { color: red; }';
-            }
+    return {
+        transform: {
+            enforce: 'pre',
+            handler(code, path) {
+                if (!filter(path)) {
+                    return;
+                } else {
+                    styles[path] = code;
+                    return '';
+                }
+            },
         },
-        // generateBundle() {
-        //     // console.log(styles)
-        //     /* Outputs css files doesn't touch js files */
-        //     return Promise.all(Object.keys(styles).map((key) => {
-        //         /* Output the files to their directory in dist */
-        //         /* basically fileName.replace("src", "dist")
-        //            writeFileSync Each File
-        //          */
-        //     }))
-        // },
+        writeBundle: {
+            enforce: 'post',
+            async handler() {
+                return Promise.all(
+                    Object.keys(styles).map((path) => {
+                        const outfile = path.replace('/src/', '/dist/');
+                        console.log(outfile)
+                        return new Promise((resolve, reject) => {
+                            writeFile(outfile, styles[path], resolve);
+                        })
+                    })
+                )
+            },
+        },
     }
 }

@@ -8,10 +8,13 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/index.ts',
-      formats: ['es'],
+      formats: ['esm'],
       fileName: (format, entryAlias) => {
-        console.log(entryAlias)
-        return `${entryAlias}.mjs`;
+        if (entryAlias.includes('.css')) {
+          return `${entryAlias}`;
+        } else {
+          return `${entryAlias}.mjs`;
+        }
       },
     },
     cssCodeSplit: true,
