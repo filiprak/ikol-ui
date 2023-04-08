@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   entry: {
     app: './src/index.ts',
@@ -19,7 +19,7 @@ module.exports = {
     filename: '[name].js',
   },
   optimization: {
-    // minimize: false
+    minimize: false
   },
   resolve: {
     extensions: ['.ts', '.json', '.js', '.vue', '.css'],

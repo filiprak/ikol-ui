@@ -1,34 +1,42 @@
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 import path from 'path';
+import { defineConfig } from 'vite'
 
-export default {
+export default defineConfig({
   build: {
+    lib: {
+      entry: './src/index.ts',
+      formats: ['es'],
+      fileName: (format, entryAlias) => {
+        return `${entryAlias}.mjs`;
+      },
+    },
+    cssCodeSplit: true,
     minify: false,
     target: 'esnext',
-    lib: {
-      name: 'abcde',
-      entry: './src/index.ts',
-      formats: ['esm'],
-    },
-  },
-  rollupOptions: {
-    input: {
-      IkLoaderCircle: './src/components/IkLoaderCircle/index.ts',
-      IkIcon: './src/components/IkIcon/index.ts',
-    },
-    external: ['vue'],
-    output: {
-      preserveModules: true,
+    rollupOptions: {
+      input: './src/index.ts',
+      external: ['vue'],
+      output: {
+        dir: './dist',
+        exports: 'named',
+        preserveModules: true,
+      },
     },
   },
   plugins: [
     vue(),
-    dts(),
+    dts({
+      beforeWriteFile: (filePath, content) => {
+        return { filePath: `${filePath}`, content };
+      },
+      cleanVueFileName: true,
+    }),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-}
+})

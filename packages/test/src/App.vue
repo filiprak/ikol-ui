@@ -8,12 +8,11 @@
   
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IkIcon, IkLoaderCircle } from 'ikol-ui-kit';
+import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
 
 export default defineComponent({
     components: {
-        IkIcon,
-        IkLoaderCircle
+        IkLoaderCircle,
     },
     props: {
         name: {

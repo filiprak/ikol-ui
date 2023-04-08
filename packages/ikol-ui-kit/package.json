@@ -4,7 +4,6 @@
   "author": "IKOL",
   "license": "MIT",
   "description": "IKOL JavaScript Software Development Kit UI framework",
-  "main": "index.js",
   "scripts": {
     "tsc": "vue-tsc --declaration --emitDeclarationOnly",
     "build": "npm run build:types && npm run build:lib",
@@ -23,10 +22,24 @@
   "bugs": {
     "url": "https://github.com/filiprak/ikol-js-sdk/issues"
   },
+  "main": "./dist/index.mjs",
   "exports": {
-    ".": "./dist/ikol-ui-kit.esm.js"
+    ".": "./dist/index.mjs",
+    "./components/*": "./dist/components/*/index.mjs"
   },
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "dist/index.mjs": [
+        "dist/index.d.ts"
+      ],
+      "*": [
+        "*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
+      ]
+    }
+  },
   "peerDependencies": {
     "vue": "^3.2.47"
   },
