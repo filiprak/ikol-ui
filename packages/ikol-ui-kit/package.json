@@ -6,7 +6,7 @@
   "description": "IKOL JavaScript Software Development Kit UI framework",
   "scripts": {
     "lint": "concurrently 'npm:tsc' 'npm:eslint' --kill-others-on-fail",
-    "lint:eslint": "eslint src --rulesdir ./tests/eslint/rules",
+    "lint:eslint": "eslint src/ tests/ --rulesdir ./tests/eslint/rules",
     "lint:fix": "eslint src",
     "tsc": "vue-tsc --noEmit",
     "build": "npm run build:clean && vite build --config vite.config.js",

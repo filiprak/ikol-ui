@@ -35,6 +35,7 @@ module.exports = {
         }],
         'space-before-function-paren': 'off',
         'camelcase': 'off',
+        'prefer-regex-literals': 'off',
         'ik-variables-case': 'error',
     },
     plugins: [
@@ -63,12 +64,18 @@ module.exports = {
             },
         },
         {
-            files: '**/*.test.ts',
+            files: './tests/**/*.{js,ts}',
+            rules: {
+                'ik-variables-case': 'off'
+            },
+        },
+        {
+            files: './tests/**/*.test.{js,ts}',
             env: {
                 'jest/globals': true,
             },
             plugins: ['jest'],
             extends: ['plugin:jest/recommended'],
-        }
+        },
     ],
 }

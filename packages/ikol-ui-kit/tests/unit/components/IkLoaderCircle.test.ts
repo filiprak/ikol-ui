@@ -1,10 +1,8 @@
 import { mount } from '@vue/test-utils';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 
-console.log('s')
-
 describe('IkLoaderCircle', () => {
-    let getInstance = (options = {}) => mount(IkLoaderCircle, options);
+    const getInstance = (options = {}) => mount(IkLoaderCircle, options);
 
     it('renders with correct default state', () => {
         const wrapper = getInstance();
@@ -126,5 +124,4 @@ describe('IkLoaderCircle', () => {
         });
         expect(wrapper.classes()).toContain('ik-loader-circle--accent');
     });
-
 });
