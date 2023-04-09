@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkLoaderCircle renders with correct default state 1`] = `
+<div
+  class="ik-loader-circle"
+  role="progressbar"
+  style="height: 28px; width: 28px;"
+>
+  <svg
+    style="transform: rotate(0deg);"
+    viewBox="22.4 22.4 44.8 44.8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="ik-loader-circle__bckg"
+      cx="44.8"
+      cy="44.8"
+      fill="transparent"
+      r="20"
+      stroke-dasharray="125.664"
+      stroke-width="4.8"
+    />
+    <circle
+      class="ik-loader-circle__bar"
+      cx="44.8"
+      cy="44.8"
+      fill="transparent"
+      r="20"
+      stroke-dasharray="125.664"
+      stroke-dashoffset="125.66370614359172px"
+      stroke-width="4.8"
+    />
+  </svg>
+</div>
+`;

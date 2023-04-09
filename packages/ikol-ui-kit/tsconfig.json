@@ -1,15 +1,22 @@
 {
     "include": [
-        "src"
+        "src",
+        "tests"
     ],
     "exclude": [
         "node_modules"
     ],
     "compilerOptions": {
         "baseUrl": ".",
+        "types": [
+            "jest",
+            "node",
+            "vue-router"
+        ],
         "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "node",
+        "esModuleInterop": true,
         "skipLibCheck": true,
         "allowJs": false,
         "jsx": "preserve",

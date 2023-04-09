@@ -8,8 +8,7 @@
   ],
   "description": "IKOL JavaScript Software Development Kit",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filiprak/ikol-js-sdk.git"

@@ -6,7 +6,8 @@
         <svg xmlns="http://www.w3.org/2000/svg"
              :style="{ transform: `rotate(${rotate}deg)` }"
              :viewBox="view_box">
-            <circle class="ik-loader-circle__bckg"
+            <circle v-if="!indeterminate"
+                    class="ik-loader-circle__bckg"
                     fill="transparent"
                     :cx="2 * view_box_size"
                     :cy="2 * view_box_size"
