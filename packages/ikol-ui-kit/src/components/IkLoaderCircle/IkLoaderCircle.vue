@@ -3,19 +3,20 @@
          class="ik-loader-circle"
          role="progressbar"
          :style="{ height: size_css, width: size_css }">
-        <svg :style="{ transform: `rotate(${rotate}deg)` }"
+        <svg xmlns="http://www.w3.org/2000/svg"
+             :style="{ transform: `rotate(${rotate}deg)` }"
              :viewBox="view_box">
             <circle class="ik-loader-circle__bckg"
                     fill="transparent"
-                    :cx="center"
-                    :cy="center"
+                    :cx="2 * view_box_size"
+                    :cy="2 * view_box_size"
                     :r="radius"
                     :stroke-width="stroke_width"
                     :stroke-dasharray="stroke_dash_array" />
             <circle class="ik-loader-circle__bar"
                     fill="transparent"
-                    :cx="center"
-                    :cy="center"
+                    :cx="2 * view_box_size"
+                    :cy="2 * view_box_size"
                     :r="radius"
                     :stroke-width="stroke_width"
                     :stroke-dasharray="stroke_dash_array"
@@ -57,7 +58,6 @@ export default defineComponent({
     },
     setup(props) {
         const radius = 20;
-        const center = 2 * radius;
         const stroke_width = computed(() => Number(props.thickness) / Number(props.size) * view_box_size.value * 2);
         const view_box_size = computed(() => radius / (1 - Number(props.thickness) / Number(props.size)));
         const circle_len = computed(() => 2 * Math.PI * radius);
@@ -75,7 +75,6 @@ export default defineComponent({
 
         return {
             radius,
-            center,
             stroke_width,
             view_box_size,
             circle_len,
