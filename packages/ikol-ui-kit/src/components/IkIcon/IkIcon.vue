@@ -15,7 +15,7 @@ export default defineComponent({
     setup(props) {
         const x = formatCssValue(4, 'px');
         return {
-            x
+            x,
         };
     },
 });

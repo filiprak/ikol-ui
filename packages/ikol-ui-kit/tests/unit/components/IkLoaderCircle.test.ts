@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 
+console.log('s')
 
 describe('IkLoaderCircle', () => {
     let getInstance = (options = {}) => mount(IkLoaderCircle, options);
