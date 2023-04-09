@@ -1,4 +1,7 @@
 module.exports = {
+    env: {
+        browser: true
+    },
     parserOptions: {
         parser: '@typescript-eslint/parser',
         ecmaVersion: 2020,
@@ -15,6 +18,14 @@ module.exports = {
         'no-console': 'error',
         'semi': 'off',
         'indent': ['error', 4],
+        'no-var': 'error',
+        'no-unused-vars': 'off',
+        'no-undef': 'error',
+        'no-console': 'error',
+        'no-prototype-builtins': 'off',
+        'no-useless-escape': 'off',
+        'no-case-declarations': 'off',
+        'brace-style': ['error', '1tbs', { allowSingleLine: true }],
         'comma-dangle': ['error', {
             arrays: 'always-multiline',
             objects: 'always-multiline',

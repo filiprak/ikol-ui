@@ -4,7 +4,7 @@ const pascalcase_regex = new RegExp(/^([A-Z][a-z0-9]*)+$/);
 const camelcase_regex = new RegExp(/^([a-z0-9]+)(([A-Z][a-z0-9]*)+)?$/);
 
 module.exports = {
-    isSnakeCase: (string) => {
+    isSnakeCase: function (string) {
         return string.match(lower_snakecase_regex) || string.match(upper_snakecase_regex);
     },
     isPascalCase: (string) => {
