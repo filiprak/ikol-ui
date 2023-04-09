@@ -2,6 +2,7 @@
     <div class="ik-icon"></div>
 </template>
 <script lang="ts">
+import '@/styles';
 import { defineComponent } from 'vue';
 import { formatCssValue } from '@/utils/helpers';
 

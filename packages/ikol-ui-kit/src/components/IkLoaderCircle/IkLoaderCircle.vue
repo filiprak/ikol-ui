@@ -26,8 +26,8 @@
     </div>
 </template>
 <script lang="ts">
+import '@/styles';
 import './IkLoaderCircle.css';
-import '../../styles/variables.css';
 import { defineComponent, computed } from 'vue';
 import { formatCssValue, clamp } from '@/utils/helpers';
 

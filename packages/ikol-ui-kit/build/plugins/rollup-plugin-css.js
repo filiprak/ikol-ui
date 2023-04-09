@@ -31,7 +31,7 @@ export default function css(options = {}) {
                         const original = bundle[name].facadeModuleId;
                         const filename = bundle[name].fileName;
 
-                        if (styles[original]) {
+                        if (styles[original] !== undefined) {
                             outfiles[path.join(opts.dir, filename)] = styles[original];
                         }
                     });
@@ -41,7 +41,7 @@ export default function css(options = {}) {
                         .keys(outfiles)
                         .map((filename) => {
                             return new Promise((resolve, reject) => {
-                                writeFile(filename, outfiles[filename], error => {
+                                writeFile(filename, outfiles[filename] || '/* empty */', error => {
                                     if (error) reject(error);
                                     resolve();
                                 });

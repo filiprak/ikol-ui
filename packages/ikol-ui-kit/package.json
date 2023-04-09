@@ -32,7 +32,7 @@
     "./components/*": "./lib/components/*/index.mjs",
     "./utils/*": "./lib/utils/*.mjs",
     "./styles": {
-      "default": "./lib/styles/variables.css"
+      "default": "./lib/styles/index.mjs"
     }
   },
   "types": "./lib/index.d.ts",
