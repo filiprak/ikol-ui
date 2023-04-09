@@ -5,14 +5,15 @@
   "license": "MIT",
   "description": "IKOL JavaScript Software Development Kit UI framework",
   "scripts": {
-    "lint": "concurrently 'npm:tsc' 'npm:eslint' --kill-others-on-fail",
-    "lint:eslint": "eslint src/ tests/ --rulesdir ./tests/eslint/rules",
-    "lint:fix": "eslint src",
     "tsc": "vue-tsc --noEmit",
+    "eslint": "eslint src/ tests/ --rulesdir ./tests/eslint/rules",
+    "lint": "concurrently 'npm:tsc' 'npm:eslint' --kill-others-on-fail",
+    "lint:fix": "npm run eslint -- --fix",
+    "storybook": "storybook dev -p 6006",
+    "test": "jest",
     "build": "npm run build:clean && vite build --config vite.config.js",
     "build:clean": "rm -rf lib/ dist/",
-    "build:storybook": "storybook build -o docs/dist/",
-    "storybook": "storybook dev -p 6006"
+    "build:storybook": "storybook build -o docs/dist/"
   },
   "repository": {
     "type": "git",

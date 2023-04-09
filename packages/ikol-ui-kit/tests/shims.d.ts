@@ -1,5 +1,4 @@
-import { VueWrapper, ComponentMountingOptions } from '@vue/test-utils';
-import { DefineComponent } from 'vue';
+import { VueWrapper, ComponentMountingOptions, DefineComponent } from '@vue/test-utils';
 
 declare module '@vue/test-utils' {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types

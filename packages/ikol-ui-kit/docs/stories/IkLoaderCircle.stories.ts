@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/vue3';
-import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
+import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 
 const meta: Meta<typeof IkLoaderCircle> = {
   title: 'Components/IkLoaderCircle',
