@@ -1,8 +1,9 @@
-import vue from '@vitejs/plugin-vue';
-import dts from 'vite-plugin-dts';
-import css from './build/plugins/rollup-plugin-css';
 import path from 'path';
 import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
+import multiInput from 'rollup-plugin-multi-input';
+import css from './build/plugins/rollup-plugin-css';
 
 export default defineConfig({
   build: {
@@ -24,8 +25,7 @@ export default defineConfig({
     rollupOptions: {
       input: [
         './src/index.ts',
-        './src/components/IkIcon/index.ts',
-        './src/components/IkLoaderCircle/index.ts',
+        './src/**/index.ts',
       ],
       external: ['vue'],
       output: {
@@ -34,6 +34,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    multiInput(),
     vue(),
     css(),
     dts({

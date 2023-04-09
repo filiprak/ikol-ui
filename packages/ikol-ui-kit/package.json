@@ -5,11 +5,9 @@
   "license": "MIT",
   "description": "IKOL JavaScript Software Development Kit UI framework",
   "scripts": {
-    "tsc": "vue-tsc --declaration --emitDeclarationOnly",
-    "build": "npm run build:types && npm run build:lib",
-    "build:lib": "npm run build:clean && vite build --mode development --config vite.config.js",
-    "build:types": "npm run tsc",
-    "build:clean": "rm -rf dist/"
+    "tsc": "vue-tsc --noEmit",
+    "build": "npm run build:clean && vite build --config vite.config.js",
+    "build:clean": "rm -rf lib/ dist/"
   },
   "repository": {
     "type": "git",
@@ -22,25 +20,25 @@
   "bugs": {
     "url": "https://github.com/filiprak/ikol-js-sdk/issues"
   },
-  "main": "./dist/index.mjs",
+  "main": "./lib/index.mjs",
   "exports": {
-    ".": "./dist/index.mjs",
-    "./components/*": "./dist/components/*/index.mjs",
-    "./utils/*": "./dist/utils/*.mjs",
+    ".": "./lib/index.mjs",
+    "./components/*": "./lib/components/*/index.mjs",
+    "./utils/*": "./lib/utils/*.mjs",
     "./styles": {
-      "default": "./dist/styles/variables.css"
+      "default": "./lib/styles/variables.css"
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "./lib/index.d.ts",
   "typesVersions": {
     "*": {
-      "dist/index.mjs": [
-        "dist/index.d.ts"
+      "lib/index.mjs": [
+        "lib/index.d.ts"
       ],
       "*": [
         "*",
-        "dist/*.d.ts",
-        "dist/*/index.d.ts"
+        "lib/*.d.ts",
+        "lib/*/index.d.ts"
       ]
     }
   },
@@ -48,26 +46,11 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "@babel/preset-typescript": "^7.21.4",
     "@vitejs/plugin-vue": "^4.1.0",
-    "babel-plugin-module-resolver": "^5.0.0",
-    "css-loader": "^6.7.3",
     "rollup": "^3.20.2",
-    "rollup-plugin-alias": "^2.2.0",
-    "rollup-plugin-import-css": "^3.2.1",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-vue": "^6.0.0",
-    "ts-loader": "^9.4.2",
+    "rollup-plugin-multi-input": "^1.4.1",
     "vite": "^4.2.1",
-    "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-dts": "^2.2.0",
-    "vue-loader": "^17.0.1",
-    "vue-tsc": "^1.2.0",
-    "webpack": "^5.78.0",
-    "webpack-cli": "^5.0.1"
+    "vue-tsc": "^1.2.0"
   }
 }
