@@ -1,3 +1,3 @@
-import IkLoaderCircle from './IkLoaderCircle.vue'
+import IkLoaderCircle from './IkLoaderCircle.vue';
 
-export { IkLoaderCircle }
+export { IkLoaderCircle };

@@ -11,7 +11,7 @@ module.exports = {
         return string.match(pascalcase_regex);
     },
     isCamelCase: (string) => {
-        return string.match(camelcase_regex);
+        return string.match(camelcase_regex)
     },
     testRegex: (string, regexes) => {
         if (!Array.isArray(regexes)) {

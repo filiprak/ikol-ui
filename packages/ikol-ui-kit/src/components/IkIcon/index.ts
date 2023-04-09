@@ -1,2 +1,2 @@
-import IkIcon from './IkIcon.vue'
-export { IkIcon }
+import IkIcon from './IkIcon.vue';
+export { IkIcon };

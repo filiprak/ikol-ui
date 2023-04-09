@@ -16,7 +16,7 @@ module.exports = {
     ],
     rules: {
         'no-console': 'error',
-        'semi': 'off',
+        'semi': ['warn', 'always'],
         'indent': ['error', 4],
         'no-var': 'error',
         'no-unused-vars': 'off',
@@ -31,7 +31,7 @@ module.exports = {
             objects: 'always-multiline',
             imports: 'always-multiline',
             exports: 'always-multiline',
-            functions: 'never',
+            functions: 'only-multiline',
         }],
         'space-before-function-paren': 'off',
         'camelcase': 'off',
@@ -41,6 +41,9 @@ module.exports = {
         '@typescript-eslint',
     ],
     overrides: [
+        {
+            files: '**/*.js',
+        },
         {
             files: '**/*.ts',
             rules: {
