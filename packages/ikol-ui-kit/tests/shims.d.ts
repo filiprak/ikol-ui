@@ -1,5 +1,4 @@
 import { VueWrapper, ComponentMountingOptions } from '@vue/test-utils';
-
 import { DefineComponent } from 'vue';
 
 declare module '@vue/test-utils' {
