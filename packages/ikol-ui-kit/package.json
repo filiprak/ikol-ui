@@ -10,7 +10,7 @@
     "build:clean": "rm -rf lib/ dist/",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build -o docs/dist/"
   },
   "repository": {
     "type": "git",
