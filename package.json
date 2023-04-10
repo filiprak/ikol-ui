@@ -8,7 +8,10 @@
   ],
   "description": "IKOL JavaScript Software Development Kit",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build:test": "npm run build --workspace=ikol-ui-kit --workspace=test",
+    "lint": "npm run lint --workspace=ikol-ui-kit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filiprak/ikol-js-sdk.git"

@@ -2,6 +2,14 @@
     <div>
         <h1>{{ greeting }}</h1>
         <p>{{ message }}</p>
+        <IkThemeProvider theme="light">
+            this is provided light theme
+            <ThemeInfo></ThemeInfo>
+        </IkThemeProvider>
+        <IkThemeProvider theme="dark">
+            this is provided dark theme
+            <ThemeInfo></ThemeInfo>
+        </IkThemeProvider>
         <IkLoaderCircle indeterminate />
         <IkLoaderCircle indeterminate
                         design="primary" />
@@ -15,11 +23,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
+import { IkThemeProvider } from 'ikol-ui-kit/components/IkThemeProvider';
 import { clamp } from 'ikol-ui-kit/utils/helpers';
+import ThemeInfo from './ThemeInfo.vue';
 
 export default defineComponent({
     components: {
         IkLoaderCircle,
+        IkThemeProvider,
+        ThemeInfo
     },
     props: {
         name: {

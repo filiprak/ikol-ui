@@ -1,4 +1,4 @@
-import type { Ref } from 'vue';
+import { InjectionKey, Ref, inject, provide, watchEffect } from 'vue';
 import { watch, ref } from 'vue';
 
 export enum ThemeType {
@@ -7,10 +7,18 @@ export enum ThemeType {
 }
 
 export interface ThemeInstance {
-    readonly theme: Ref<ThemeType>,
+    readonly type: Ref<ThemeType>,
+    readonly css_classes: Ref<{ [key: string]: boolean }>,
     is_dark: Ref<boolean>,
     variant: Ref<number | null>,
 }
+
+export type ThemeOptions = {
+    type?: ThemeType,
+    variant?: number,
+}
+
+export const ThemeSymbol: InjectionKey<ThemeInstance> = Symbol.for('ik-theme')
 
 // function getColorVar(name: string) {
 //     let value = getComputedStyle(document.documentElement)
@@ -23,37 +31,80 @@ export interface ThemeInstance {
 //     return value || null;
 // }
 
-export function useTheme(): ThemeInstance {
-    const theme = ref(ThemeType.LIGHT);
-    const variant = ref<number | null>(null);
-    const is_dark = ref(theme.value === ThemeType.DARK);
+export function provideTheme(options: ThemeOptions) {
+    const theme = createTheme(options);
 
-    function updateDOM(type?: ThemeType) {
-        type = type || theme.value;
+    provide(ThemeSymbol, theme);
 
-        const classes = [
-            'ik-theme',
-            ['ik-theme--', type].join(''),
-        ];
+    return theme;
+}
+
+function createTheme(options?: ThemeOptions): ThemeInstance {
+    const type = ref(options?.type || ThemeType.LIGHT);
+    const variant = ref<number | null>(options?.variant || null);
+    const is_dark = ref(type.value === ThemeType.DARK);
+    const css_classes = ref<{ [key: string]: boolean }>({});
+
+    function updateType(new_type?: ThemeType) {
+        new_type = new_type || type.value;
+
+        const classes = {
+            'ik-theme': true,
+            [['ik-theme--', new_type].join('')]: true,
+        };
+
         if (variant.value) {
-            classes.push(['ik-theme--', variant.value].join(''));
+            classes[['ik-theme--', variant.value].join('')] = true;
         }
-        document.documentElement.className = classes.join(' ');
 
-        theme.value = type;
+        css_classes.value = classes;
+        type.value = new_type;
     };
 
     watch(is_dark, (dark) => {
-        updateDOM(dark ? ThemeType.DARK : ThemeType.LIGHT);
+        updateType(dark ? ThemeType.DARK : ThemeType.LIGHT);
     });
     watch(variant, () => {
-        updateDOM();
+        updateType();
     });
-    updateDOM(theme.value);
+    updateType(type.value);
 
     return {
-        theme,
+        type,
         is_dark,
         variant,
+        css_classes,
     };
+}
+
+const global = createTheme();
+
+watchEffect(() => {
+    const el = document.documentElement;
+
+    [...el.classList].forEach(class_name => {
+        if (class_name.startsWith('ik-theme')) {
+            el.classList.remove(class_name);
+        }
+    });
+
+    for (const class_name in global.css_classes.value) {
+        if (global.css_classes.value[class_name]) {
+            el.classList.add(class_name);
+        }
+    }
+});
+
+document.addEventListener('click', () => {
+    global.is_dark.value = !global.is_dark.value;
+});
+
+export function useTheme(): ThemeInstance {
+    const theme = inject(ThemeSymbol, global);
+
+    return theme;
+}
+
+export function useGlobalTheme(): ThemeInstance {
+    return global;
 }

@@ -1,7 +1,5 @@
 body {
     position: relative;
-    background-color: var(--background-color);
-    color: var(--on-background-color-1);
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0;
     font-weight: 600;

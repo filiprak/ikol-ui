@@ -237,3 +237,8 @@
     --on-primary-color: var(--on-theme-color);
     --primary-color-o1: var(--theme-9-color-o1);
 }
+
+.ik-theme {
+    background-color: var(--background-color);
+    color: var(--on-background-color-1);
+}

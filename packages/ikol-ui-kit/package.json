@@ -30,6 +30,7 @@
   "exports": {
     ".": "./lib/index.mjs",
     "./components/*": "./lib/components/*/index.mjs",
+    "./composables": "./lib/composables/index.mjs",
     "./utils/*": "./lib/utils/*.mjs",
     "./styles": {
       "default": "./lib/styles/index.mjs"
