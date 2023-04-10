@@ -16,7 +16,7 @@
         <IkThemeProvider theme="dark">
             this is provided dark theme
             <ThemeInfo></ThemeInfo>
-            <IkIcon></IkIcon>
+            <IkIcon class="test" icon="user:regular"></IkIcon>
             <IkLoaderCircle indeterminate />
             <IkLoaderCircle indeterminate
                             design="primary" />
