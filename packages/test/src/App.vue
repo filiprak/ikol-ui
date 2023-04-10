@@ -16,6 +16,7 @@
         <IkThemeProvider theme="dark">
             this is provided dark theme
             <ThemeInfo></ThemeInfo>
+            <IkIcon></IkIcon>
             <IkLoaderCircle indeterminate />
             <IkLoaderCircle indeterminate
                             design="primary" />
@@ -30,6 +31,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
+import { IkIcon } from 'ikol-ui-kit/components/IkIcon';
 import { IkThemeProvider } from 'ikol-ui-kit/components/IkThemeProvider';
 import { clamp } from 'ikol-ui-kit/utils/helpers';
 import ThemeInfo from './ThemeInfo.vue';
@@ -37,6 +39,7 @@ import ThemeInfo from './ThemeInfo.vue';
 export default defineComponent({
     components: {
         IkLoaderCircle,
+        IkIcon,
         IkThemeProvider,
         ThemeInfo
     },
