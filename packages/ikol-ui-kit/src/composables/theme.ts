@@ -57,7 +57,7 @@ function loadCssColors(variables: ThemeColors, options?: ThemeOptions): ThemeCol
 
     document.body.appendChild(el);
 
-    for (let name in variables) {
+    for (const name in variables) {
         const var_name = (variables as any)[name];
 
         if (var_name) {
