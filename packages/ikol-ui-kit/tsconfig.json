@@ -9,6 +9,7 @@
     ],
     "compilerOptions": {
         "baseUrl": ".",
+        "outDir": "./lib",
         "types": [
             "jest",
             "node"

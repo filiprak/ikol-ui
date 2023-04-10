@@ -14,6 +14,9 @@ module.exports = {
         'standard',
         'plugin:vue/vue3-recommended',
     ],
+    plugins: [
+        '@typescript-eslint',
+    ],
     rules: {
         'no-console': 'error',
         'semi': ['warn', 'always'],
@@ -38,20 +41,22 @@ module.exports = {
         'prefer-regex-literals': 'off',
         'ik-variables-case': 'error',
     },
-    plugins: [
-        '@typescript-eslint',
-    ],
     overrides: [
         {
             files: '**/*.js',
         },
         {
-            files: '**/*.ts',
+            files: '**/*.{ts,vue}',
             rules: {
-                '@typescript-eslint/quotes': ['error', 'single', {
-                    avoidEscape: true,
-                    allowTemplateLiterals: true,
-                }],
+                'no-redeclare': 'off', // handled by tsc
+                '@typescript-eslint/member-ordering': 'error',
+                '@typescript-eslint/type-annotation-spacing': 'error',
+                '@typescript-eslint/no-inferrable-types': 'error',
+                '@typescript-eslint/unified-signatures': 'error',
+                '@typescript-eslint/no-invalid-this': 'error',
+                '@typescript-eslint/consistent-type-imports': 'error',
+                '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
+                '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
             },
         },
         {
@@ -64,13 +69,13 @@ module.exports = {
             },
         },
         {
-            files: './tests/**/*.{js,ts}',
+            files: './tests/**/*.ts',
             rules: {
                 'ik-variables-case': 'off'
             },
         },
         {
-            files: './tests/**/*.test.{js,ts}',
+            files: './tests/**/*.test.ts',
             env: {
                 'jest/globals': true,
             },

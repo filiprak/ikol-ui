@@ -1,0 +1,63 @@
+body {
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--on-background-color-1);
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+::selection {
+    background-color: var(--primary-color) !important;
+    color: var(--on-primary-color) !important;
+}
+
+::-moz-selection {
+    background-color: var(--primary-color) !important;
+    color: var(--on-primary-color) !important;
+}
+
+::placeholder {
+    color: var(--on-background-color-4) !important;
+    font-weight: 600;
+}
+
+::-moz-placeholder {
+    color: var(--on-background-color-4) !important;
+    font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+    color: var(--on-background-color-4) !important;
+    font-weight: 600;
+}
+
+:-ms-input-placeholder {
+    color: var(--on-background-color-4) !important;
+    font-weight: 600;
+}
+
+::-ms-input-placeholder {
+    color: var(--on-background-color-4) !important;
+    font-weight: 600;
+}
+
+/* number input arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}

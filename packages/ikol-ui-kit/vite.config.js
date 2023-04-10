@@ -38,9 +38,7 @@ export default defineConfig({
     vue(),
     css(),
     dts({
-      beforeWriteFile: (filePath, content) => {
-        return { filePath: `${filePath}`, content };
-      },
+      entryRoot: './src',
       cleanVueFileName: true,
     }),
   ],
