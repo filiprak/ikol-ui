@@ -48,9 +48,9 @@ export default defineComponent({
                         'ik-icon': true,
                         ['ik-icon--' + props.design]: !!props.design,
                         ['ik-icon--' + props.variant]: !!props.variant,
-                        ['ik-icon--circle']: props.circle,
-                        ['ik-icon--clickable']: !props.disabled && !!attrs.onClick,
-                        ['ik-icon--disabled']: props.disabled,
+                        'ik-icon--circle': props.circle,
+                        'ik-icon--clickable': !props.disabled && !!attrs.onClick,
+                        'ik-icon--disabled': props.disabled,
                         ['fa-' + props.size + 'x']: !!props.size,
                     },
                     getIconClasses(props.icon),
@@ -59,7 +59,7 @@ export default defineComponent({
                     width: props.circle ? formatCssValue(props.size_px, 'px') : null,
                     height: props.circle ? formatCssValue(props.size_px, 'px') : null,
                     fontSize: props.size_px ? formatCssValue(props.circle ? (Number(props.size_px) / 2) : props.size_px, 'px') : null,
-                }
+                },
             });
         };
     },

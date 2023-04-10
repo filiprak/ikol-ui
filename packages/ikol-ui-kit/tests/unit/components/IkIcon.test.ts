@@ -17,7 +17,7 @@ describe('IkIcon', () => {
         const wrapper = getInstance({
             props: {
                 icon: 'cogs:light',
-            }
+            },
         });
         expect(wrapper.element.tagName).toBe('I');
         expect(wrapper.classes()).toStrictEqual([
@@ -31,8 +31,8 @@ describe('IkIcon', () => {
     it('renders with custom tag', () => {
         const wrapper = getInstance({
             props: {
-                tag: 'span'
-            }
+                tag: 'span',
+            },
         });
         expect(wrapper.element.tagName).toBe('SPAN');
         expect(wrapper.element).toMatchSnapshot();
@@ -41,8 +41,8 @@ describe('IkIcon', () => {
     it('renders with custom size', () => {
         const wrapper = getInstance({
             props: {
-                size: 5
-            }
+                size: 5,
+            },
         });
         expect(wrapper.classes()).toContain('fa-5x');
         expect(wrapper.element).toMatchSnapshot();
@@ -61,11 +61,11 @@ describe('IkIcon', () => {
     });
 
     it('renders clickable', async () => {
-        let clickFn = jest.fn();
+        const clickFn = jest.fn();
         const wrapper = getInstance({
             props: {
-                onClick: clickFn
-            }
+                onClick: clickFn,
+            },
         });
 
         await wrapper.find('.ik-icon').trigger('click');
@@ -79,8 +79,8 @@ describe('IkIcon', () => {
         const wrapper = getInstance({
             props: {
                 icon: 'home:light',
-                circle: true
-            }
+                circle: true,
+            },
         });
 
         expect(wrapper.classes()).toContain('fa-light');
@@ -93,8 +93,8 @@ describe('IkIcon', () => {
         const wrapper = getInstance({
             props: {
                 icon: 'home:light',
-                design: 'success'
-            }
+                design: 'success',
+            },
         });
 
         expect(wrapper.classes()).toContain('fa-light');
@@ -107,7 +107,7 @@ describe('IkIcon', () => {
             props: {
                 icon: 'home',
                 size_px: 37,
-            }
+            },
         });
 
         expect(wrapper.classes()).toContain('fa-solid');
@@ -121,7 +121,7 @@ describe('IkIcon', () => {
                 icon: 'home:light',
                 size_px: 37,
                 circle: true,
-            }
+            },
         });
 
         expect(wrapper.classes()).toContain('fa-light');
@@ -130,5 +130,4 @@ describe('IkIcon', () => {
         expect(wrapper.attributes('style')).toContain('height: 37px;');
         expect(wrapper.attributes('style')).toContain('font-size: 18.5px;');
     });
-
 });
