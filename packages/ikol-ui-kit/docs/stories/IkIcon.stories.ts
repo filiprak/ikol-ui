@@ -1,18 +1,18 @@
 import type { Meta } from '@storybook/vue3';
-import { IkLoaderCircle } from '@/components/IkLoaderCircle';
+import { IkIcon } from '@/components/IkIcon';
 import { h } from 'vue';
 import { useTheme } from '@/composables';
 
 
-const meta: Meta<typeof IkLoaderCircle> = {
-  title: 'Components/IkLoaderCircle',
+const meta: Meta<typeof IkIcon> = {
+  title: 'Components/IkIcon',
   tags: ['autodocs'],
-  component: IkLoaderCircle,
+  component: IkIcon,
 
   render: (args) => {
     return {
       components: {
-        IkLoaderCircle,
+        IkIcon,
       },
       inheritAttrs: false,
       setup() {
@@ -22,7 +22,7 @@ const meta: Meta<typeof IkLoaderCircle> = {
           const { dark_theme, ...props } = args;
           theme.is_dark.value = dark_theme;
 
-          return h(IkLoaderCircle, props);
+          return h(IkIcon, props);
         };
       },
     };

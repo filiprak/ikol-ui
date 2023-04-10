@@ -13,6 +13,7 @@
     "test": "jest",
     "build": "npm run build:clean && vite build --config vite.config.js",
     "build:clean": "rm -rf lib/ dist/",
+    "build:stories": "storybook build -o docs/dist/",
     "build:storybook": "storybook build -o docs/dist/"
   },
   "repository": {
