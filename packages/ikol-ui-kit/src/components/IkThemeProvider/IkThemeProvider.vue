@@ -4,6 +4,7 @@ import { defineComponent, h } from 'vue';
 import { ThemeType, provideTheme } from '@/composables/theme';
 
 export default defineComponent({
+    name: 'IkThemeProvider',
     props: {
         tag: {
             type: String,
@@ -14,14 +15,17 @@ export default defineComponent({
             default: null,
         },
         variant: {
-            type: Number,
+            type: [String, Number],
             default: null,
         },
     },
     setup(props, { slots }) {
-        const theme = provideTheme({ type: props.theme as ThemeType, variant: props.variant });
+        const theme = provideTheme({
+            type: props.theme as ThemeType,
+            variant: props.variant ? Number(props.variant) : undefined,
+        });
 
-        return () => h(props.tag, { class: theme.css_classes.value }, slots.default?.());
+        return () => h(props.tag, { class: ['ik-theme-provider', theme.css_classes.value] }, slots.default?.());
     },
 });
 </script>

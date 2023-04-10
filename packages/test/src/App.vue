@@ -2,21 +2,28 @@
     <div>
         <h1>{{ greeting }}</h1>
         <p>{{ message }}</p>
-        <IkThemeProvider theme="light">
+        <IkThemeProvider theme="light" variant="5">
             this is provided light theme
             <ThemeInfo></ThemeInfo>
+            <IkLoaderCircle indeterminate />
+            <IkLoaderCircle indeterminate
+                            design="primary" />
+            <IkLoaderCircle indeterminate
+                            design="success" />
+            <IkLoaderCircle indeterminate
+                            design="error" />
         </IkThemeProvider>
         <IkThemeProvider theme="dark">
             this is provided dark theme
             <ThemeInfo></ThemeInfo>
+            <IkLoaderCircle indeterminate />
+            <IkLoaderCircle indeterminate
+                            design="primary" />
+            <IkLoaderCircle indeterminate
+                            design="success" />
+            <IkLoaderCircle indeterminate
+                            design="error" />
         </IkThemeProvider>
-        <IkLoaderCircle indeterminate />
-        <IkLoaderCircle indeterminate
-                        design="primary" />
-        <IkLoaderCircle indeterminate
-                        design="success" />
-        <IkLoaderCircle indeterminate
-                        design="error" />
     </div>
 </template>
   

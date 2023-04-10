@@ -7,6 +7,7 @@ import { defineComponent } from 'vue';
 import { formatCssValue } from '@/utils/helpers';
 
 export default defineComponent({
+    name: 'IkIcon',
     props: {
         name: {
             type: [Number, String],

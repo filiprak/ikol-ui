@@ -32,6 +32,7 @@ import { defineComponent, computed } from 'vue';
 import { formatCssValue, clamp } from '@/utils/helpers';
 
 export default defineComponent({
+    name: 'IkLoaderCircle',
     props: {
         value: {
             type: [Number, String],

@@ -1,4 +1,4 @@
-import { InjectionKey, Ref, inject, provide, watchEffect } from 'vue';
+import { InjectionKey, Ref, getCurrentInstance, inject, provide, watchEffect } from 'vue';
 import { watch, ref } from 'vue';
 
 export enum ThemeType {
@@ -100,11 +100,9 @@ document.addEventListener('click', () => {
 });
 
 export function useTheme(): ThemeInstance {
-    const theme = inject(ThemeSymbol, global);
-
-    return theme;
-}
-
-export function useGlobalTheme(): ThemeInstance {
-    return global;
+    if (getCurrentInstance()) {
+        return inject(ThemeSymbol, global);
+    } else {
+        return global;
+    }
 }

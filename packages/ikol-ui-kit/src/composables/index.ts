@@ -1,1 +1,1 @@
-export { useTheme, useGlobalTheme } from './theme';
+export { useTheme } from './theme';
