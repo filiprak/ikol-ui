@@ -66,6 +66,7 @@ module.exports = {
                 'vue/html-self-closing': 'off',
                 'vue/first-attribute-linebreak': 'off',
                 'vue/html-closing-bracket-newline': 'off',
+                'vue/prop-name-casing': 'off',
             },
         },
         {
