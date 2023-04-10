@@ -1,7 +1,7 @@
 import '@/styles';
 import type { App } from 'vue';
 import { useTheme } from '@/composables/theme';
-import type { VuePlugin } from './types/util';
+import type { VuePlugin } from './types/utils';
 
 export function createIkolUI(): VuePlugin {
     function install(app: App) {
