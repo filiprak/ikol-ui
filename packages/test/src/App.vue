@@ -2,10 +2,13 @@
     <div>
         <h1>{{ greeting }}</h1>
         <p>{{ message }}</p>
-        <IkLoaderCircle indeterminate/>
-        <IkLoaderCircle indeterminate design="primary"/>
-        <IkLoaderCircle indeterminate design="success"/>
-        <IkLoaderCircle indeterminate design="error"/>
+        <IkLoaderCircle indeterminate />
+        <IkLoaderCircle indeterminate
+                        design="primary" />
+        <IkLoaderCircle indeterminate
+                        design="success" />
+        <IkLoaderCircle indeterminate
+                        design="error" />
     </div>
 </template>
   

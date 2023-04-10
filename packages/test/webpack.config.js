@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   target: 'web',
   entry: {
     app: './src/index.ts',
@@ -26,6 +26,7 @@ module.exports = {
     extensions: ['.ts', '.json', '.js', '.vue', '.css'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      'vue$': path.resolve('./node_modules/vue/dist/vue.runtime.esm-bundler.js'), // important for preventing code duplication
     },
   },
   module: {

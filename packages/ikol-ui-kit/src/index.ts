@@ -1,15 +1,13 @@
 import '@/styles';
 import type { App } from 'vue';
-import { createTheme } from '@/composables/theme';
+import { useTheme } from '@/composables/theme';
 import type { VuePlugin } from './types/util';
 
 export function createIkolUI(): VuePlugin {
     function install(app: App) {
-        const theme = createTheme();
+        const theme = useTheme();
 
-        theme.install(app);
-
-        app.provide('theme', theme);
+        theme.is_dark.value = true;
     };
 
     return {

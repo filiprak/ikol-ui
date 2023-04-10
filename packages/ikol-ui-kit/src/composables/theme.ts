@@ -1,7 +1,5 @@
-import type { App, Ref } from 'vue';
+import type { Ref } from 'vue';
 import { watch, ref } from 'vue';
-
-import type { VuePlugin } from '../types/util';
 
 export enum ThemeType {
     DARK = 'dark',
@@ -25,7 +23,7 @@ export interface ThemeInstance {
 //     return value || null;
 // }
 
-export function createTheme(): ThemeInstance & VuePlugin {
+export function useTheme(): ThemeInstance {
     const theme = ref(ThemeType.LIGHT);
     const variant = ref<number | null>(null);
     const is_dark = ref(theme.value === ThemeType.DARK);
@@ -45,18 +43,15 @@ export function createTheme(): ThemeInstance & VuePlugin {
         theme.value = type;
     };
 
-    function install(app: App) {
-        watch(is_dark, (dark) => {
-            updateDOM(dark ? ThemeType.DARK : ThemeType.LIGHT);
-        });
-        watch(variant, () => {
-            updateDOM();
-        });
-        updateDOM(theme.value);
-    };
+    watch(is_dark, (dark) => {
+        updateDOM(dark ? ThemeType.DARK : ThemeType.LIGHT);
+    });
+    watch(variant, () => {
+        updateDOM();
+    });
+    updateDOM(theme.value);
 
     return {
-        install,
         theme,
         is_dark,
         variant,
