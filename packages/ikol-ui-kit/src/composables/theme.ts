@@ -95,10 +95,6 @@ watchEffect(() => {
     }
 });
 
-document.addEventListener('click', () => {
-    global.is_dark.value = !global.is_dark.value;
-});
-
 export function useTheme(): ThemeInstance {
     if (getCurrentInstance()) {
         return inject(THEME_SYMBOL, global);
