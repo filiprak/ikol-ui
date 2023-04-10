@@ -1,5 +1,5 @@
-import { InjectionKey, Ref, getCurrentInstance, inject, provide, watchEffect } from 'vue';
-import { watch, ref } from 'vue';
+import type { InjectionKey, Ref } from 'vue';
+import { getCurrentInstance, inject, provide, watchEffect, watch, ref } from 'vue';
 
 export enum ThemeType {
     DARK = 'dark',
@@ -18,7 +18,7 @@ export type ThemeOptions = {
     variant?: number,
 }
 
-export const ThemeSymbol: InjectionKey<ThemeInstance> = Symbol.for('ik-theme')
+export const THEME_SYMBOL: InjectionKey<ThemeInstance> = Symbol.for('ik-theme');
 
 // function getColorVar(name: string) {
 //     let value = getComputedStyle(document.documentElement)
@@ -34,7 +34,7 @@ export const ThemeSymbol: InjectionKey<ThemeInstance> = Symbol.for('ik-theme')
 export function provideTheme(options: ThemeOptions) {
     const theme = createTheme(options);
 
-    provide(ThemeSymbol, theme);
+    provide(THEME_SYMBOL, theme);
 
     return theme;
 }
@@ -101,7 +101,7 @@ document.addEventListener('click', () => {
 
 export function useTheme(): ThemeInstance {
     if (getCurrentInstance()) {
-        return inject(ThemeSymbol, global);
+        return inject(THEME_SYMBOL, global);
     } else {
         return global;
     }
