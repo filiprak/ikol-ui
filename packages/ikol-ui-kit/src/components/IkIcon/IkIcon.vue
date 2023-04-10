@@ -1,28 +1,32 @@
 <script lang="ts">
 import '@/styles';
+import './IkIcon.css';
 import { defineComponent, h } from 'vue';
 import { formatCssValue } from '@/utils/helpers';
 
 function getIconClasses(icon: string): string[] {
     const parts = (icon || '').split(':');
-    let prefix = 'fas';
+    let prefix = 'fa-solid';
 
     if (parts.length > 1) {
         switch (parts[1]) {
+            case 'thin':
+                prefix = 'fa-thin';
+                break;
             case 'light':
-                prefix = 'fal';
+                prefix = 'fa-light';
                 break;
             case 'regular':
-                prefix = 'far';
+                prefix = 'fa-regular';
                 break;
             case 'solid':
-                prefix = 'fas';
+                prefix = 'fa-solid';
                 break;
             case 'duotone':
-                prefix = 'fad';
+                prefix = 'fa-duotone';
                 break;
             case 'brands':
-                prefix = 'fab';
+                prefix = 'fa-brands';
                 break;
         }
     }
@@ -64,6 +68,10 @@ export default defineComponent({
             type: String,
             default: null,
         },
+        variant: {
+            type: String,
+            default: null,
+        },
     },
     setup(props) {
         return () => {
@@ -72,14 +80,17 @@ export default defineComponent({
                     {
                         'ik-icon': true,
                         ['ik-icon--' + props.design]: !!props.design,
-                        ['fa-' + props.size + 'x']: !props.size,
+                        ['ik-icon--' + props.variant]: !!props.variant,
+                        ['ik-icon--circle']: props.circle,
+                        ['ik-icon--disabled']: props.disabled,
+                        ['fa-' + props.size + 'x']: !!props.size,
                     },
                     getIconClasses(props.icon),
                 ],
                 style: {
-                    width: formatCssValue(props.size_px, 'px'),
-                    height: formatCssValue(props.size_px, 'px'),
-                    fontSize: formatCssValue(Number(props.size_px) / 2, 'px'),
+                    width: props.circle ? formatCssValue(props.size_px, 'px') : null,
+                    height: props.circle ? formatCssValue(props.size_px, 'px') : null,
+                    fontSize: props.size_px ? formatCssValue(Number(props.size_px) / 2, 'px') : null,
                 }
             });
         };

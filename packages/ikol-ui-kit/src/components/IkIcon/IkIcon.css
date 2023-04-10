@@ -1,0 +1,104 @@
+.ik-icon--clickable {
+    cursor: pointer;
+}
+
+.ik-icon--clickable:hover {
+    opacity: 0.75;
+}
+
+.ik-icon--disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.ik-icon--circle {
+    /* display style forced to unable async fontawesome load */
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 5px 4px 5px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: var(--surface-darken-color);
+}
+
+/* design */
+.ik-icon--default {
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-icon--primary {
+    color: var(--primary-color);
+}
+
+.ik-icon--secondary {
+    color: var(--secondary-color);
+}
+
+.ik-icon--success {
+    color: var(--success-color);
+}
+
+.ik-icon--accent {
+    color: var(--accent-color);
+}
+
+.ik-icon--error {
+    color: var(--error-color);
+}
+
+/* circle design */
+.ik-icon--circle.ik-icon--default {
+    background-color: var(--surface-darken-color);
+}
+
+.ik-icon--circle.ik-icon--primary {
+    background-color: var(--primary-color-o1);
+}
+
+.ik-icon--circle.ik-icon--secondary {
+    background-color: var(--surface-darken-color);
+}
+
+.ik-icon--circle.ik-icon--success {
+    background-color: var(--success-color-o1);
+}
+
+.ik-icon--circle.ik-icon--accent {
+    background-color: var(--accent-color-o1);
+}
+
+.ik-icon--circle.ik-icon--error {
+    background-color: var(--error-color-o1);
+}
+
+/* filled variant */
+.ik-icon--circle.ik-icon--filled.ik-icon--default {
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-icon--circle.ik-icon--filled.ik-icon--primary {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-icon--circle.ik-icon--filled.ik-icon--secondary {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+
+.ik-icon--circle.ik-icon--filled.ik-icon--success {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
+}
+
+.ik-icon--circle.ik-icon--filled.ik-icon--accent {
+    background-color: var(--accent-color);
+    color: var(--on-accent-color);
+}
+
+.ik-icon--circle.ik-icon--filled.ik-icon--error {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+}

@@ -30,7 +30,7 @@ const meta: Meta<typeof IkIcon> = {
 };
 
 export const Preview = {
-  args: {},
+  args: { icon: 'home' },
 };
 
 export default meta;
