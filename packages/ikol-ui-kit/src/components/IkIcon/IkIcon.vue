@@ -40,7 +40,7 @@ export default defineComponent({
             default: null,
         },
     },
-    setup(props) {
+    setup(props, { attrs }) {
         return () => {
             return h(props.tag, {
                 class: [
@@ -49,6 +49,7 @@ export default defineComponent({
                         ['ik-icon--' + props.design]: !!props.design,
                         ['ik-icon--' + props.variant]: !!props.variant,
                         ['ik-icon--circle']: props.circle,
+                        ['ik-icon--clickable']: !props.disabled && !!attrs.onClick,
                         ['ik-icon--disabled']: props.disabled,
                         ['fa-' + props.size + 'x']: !!props.size,
                     },
@@ -57,7 +58,7 @@ export default defineComponent({
                 style: {
                     width: props.circle ? formatCssValue(props.size_px, 'px') : null,
                     height: props.circle ? formatCssValue(props.size_px, 'px') : null,
-                    fontSize: props.size_px ? formatCssValue(Number(props.size_px) / 2, 'px') : null,
+                    fontSize: props.size_px ? formatCssValue(props.circle ? (Number(props.size_px) / 2) : props.size_px, 'px') : null,
                 }
             });
         };

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkIcon renders as circle 1`] = `
+<i
+  class="ik-icon ik-icon--circle fa-light fa-home"
+/>
+`;
+
+exports[`IkIcon renders clickable 1`] = `
+<i
+  class="ik-icon ik-icon--clickable"
+/>
+`;
+
+exports[`IkIcon renders disabled 1`] = `
+<i
+  class="ik-icon ik-icon--disabled"
+/>
+`;
+
+exports[`IkIcon renders with correct default state 1`] = `
+<i
+  class="ik-icon"
+/>
+`;
+
+exports[`IkIcon renders with correct fa class 1`] = `
+<i
+  class="ik-icon fa-light fa-cogs"
+/>
+`;
+
+exports[`IkIcon renders with custom size 1`] = `
+<i
+  class="ik-icon fa-5x"
+/>
+`;
+
+exports[`IkIcon renders with custom tag 1`] = `
+<span
+  class="ik-icon"
+/>
+`;
