@@ -6,30 +6,75 @@ export enum ThemeType {
     LIGHT = 'light',
 }
 
+export type ThemeOptions = {
+    type?: ThemeType,
+    variant?: number | null,
+}
+
+class ThemeColors {
+    primary: string | null = null;
+    accent: string | null = null;
+    success: string | null = null;
+    error: string | null = null;
+
+    background: string | null = null;
+    on_background_1: string | null = null;
+    on_background_2: string | null = null;
+    on_background_3: string | null = null;
+
+    border_1: string | null = null;
+
+    theme_1: string | null = null;
+    theme_2: string | null = null;
+    theme_3: string | null = null;
+    theme_4: string | null = null;
+    theme_5: string | null = null;
+    theme_6: string | null = null;
+    theme_7: string | null = null;
+    theme_8: string | null = null;
+    theme_9: string | null = null;
+}
+
 export interface ThemeInstance {
     readonly type: Ref<ThemeType>,
     readonly css_classes: Ref<{ [key: string]: boolean }>,
     is_dark: Ref<boolean>,
     variant: Ref<number | null>,
-}
-
-export type ThemeOptions = {
-    type?: ThemeType,
-    variant?: number,
+    colors: Ref<ThemeColors>,
 }
 
 export const THEME_SYMBOL: InjectionKey<ThemeInstance> = Symbol.for('ik-theme');
 
-// function getColorVar(name: string) {
-//     let value = getComputedStyle(document.documentElement)
-//         .getPropertyValue(name);
+function loadCssColors(variables: ThemeColors, options?: ThemeOptions): ThemeColors {
+    const result = new ThemeColors();
+    const el = document.createElement('div');
 
-//     value = String(value || '')
-//         .trim()
-//         .replace('#', '');
+    el.classList.add('ik-theme');
+    el.style.display = 'none';
 
-//     return value || null;
-// }
+    options?.type && el.classList.add('ik-theme--' + options.type);
+    options?.variant && el.classList.add('ik-theme--' + options.variant);
+
+    document.body.appendChild(el);
+
+    for (let name in variables) {
+        const var_name = (variables as any)[name];
+
+        if (var_name) {
+            const value = getComputedStyle(el).getPropertyValue((variables as any)[name]);
+
+            if (result.hasOwnProperty(name)) {
+                (result as any)[name] = String(value || '')
+                    .trim()
+                    .replace('#', '') || null;
+            }
+        }
+    }
+
+    el.remove();
+
+    return result;
+}
 
 export function provideTheme(options: ThemeOptions) {
     const theme = createTheme(options);
@@ -44,6 +89,7 @@ function createTheme(options?: ThemeOptions): ThemeInstance {
     const variant = ref<number | null>(options?.variant || null);
     const is_dark = ref(type.value === ThemeType.DARK);
     const css_classes = ref<{ [key: string]: boolean }>({});
+    const colors = ref<ThemeColors>(new ThemeColors());
 
     function updateType(new_type?: ThemeType) {
         new_type = new_type || type.value;
@@ -59,7 +105,32 @@ function createTheme(options?: ThemeOptions): ThemeInstance {
 
         css_classes.value = classes;
         type.value = new_type;
-    };
+
+        colors.value = loadCssColors({
+            primary: '--primary-color',
+            accent: '--accent-color',
+            success: '--success-color',
+            error: '--error-color',
+
+            background: '--background-color',
+            on_background_1: '--background-color-1',
+            on_background_2: '--background-color-2',
+            on_background_3: '--background-color-3',
+
+            border_1: '--border-color-1',
+
+            theme_1: '--theme-1-color',
+            theme_2: '--theme-2-color',
+            theme_3: '--theme-3-color',
+            theme_4: '--theme-4-color',
+            theme_5: '--theme-5-color',
+            theme_6: '--theme-6-color',
+            theme_7: '--theme-7-color',
+            theme_8: '--theme-8-color',
+            theme_9: '--theme-9-color',
+
+        }, { type: new_type, variant: variant.value });
+    }
 
     watch(is_dark, (dark) => {
         updateType(dark ? ThemeType.DARK : ThemeType.LIGHT);
@@ -73,6 +144,7 @@ function createTheme(options?: ThemeOptions): ThemeInstance {
         type,
         is_dark,
         variant,
+        colors,
         css_classes,
     };
 }

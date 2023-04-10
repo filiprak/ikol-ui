@@ -23,7 +23,7 @@ export default defineComponent({
     setup(props, { slots }) {
         const theme = provideTheme({
             type: props.theme as ThemeType,
-            variant: props.variant ? Number(props.variant) : undefined,
+            variant: props.variant ? Number(props.variant) : null,
         });
 
         return () => h(props.tag, { class: ['ik-theme-provider', theme.css_classes.value] }, slots.default?.());
