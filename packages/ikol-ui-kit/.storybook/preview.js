@@ -1,6 +1,6 @@
-/** @type { import('@storybook/vue3').Preview } */
 import './preview.css';
 
+/** @type { import('@storybook/vue3').Preview } */
 const preview = {
   argTypes: { dark_theme: { control: 'boolean' } },
   args: { dark_theme: false },
