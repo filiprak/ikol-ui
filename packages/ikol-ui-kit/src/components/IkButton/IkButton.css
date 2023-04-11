@@ -1,0 +1,326 @@
+.ik-button {
+    display: inline-block;
+    padding: 4px 16px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    border-radius: 8px;
+}
+
+/* fix black chrome outline */
+.ik-button,
+.ik-button:focus,
+.ik-button:hover,
+.ik-button:active {
+    outline: none !important;
+}
+
+.ik-button:active {
+    transform: translateY(1px);
+}
+
+.ik-button .ik-loader-circle {
+    margin-bottom: 2px;
+    margin-right: 7px;
+}
+
+.ik-button--round {
+    border-radius: 48px;
+}
+
+.ik-button--size-lg {
+    height: 48px;
+    padding: 12px 24px;
+}
+
+.ik-button--fab {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    border-radius: 28px;
+}
+
+.ik-button--fab.ik-button--filled.ik-button--primary {
+    box-shadow: 0 5px 15px 0 var(--primary-color-o1);
+}
+
+.ik-button--fab.ik-button--filled.ik-button--success {
+    box-shadow: 0 5px 15px 0 var(--success-color-o1);
+}
+
+.ik-button--fab.ik-button--filled.ik-button--error {
+    box-shadow: 0 5px 15px 0 var(--error-color-o1);
+}
+
+/* default buttons */
+.ik-button--filled {
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-button--flat,
+.ik-button--outline {
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-button--flat:hover,
+.ik-button--flat:focus,
+.ik-button--flat.ik-button--active,
+.ik-button--flat:active,
+.ik-button--outline:hover,
+.ik-button--outline:focus,
+.ik-button--outline.ik-button--active,
+.ik-button--outline:active {
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-button--outline,
+.ik-button--outline:hover,
+.ik-button--outline:active,
+.ik-button--outline:focus {
+    border: 1px solid var(--border-color-1);
+}
+
+.ik-button.ik-button--fab {
+    box-shadow: 0 5px 15px 0 var(--surface-darken-color);
+}
+
+/* primary buttons */
+.ik-button--primary.ik-button--filled {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-button--primary.ik-button--outline,
+.ik-button--primary.ik-button--flat {
+    color: var(--primary-color);
+}
+
+.ik-button--primary.ik-button--outline:hover,
+.ik-button--primary.ik-button--outline:focus,
+.ik-button--primary.ik-button--outline.ik-button--active,
+.ik-button--primary.ik-button--outline:active,
+.ik-button--primary.ik-button--flat:hover,
+.ik-button--primary.ik-button--flat:focus,
+.ik-button--primary.ik-button--flat.ik-button--active,
+.ik-button--primary.ik-button--flat:active {
+    background-color: var(--primary-color-o1);
+    color: var(--primary-color);
+}
+
+.ik-button--primary.ik-button--outline,
+.ik-button--primary.ik-button--outline:hover,
+.ik-button--primary.ik-button--outline:active,
+.ik-button--primary.ik-button--outline:focus {
+    border: 1px solid var(--primary-color);
+}
+
+/* success buttons */
+.ik-button--success.ik-button--filled,
+.ik-button--success.ik-button--filled.ik-button--active,
+.ik-button--success.ik-button--filled:focus,
+.ik-button--success.ik-button--filled:hover,
+.ik-button--success.ik-button--filled:active {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
+}
+
+.ik-button--success.ik-button--outline,
+.ik-button--success.ik-button--flat {
+    color: var(--success-color);
+}
+
+.ik-button--success.ik-button--outline:hover,
+.ik-button--success.ik-button--outline:focus,
+.ik-button--success.ik-button--outline.ik-button--active,
+.ik-button--success.ik-button--outline:active,
+.ik-button--success.ik-button--flat:hover,
+.ik-button--success.ik-button--flat:focus,
+.ik-button--success.ik-button--flat.ik-button--active,
+.ik-button--success.ik-button--flat:active {
+    background-color: var(--success-color-o1);
+    color: var(--success-color);
+}
+
+.ik-button--success.ik-button--outline,
+.ik-button--success.ik-button--outline:hover,
+.ik-button--success.ik-button--outline:active,
+.ik-button--success.ik-button--outline:focus {
+    border: 1px solid var(--success-color);
+}
+
+/* error buttons */
+.ik-button--error.ik-button--filled,
+.ik-button--error.ik-button--filled.ik-button--active,
+.ik-button--error.ik-button--filled:focus,
+.ik-button--error.ik-button--filled:hover,
+.ik-button--error.ik-button--filled:active {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+}
+
+.ik-button--error.ik-button--outline,
+.ik-button--error.ik-button--flat {
+    color: var(--error-color);
+}
+
+.ik-button--error.ik-button--outline:hover,
+.ik-button--error.ik-button--outline:focus,
+.ik-button--error.ik-button--outline.ik-button--active,
+.ik-button--error.ik-button--outline:active,
+.ik-button--error.ik-button--flat:hover,
+.ik-button--error.ik-button--flat:focus,
+.ik-button--error.ik-button--flat.ik-button--active,
+.ik-button--error.ik-button--flat:active {
+    background-color: var(--error-color-o1);
+    color: var(--error-color);
+}
+
+.ik-button--error.ik-button--outline,
+.ik-button--error.ik-button--outline:hover,
+.ik-button--error.ik-button--outline:active,
+.ik-button--error.ik-button--outline:focus {
+    border: 1px solid var(--error-color) !important;
+}
+
+/* accent buttons */
+.ik-button--accent.ik-button--filled,
+.ik-button--accent.ik-button--filled.ik-button--active,
+.ik-button--accent.ik-button--filled:focus,
+.ik-button--accent.ik-button--filled:hover,
+.ik-button--accent.ik-button--filled:active {
+    background-color: var(--accent-color-o1);
+    color: var(--accent-color);
+}
+
+.ik-button--accent.ik-button--outline,
+.ik-button--accent.ik-button--flat {
+    color: var(--accent-color);
+}
+
+.ik-button--accent.ik-button--outline:hover,
+.ik-button--accent.ik-button--outline:focus,
+.ik-button--accent.ik-button--outline.ik-button--active,
+.ik-button--accent.ik-button--outline:active,
+.ik-button--accent.ik-button--flat:hover,
+.ik-button--accent.ik-button--flat:focus,
+.ik-button--accent.ik-button--flat.ik-button--active,
+.ik-button--accent.ik-button--flat:active {
+    background-color: var(--accent-color-o1);
+    color: var(--accent-color);
+}
+
+.ik-button--accent.ik-button--outline,
+.ik-button--accent.ik-button--outline:hover,
+.ik-button--accent.ik-button--outline:active,
+.ik-button--accent.ik-button--outline:focus {
+    border: 1px solid var(--accent-color);
+}
+
+/* common button states */
+.ik-button--circle {
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.ik-button--circle.ik-button--size-lg {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+}
+
+/* .btn.btn-skeleton,
+.btn.btn-skeleton:active,
+.btn.btn-skeleton:focus {
+    pointer-events: none;
+    background: var(--skeleton-color-1) !important;
+    border-color: var(--skeleton-color-1) !important;
+    color: transparent !important;
+}
+
+.btn.btn-skeleton > *,
+.btn.btn-skeleton:focus > *,
+.btn.btn-skeleton:active > * {
+    visibility: hidden;
+} */
+
+/* separated buttons */
+.ik-button--separate {
+    padding: 0 10px 0 0;
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-button--separate .ik-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--surface-darken-color);
+}
+
+.ik-button--separate.ik-button--size-lg .ik-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.ik-button--separate.ik-button--primary {
+    color: var(--primary-color);
+}
+
+.ik-button--separate.ik-button--primary .ik-icon {
+    background-color: var(--primary-color-o1);
+}
+
+.ik-button--separate.ik-button--success {
+    color: var(--success-color);
+}
+
+.ik-button--separate.ik-button--success .ik-icon {
+    background-color: var(--success-color-o1);
+}
+
+.ik-button--separate.ik-button--error {
+    color: var(--error-color);
+}
+
+.ik-button--separate.ik-button--error .ik-icon {
+    background-color: var(--error-color-o1);
+}
+
+.ik-button--separate.ik-button--accent {
+    color: var(--accent-color);
+}
+
+.ik-button--separate.ik-button--accent .ik-icon {
+    background-color: var(--accent-color-o1);
+}
+
+.ik-button--loading,
+.ik-button--disabled {
+    opacity: 0.65;
+    pointer-events: none;
+}
