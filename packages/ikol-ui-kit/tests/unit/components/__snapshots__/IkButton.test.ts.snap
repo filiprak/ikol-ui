@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkButton renders with correct default state 1`] = `
+<button
+  class="ik-button ik-button--default ik-button--filled"
+  type="button"
+>
+  
+  <!--v-if-->
+  
+  
+  <!--v-if-->
+  
+</button>
+`;
