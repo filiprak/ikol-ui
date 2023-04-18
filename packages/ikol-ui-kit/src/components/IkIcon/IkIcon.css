@@ -32,10 +32,6 @@
     color: var(--primary-color);
 }
 
-.ik-icon--secondary {
-    color: var(--secondary-color);
-}
-
 .ik-icon--success {
     color: var(--success-color);
 }
@@ -55,10 +51,6 @@
 
 .ik-icon--circle.ik-icon--primary {
     background-color: var(--primary-color-o1);
-}
-
-.ik-icon--circle.ik-icon--secondary {
-    background-color: var(--surface-darken-color);
 }
 
 .ik-icon--circle.ik-icon--success {
@@ -82,11 +74,6 @@
 .ik-icon--circle.ik-icon--filled.ik-icon--primary {
     background-color: var(--primary-color);
     color: var(--on-primary-color);
-}
-
-.ik-icon--circle.ik-icon--filled.ik-icon--secondary {
-    background-color: var(--secondary-color);
-    color: var(--on-secondary-color);
 }
 
 .ik-icon--circle.ik-icon--filled.ik-icon--success {

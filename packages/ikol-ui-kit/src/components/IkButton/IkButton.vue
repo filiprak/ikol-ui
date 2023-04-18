@@ -153,8 +153,8 @@ export default defineComponent({
                     ['ik-button--' + props.design]: !!props.design,
                     ['ik-button--size-' + props.size]: !!props.size,
                     'ik-button--skeleton': props.skeleton,
+                    'ik-bg-skeleton': props.skeleton,
                     'ik-button--block': props.block,
-                    'ik-skeleton-bckg': props.skeleton,
                     'ik-button--fab': props.fab,
                     'ik-button--circle': props.circle,
                     ['ik-button--' + variant]: !!variant,
@@ -164,12 +164,12 @@ export default defineComponent({
             }),
             prepend_icon_class: computed(() => {
                 return {
-                    'ik-mr-2': !!slots.default,
+                    'ik-mr-2': !!slots.default?.(),
                 };
             }),
             append_icon_class: computed(() => {
                 return {
-                    'ik-ml-2': !!slots.default,
+                    'ik-ml-2': !!slots.default?.(),
                 };
             }),
             listeners: computed(() => {

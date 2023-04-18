@@ -1,7 +1,6 @@
 .ik-button {
     display: inline-block;
     padding: 4px 16px;
-    margin-bottom: 0;
     font-size: 13px;
     font-weight: 600;
     line-height: 24px;
@@ -18,6 +17,15 @@
     user-select: none;
 
     border-radius: 8px;
+}
+
+.ik-button:hover {
+    opacity: .85;
+}
+
+.ik-button--block {
+    display: block;
+    width: 100%;
 }
 
 /* fix black chrome outline */
@@ -248,20 +256,21 @@
     padding: 12px;
 }
 
-/* .btn.btn-skeleton,
-.btn.btn-skeleton:active,
-.btn.btn-skeleton:focus {
+/* skeleton */
+.ik-button--skeleton,
+.ik-button--skeleton:active,
+.ik-button--skeleton:focus {
     pointer-events: none;
     background: var(--skeleton-color-1) !important;
     border-color: var(--skeleton-color-1) !important;
     color: transparent !important;
 }
 
-.btn.btn-skeleton > *,
-.btn.btn-skeleton:focus > *,
-.btn.btn-skeleton:active > * {
+.ik-button--skeleton > *,
+.ik-button--skeleton:focus > *,
+.ik-button--skeleton:active > * {
     visibility: hidden;
-} */
+}
 
 /* separated buttons */
 .ik-button--separate {
