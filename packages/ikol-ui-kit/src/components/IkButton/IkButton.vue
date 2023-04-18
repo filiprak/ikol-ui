@@ -7,7 +7,9 @@
             <IkLoaderCircle indeterminate
                             :size="16"
                             :thickness="2" />
-            <template v-if="!fab && $slots.default">Loading...</template>
+            <template v-if="!fab && $slots.default">
+                Loading...
+            </template>
         </template>
         <template v-else>
             <IkIcon v-if="prepend_icon || icon"
@@ -23,11 +25,9 @@
 <script lang="ts">
 import '@/styles';
 import './IkButton.css';
-import { useRouter } from '@/composables/router';
 import { IkIcon } from '@/components/IkIcon';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
-import { computed, defineComponent, PropType } from 'vue';
-import { RouteRecordNormalized } from 'vue-router';
+import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'IkButton',
@@ -38,71 +38,63 @@ export default defineComponent({
     props: {
         tag: {
             type: String,
-            default: 'button'
+            default: 'button',
         },
         type: {
             type: String,
-            default: 'button'
+            default: 'button',
         },
         block: {
             type: Boolean,
-            default: false
+            default: false,
         },
         design: {
             type: String,
-            default: 'default'
+            default: 'default',
         },
         size: {
             type: String,
-            default: null
+            default: null,
         },
         prepend_icon: {
             type: String,
-            default: null
+            default: null,
         },
         append_icon: {
             type: String,
-            default: null
+            default: null,
         },
         icon: {
             type: String,
-            default: null
+            default: null,
         },
         separate: {
             type: Boolean,
-            default: false
-        },
-        route: {
-            type: Object as PropType<string | RouteRecordNormalized>,
-            default: null
-        },
-        route_func: {
-            type: String,
-            default: 'push'
+            default: false,
         },
         loading: {
             type: Boolean,
-            default: false
+            default: false,
         },
         skeleton: {
             type: Boolean,
-            default: false
+            default: false,
         },
         disabled: {
             type: Boolean,
-            default: false
+            default: false,
         },
         fab: {
             type: Boolean,
-            default: false
+            default: false,
         },
         round: {
             type: Boolean,
-            default: false
+            default: false,
         },
         circle: {
             type: Boolean,
-            default: false
+            default: false,
         },
         active: {
             type: Boolean,
@@ -114,15 +106,15 @@ export default defineComponent({
         },
         flat: {
             type: Boolean,
-            default: false
+            default: false,
         },
         filled: {
             type: Boolean,
-            default: false
+            default: false,
         },
         outline: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     setup(props, { slots }) {
@@ -172,20 +164,7 @@ export default defineComponent({
                     'ik-ml-2': !!slots.default?.(),
                 };
             }),
-            listeners: computed(() => {
-                const attrs: any = {};
-                const router = useRouter();
-
-                if (props.route !== null) {
-                    attrs.onClick = () => {
-                        if ((router as any)[props.route_func]) {
-                            (router as any)[props.route_func](props.route);
-                        }
-                    };
-                }
-                return attrs;
-            }),
         };
-    }
+    },
 });
 </script>

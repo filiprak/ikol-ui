@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`IkButton renders with append icon 1`] = `
+<button
+  class="ik-button ik-button--default ik-button--filled"
+  type="button"
+>
+  
+  <!--v-if-->
+  
+  Test
+  
+  <i
+    class="ik-icon fa-solid fa-home ik-ml-2"
+  />
+  
+</button>
+`;
+
 exports[`IkButton renders with correct default state 1`] = `
 <button
   class="ik-button ik-button--default ik-button--filled"
@@ -8,6 +25,40 @@ exports[`IkButton renders with correct default state 1`] = `
   
   <!--v-if-->
   
+  
+  <!--v-if-->
+  
+</button>
+`;
+
+exports[`IkButton renders with icon 1`] = `
+<button
+  class="ik-button ik-button--default ik-button--filled"
+  type="button"
+>
+  
+  <i
+    class="ik-icon fa-solid fa-home ik-mr-2"
+  />
+  
+  Test
+  
+  <!--v-if-->
+  
+</button>
+`;
+
+exports[`IkButton renders with prepend icon 1`] = `
+<button
+  class="ik-button ik-button--default ik-button--filled"
+  type="button"
+>
+  
+  <i
+    class="ik-icon fa-solid fa-home ik-mr-2"
+  />
+  
+  Test
   
   <!--v-if-->
   
