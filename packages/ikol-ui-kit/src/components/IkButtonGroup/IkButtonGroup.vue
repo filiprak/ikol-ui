@@ -13,7 +13,7 @@ export default defineComponent({
     props: {
         equal: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     computed: {
@@ -21,10 +21,10 @@ export default defineComponent({
             const classes = ['ik-button-group'];
 
             if (this.equal) {
-                classes.push(`ik-button-group--equal`);
+                classes.push('ik-button-group--equal');
             }
             return classes;
-        }
-    }
+        },
+    },
 });
 </script>
