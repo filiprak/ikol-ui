@@ -2,9 +2,9 @@ export function clamp(number: number, min: number, max: number): number {
     return Math.max(Math.min(number, max), min);
 };
 
-export function formatCssValue(value: number | string, units: string): string {
-    value = (value || '').toString();
-    return value !== '0' ? value + units : '0';
+export function formatCssValue(value: number | string, units: string = 'px'): string {
+    value = (value || '').toString().trim();
+    return (value && value !== '0') ? value + units : '0';
 };
 
 export function getIconClasses(icon: string): string[] {
