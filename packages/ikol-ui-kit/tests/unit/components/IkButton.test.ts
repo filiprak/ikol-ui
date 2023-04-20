@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { IkButton } from '@/components/IkButton';
+import { IkIcon } from '@/components/IkIcon';
 
 describe('IkButton', () => {
     const getInstance = (options = {}) => mount(IkButton, options);
@@ -180,7 +181,7 @@ describe('IkButton', () => {
                 default: 'Test',
             },
         });
-        expect(wrapper.findComponent({ name: 'IkIcon' }).props('icon')).toContain('home');
+        expect(wrapper.findComponent(IkIcon).props('icon')).toContain('home');
         expect(wrapper.text()).toContain('Test');
         expect(wrapper.element).toMatchSnapshot();
     });
@@ -194,7 +195,7 @@ describe('IkButton', () => {
                 default: 'Test',
             },
         });
-        expect(wrapper.findComponent({ name: 'IkIcon' }).props('icon')).toContain('home');
+        expect(wrapper.findComponent(IkIcon).props('icon')).toContain('home');
         expect(wrapper.text()).toContain('Test');
         expect(wrapper.element).toMatchSnapshot();
     });
@@ -208,7 +209,7 @@ describe('IkButton', () => {
                 default: 'Test',
             },
         });
-        expect(wrapper.findComponent({ name: 'IkIcon' }).props('icon')).toContain('home');
+        expect(wrapper.findComponent(IkIcon).props('icon')).toContain('home');
         expect(wrapper.text()).toContain('Test');
         expect(wrapper.element).toMatchSnapshot();
     });
