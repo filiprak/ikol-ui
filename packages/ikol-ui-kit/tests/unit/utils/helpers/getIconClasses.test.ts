@@ -1,7 +1,6 @@
-import { getIconClasses } from "@/utils/helpers";
+import { getIconClasses } from '@/utils/helpers';
 
 describe('getIconClasses', () => {
-
     it('returns correct fa classes', () => {
         expect(getIconClasses('')).toStrictEqual([]);
         expect(getIconClasses('home:')).toStrictEqual(['fa-solid', 'fa-home']);
@@ -14,5 +13,4 @@ describe('getIconClasses', () => {
         expect(getIconClasses('home:duotone')).toStrictEqual(['fa-duotone', 'fa-home']);
         expect(getIconClasses('facebook:brands')).toStrictEqual(['fa-brands', 'fa-facebook']);
     });
-
 });

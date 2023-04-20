@@ -1,7 +1,6 @@
-import { formatCssValue } from "@/utils/helpers";
+import { formatCssValue } from '@/utils/helpers';
 
 describe('formatCssValue', () => {
-
     it('formats string type values', () => {
         expect(formatCssValue('')).toBe('0');
         expect(formatCssValue(' ')).toBe('0');
@@ -23,5 +22,4 @@ describe('formatCssValue', () => {
         expect(formatCssValue(4.56)).toBe('4.56px');
         expect(formatCssValue(0.4, 'em')).toBe('0.4em');
     });
-
 });

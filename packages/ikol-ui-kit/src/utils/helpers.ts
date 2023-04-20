@@ -2,7 +2,7 @@ export function clamp(number: number, min: number, max: number): number {
     return Math.max(Math.min(number, max), min);
 };
 
-export function formatCssValue(value: number | string, units: string = 'px'): string {
+export function formatCssValue(value: number | string, units = 'px'): string {
     value = (value || '').toString().trim();
     return (value && value !== '0') ? value + units : '0';
 };
