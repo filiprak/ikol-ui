@@ -6,7 +6,7 @@
 <script lang="ts">
 import '@/styles';
 import './IkButtonGroup.css';
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
     name: 'IkButtonGroup',
@@ -16,15 +16,17 @@ export default defineComponent({
             default: false,
         },
     },
-    computed: {
-        classes(): string[] {
-            const classes = ['ik-button-group'];
+    setup(props) {
+        return {
+            classes: computed(() => {
+                const classes = ['ik-button-group'];
 
-            if (this.equal) {
-                classes.push('ik-button-group--equal');
-            }
-            return classes;
-        },
+                if (props.equal) {
+                    classes.push('ik-button-group--equal');
+                }
+                return classes;
+            }),
+        };
     },
 });
 </script>

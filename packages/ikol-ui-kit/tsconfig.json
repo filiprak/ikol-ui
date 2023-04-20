@@ -30,6 +30,9 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "paths": {
+            "@/tests/*": [
+                "tests/*"
+            ],
             "@/*": [
                 "src/*"
             ]
