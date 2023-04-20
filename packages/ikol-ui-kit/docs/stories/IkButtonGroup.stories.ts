@@ -28,11 +28,6 @@ const meta: Meta<typeof IkButtonGroup> = {
             h(IkButton, {}, 'Buttom 1'),
             h(IkButton, {}, 'Buttom 2'),
             h(IkButton, {}, 'Buttom 3'),
-            h(IkButton, {}, 'Buttom 3'),
-            h(IkButton, {}, 'Buttom 3'),
-            h(IkButton, {}, 'Buttom 3'),
-            h(IkButton, {}, 'Buttom 3'),
-            h(IkButton, {}, 'Buttom 3'),
           ]);
         };
       },
@@ -42,6 +37,10 @@ const meta: Meta<typeof IkButtonGroup> = {
 
 export const Default = {
   args: {},
+};
+
+export const Equal = {
+  args: { equal: true },
 };
 
 export default meta;

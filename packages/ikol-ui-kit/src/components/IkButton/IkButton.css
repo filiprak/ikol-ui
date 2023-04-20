@@ -1,5 +1,7 @@
 .ik-button {
     display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 4px 16px;
     font-size: 13px;
     font-weight: 600;

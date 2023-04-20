@@ -17,6 +17,4 @@
 .ik-button-group--equal > .ik-button {
     margin: 0 0 5px 0;
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

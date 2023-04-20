@@ -15,18 +15,11 @@ export default defineComponent({
             type: Boolean,
             default: false
         },
-        justified: {
-            type: Boolean,
-            default: false
-        },
     },
     computed: {
         classes(): string[] {
             const classes = ['ik-button-group'];
 
-            if (this.justified) {
-                classes.push('ik-button-group--justified');
-            }
             if (this.equal) {
                 classes.push(`ik-button-group--equal`);
             }
