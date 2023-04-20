@@ -56,8 +56,8 @@ export default defineComponent({
                     getIconClasses(props.icon),
                 ],
                 style: {
-                    width: props.circle ? formatCssValue(props.size_px, 'px') : null,
-                    height: props.circle ? formatCssValue(props.size_px, 'px') : null,
+                    width: props.size_px && props.circle ? formatCssValue(props.size_px, 'px') : null,
+                    height: props.size_px && props.circle ? formatCssValue(props.size_px, 'px') : null,
                     fontSize: props.size_px ? formatCssValue(props.circle ? (Number(props.size_px) / 2) : props.size_px, 'px') : null,
                 },
             });

@@ -4,7 +4,7 @@ export function clamp(number: number, min: number, max: number): number {
 
 export function formatCssValue(value: number | string, units = 'px'): string {
     value = (value || '').toString().trim();
-    return (value && value !== '0') ? value + units : '0';
+    return (value && value !== '0') ? (value + units) : '0';
 };
 
 export function getIconClasses(icon: string): string[] {
