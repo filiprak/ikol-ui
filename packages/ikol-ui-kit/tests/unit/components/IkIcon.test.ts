@@ -1,8 +1,8 @@
-import { mount } from '@vue/test-utils';
+import { renderDeep } from '@/tests/tools/utils';
 import { IkIcon } from '@/components/IkIcon';
 
 describe('IkIcon', () => {
-    const getInstance = (options = {}) => mount(IkIcon, options);
+    const getInstance = (options = {}) => renderDeep(IkIcon, options);
 
     it('renders with correct default state', () => {
         const wrapper = getInstance();

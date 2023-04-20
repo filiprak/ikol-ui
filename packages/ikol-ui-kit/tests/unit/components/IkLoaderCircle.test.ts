@@ -1,8 +1,8 @@
-import { mount } from '@vue/test-utils';
+import { renderDeep } from '@/tests/tools/utils';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 
 describe('IkLoaderCircle', () => {
-    const getInstance = (options = {}) => mount(IkLoaderCircle, options);
+    const getInstance = (options = {}) => renderDeep(IkLoaderCircle, options);
 
     it('renders with correct default state', () => {
         const wrapper = getInstance();

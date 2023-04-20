@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils';
+import { renderDeep } from '@/tests/tools/utils';
 import { IkThemeProvider } from '@/components/IkThemeProvider';
 import { useTheme } from '@/composables';
 
@@ -9,13 +9,13 @@ describe('IkThemeProvider', () => {
     };
 
     it('renders with default state', () => {
-        const wrapper = mount(IkThemeProvider);
+        const wrapper = renderDeep(IkThemeProvider);
         expect(wrapper.classes()).toContain('ik-theme-provider');
         expect(wrapper.classes()).toContain('ik-theme--light');
     });
 
     it('should provide theme to children', () => {
-        const wrapper = mount({
+        const wrapper = renderDeep({
             components: {
                 IkThemeProvider,
                 Child,
@@ -34,7 +34,7 @@ describe('IkThemeProvider', () => {
     });
 
     it('should render with custom tag', () => {
-        const wrapper = mount(IkThemeProvider, {
+        const wrapper = renderDeep(IkThemeProvider, {
             props: {
                 tag: 'span',
             },

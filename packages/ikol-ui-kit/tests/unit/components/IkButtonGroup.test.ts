@@ -1,5 +1,5 @@
-import { IkButtonGroup } from '@/components/IkButtonGroup';
 import { renderDeep } from '@/tests/tools/utils';
+import { IkButtonGroup } from '@/components/IkButtonGroup';
 
 describe('IkButtonGroup', () => {
     const getInstance = (options = {}) => renderDeep(IkButtonGroup, options);
