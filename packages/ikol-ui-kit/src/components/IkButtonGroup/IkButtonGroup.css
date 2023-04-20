@@ -1,36 +1,22 @@
 .ik-button-group {
-    display: block;
+    display: inline-block;
 }
 
-.ik-button-group--equal > * {
-    width: 100% !important;
-}
-
-.ik-button-group--equal-2 > * {
-    width: 50% !important;
-}
-
-.ik-button-group--equal-3 > * {
-    width: 33.3% !important;
-}
-
-.ik-button-group--equal-4 > * {
-    width: 25% !important;
-}
-
-.ik-button-group--equal-5 > * {
-    width: 20% !important;
-}
-
-.ik-button-group--equal-6 > * {
-    width: 16.6% !important;
-}
-
-.ik-button-group--separate {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.ik-button-group--separate > .ik-button {
+.ik-button-group > .ik-button {
     margin: 0 5px 5px 0;
+}
+
+.ik-button-group--equal {
+    display: grid;
+    margin: 0;
+    grid-auto-flow: column;
+    column-gap: 5px;
+    max-width: 100%;
+}
+
+.ik-button-group--equal > .ik-button {
+    margin: 0 0 5px 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
