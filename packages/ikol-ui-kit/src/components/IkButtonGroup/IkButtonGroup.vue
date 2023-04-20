@@ -7,6 +7,7 @@
 import '@/styles';
 import './IkButtonGroup.css';
 import { defineComponent } from 'vue';
+import { IkButton } from '@/components/IkButton';
 
 export default defineComponent({
     name: 'IkButtonGroup',
@@ -35,8 +36,7 @@ export default defineComponent({
                 classes.push('ik-button-group--justified');
             }
             if (this.equal) {
-                console.log(this.$slots.default?.())
-                const n = this.$slots.default?.().filter(vnode => vnode.type)?.length || 1;
+                const n = this.$slots.default?.().filter(vnode => vnode?.type === IkButton)?.length || 1;
                 classes.push(`ik-button-group--equal${n > 1 ? `-${n}` : ''}`);
             }
             return classes;

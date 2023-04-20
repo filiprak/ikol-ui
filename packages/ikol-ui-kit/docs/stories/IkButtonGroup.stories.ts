@@ -6,7 +6,7 @@ import { useTheme } from '@/composables';
 
 
 const meta: Meta<typeof IkButtonGroup> = {
-  title: 'Components/IkButton',
+  title: 'Components/IkButtonGroup',
   tags: ['autodocs'],
   component: IkButtonGroup,
 
