@@ -2,6 +2,11 @@
     <div>
         <h1>{{ greeting }}</h1>
         <p>{{ message }}</p>
+        <IkGrid>
+            <IkGridItem xs-12 :md="3" lg="5" @click="greeting">
+
+            </IkGridItem>
+        </IkGrid>
         <IkThemeProvider theme="light" variant="5">
             this is provided light theme
             <ThemeInfo></ThemeInfo>
@@ -32,6 +37,7 @@
 import { defineComponent } from 'vue';
 import { IkLoaderCircle } from 'ikol-ui-kit/components/IkLoaderCircle';
 import { IkIcon } from 'ikol-ui-kit/components/IkIcon';
+import { IkGrid, IkGridItem } from 'ikol-ui-kit/components/IkGrid';
 import { IkThemeProvider } from 'ikol-ui-kit/components/IkThemeProvider';
 import { clamp } from 'ikol-ui-kit/utils/helpers';
 import ThemeInfo from './ThemeInfo.vue';
@@ -41,7 +47,9 @@ export default defineComponent({
         IkLoaderCircle,
         IkIcon,
         IkThemeProvider,
-        ThemeInfo
+        ThemeInfo,
+        IkGrid,
+        IkGridItem,
     },
     props: {
         name: {

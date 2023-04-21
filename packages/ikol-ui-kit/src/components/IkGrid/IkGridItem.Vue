@@ -28,37 +28,24 @@ export default defineComponent({
         },
     },
     setup(props, { attrs, slots }) {
-        const staticClass = 'ik-grid-item'
-
-        const classes = Object
+        const base_class = 'ik-grid-item'
+        const brk_classes = Object
             .keys(attrs)
-            .filter((key) => {
-                console.log(key, attrs[key])
-                if (key === 'slot') {
-                    return false;
-                }
-                const value = attrs[key];
-                if (key.slice(0, 5) == 'data-') {
-                    return false;
-                }
-                return value || typeof value === 'string';
-            })
-            .map((key) => {
-                return `${staticClass}--col-${key}`;
-            });
+            .filter(key => key.slice(0, 2) != 'on')
+            .map(key => `${base_class}--col-${key}`);
 
-        props.xs && classes.push(`${staticClass}--col-xs-${props.xs}`);
-        props.sm && classes.push(`${staticClass}--col-sm-${props.sm}`);
-        props.md && classes.push(`${staticClass}--col-md-${props.md}`);
-        props.lg && classes.push(`${staticClass}--col-lg-${props.lg}`);
+        props.xs && brk_classes.push(`${base_class}--col-xs-${props.xs}`);
+        props.sm && brk_classes.push(`${base_class}--col-sm-${props.sm}`);
+        props.md && brk_classes.push(`${base_class}--col-md-${props.md}`);
+        props.lg && brk_classes.push(`${base_class}--col-lg-${props.lg}`);
 
         return () => h(
             props.tag,
             {
-                attrs: {
-                    ...attrs,
-                    class: `${staticClass} ${classes.join(' ')}`
-                },
+                class: [
+                    base_class,
+                    brk_classes,
+                ],
             },
             slots.default?.(),
         );
