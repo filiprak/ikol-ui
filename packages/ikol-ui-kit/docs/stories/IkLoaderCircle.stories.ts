@@ -1,7 +1,6 @@
 import type { Meta } from '@storybook/vue3';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 import { h } from 'vue';
-import { useTheme } from '@/composables';
 import { UIDesignColor } from '@/types/utils';
 
 
@@ -17,11 +16,8 @@ const meta: Meta<typeof IkLoaderCircle> = {
       },
       inheritAttrs: false,
       setup() {
-        const theme = useTheme();
-
         return () => {
-          const { dark_theme, ...props } = args;
-          theme.is_dark.value = dark_theme;
+          const props = args;
 
           return Object
             .values(UIDesignColor)

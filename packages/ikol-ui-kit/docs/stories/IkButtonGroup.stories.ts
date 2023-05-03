@@ -2,7 +2,6 @@ import type { Meta } from '@storybook/vue3';
 import { IkButtonGroup } from '@/components/IkButtonGroup';
 import { IkButton } from '@/components/IkButton';
 import { h } from 'vue';
-import { useTheme } from '@/composables';
 
 
 const meta: Meta<typeof IkButtonGroup> = {
@@ -18,11 +17,8 @@ const meta: Meta<typeof IkButtonGroup> = {
       },
       inheritAttrs: false,
       setup() {
-        const theme = useTheme();
-
         return () => {
-          const { dark_theme, ...props } = args;
-          theme.is_dark.value = dark_theme;
+          const props = args;
 
           return h(IkButtonGroup, props, [
             h(IkButton, {}, 'Buttom 1'),
