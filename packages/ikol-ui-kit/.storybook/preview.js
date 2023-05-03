@@ -1,9 +1,21 @@
 import './preview.css';
+import { h } from 'vue';
+import { setupTheme } from '../docs/stories/utils/composables/theme';
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
-  argTypes: { dark_theme: { control: 'boolean' } },
-  args: { dark_theme: false },
+  globalTypes: {
+    theme: {
+      description: 'Global theme for components',
+      defaultValue: 'light',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: ['light', 'dark'],
+        dynamicTitle: true,
+      },
+    },
+  },
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -13,6 +25,12 @@ const preview = {
       },
     },
   },
+  decorators: [
+    (Story, context) => {
+      setupTheme(context);
+      return h(Story());
+    },
+  ],
 };
 
 export default preview;

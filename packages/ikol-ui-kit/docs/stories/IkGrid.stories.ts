@@ -1,18 +1,11 @@
 import type { Meta } from '@storybook/vue3';
 import { IkGrid, IkGridItem } from '@/components/IkGrid';
-import { ref, watchEffect } from 'vue';
-import { useTheme } from '@/composables';
+import { h } from 'vue';
 
-const n = ref(1);
-
-const Item = {
+const ExampleContent = {
   template: `
-    <div class="item" style="padding: 5px; border: 1px solid red;">Item {{ c }}</div>
+    <div class="item" style="padding: 10px; border: 1px dashed red; background: #ff000030">Example</div>
   `,
-  setup() {
-    const c = n.value++;
-    return { c };
-  },
 };
 
 const meta: Meta<typeof IkGrid> = {
@@ -20,35 +13,28 @@ const meta: Meta<typeof IkGrid> = {
   tags: ['autodocs'],
   component: IkGrid,
 
-  render: (args) => {
-    return {
+  render: (args, context) => {
+    return () => h({
       components: {
         IkGrid,
         IkGridItem,
-        Item,
+        ExampleContent,
       },
       inheritAttrs: false,
       template: `
-        <IkGrid v-bind="props">
-          <IkGridItem xs-4><Item/></IkGridItem>
-          <IkGridItem xs-4><Item/></IkGridItem>
-          <IkGridItem xs-4><Item/></IkGridItem>
+        <IkGrid v-bind="args">
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
+          <IkGridItem xs-4><ExampleContent/></IkGridItem>
         </IkGrid>
       `,
       setup() {
-        const theme = useTheme();
-        const { dark_theme, ...props } = args;
-
-        watchEffect(() => {
-          const { dark_theme } = args;
-          theme.is_dark.value = dark_theme;
-        });
-
-        return {
-          props
-        };
+        return { args };
       },
-    };
+    });
   }
 };
 
