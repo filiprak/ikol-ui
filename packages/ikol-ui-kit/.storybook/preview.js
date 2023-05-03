@@ -1,6 +1,6 @@
 import './preview.css';
 import { h } from 'vue';
-import { setupTheme } from '../docs/stories/utils/composables/theme';
+import { setupTheme } from '../docs/stories/utils/theme';
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
@@ -10,7 +10,7 @@ const preview = {
       defaultValue: 'light',
       toolbar: {
         title: 'Theme',
-        icon: 'circlehollow',
+        icon: 'mirror',
         items: ['light', 'dark'],
         dynamicTitle: true,
       },
