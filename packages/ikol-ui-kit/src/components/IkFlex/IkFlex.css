@@ -1,0 +1,76 @@
+.ik-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.ik-flex--reverse {
+    flex-direction: row-reverse;
+}
+
+.ik-flex--wrap {
+    flex-wrap: wrap;
+}
+
+.ik-flex--inline {
+    display: inline-flex;
+}
+
+.ik-flex:not(.ik-flex--wrap-text) > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ik-flex--column {
+    flex-direction: column;
+}
+
+.ik-flex--column.ik-flex--reverse {
+    flex-direction: column-reverse;
+}
+
+.ik-flex--justify-start {
+    justify-content: flex-start;
+}
+
+.ik-flex--justify-end {
+    justify-content: flex-end;
+}
+
+.ik-flex--justify-space {
+    justify-content: space-between;
+}
+
+.ik-flex--align-start {
+    align-items: flex-start;
+}
+
+.ik-flex--align-end {
+    align-items: flex-end;
+}
+
+.ik-flex--grow-fixed > *:first-child,
+.ik-flex--fixed-grow > *:last-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+.ik-flex--grow-fixed > *:not(:first-child),
+.ik-flex--fixed-grow > *:not(:last-child) {
+    flex: 0 0 auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+.ik-flex--full-width-items > * {
+    width: 100%;
+}
+
+.ik-flex--full-height-items > * {
+    height: 100%;
+}
