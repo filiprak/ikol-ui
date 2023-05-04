@@ -11,59 +11,59 @@ export default defineComponent({
         },
         column: {
             type: Boolean,
-            default: false
+            default: false,
         },
         inline: {
             type: Boolean,
-            default: false
+            default: false,
         },
         fullHeightItems: {
             type: Boolean,
-            default: false
+            default: false,
         },
         fullWidthItems: {
             type: Boolean,
-            default: false
+            default: false,
         },
         wrap: {
             type: Boolean,
-            default: false
+            default: false,
         },
         wrapText: {
             type: Boolean,
-            default: false
+            default: false,
         },
         justifyStart: {
             type: Boolean,
-            default: false
+            default: false,
         },
         justifyEnd: {
             type: Boolean,
-            default: false
+            default: false,
         },
         justifySpace: {
             type: Boolean,
-            default: false
+            default: false,
         },
         alignStart: {
             type: Boolean,
-            default: false
+            default: false,
         },
         alignEnd: {
             type: Boolean,
-            default: false
+            default: false,
         },
         fixedAndGrow: {
             type: Boolean,
-            default: false
+            default: false,
         },
         growAndFixed: {
             type: Boolean,
-            default: false
+            default: false,
         },
         reverse: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     setup(props, { slots }) {

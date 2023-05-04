@@ -1,4 +1,4 @@
-import { renderDeep } from "@/tests/tools/utils";
+import { renderDeep } from '@/tests/tools/utils';
 import { IkFlex } from '@/components/IkFlex';
 
 describe('IkFlex', () => {
@@ -125,5 +125,4 @@ describe('IkFlex', () => {
         });
         expect(wrapper.classes()).toContain('ik-flex--reverse');
     });
-
 });
