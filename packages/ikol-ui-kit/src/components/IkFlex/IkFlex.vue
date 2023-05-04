@@ -112,7 +112,7 @@ export default defineComponent({
             classes.push('ik-flex--grow-fixed');
         }
 
-        return h(props.tag, { class: classes }, slots.default?.());
+        return () => h(props.tag, { class: classes }, slots.default?.());
     },
 });
 </script>
