@@ -11,6 +11,7 @@
     "lint:fix": "npm run eslint -- --fix",
     "storybook": "storybook dev -p 6006",
     "test": "jest",
+    "test:clear": "jest --clearCache",
     "build": "npm run build:clean && vite build --config vite.config.js",
     "build:clean": "rm -rf lib/ dist/",
     "build:stories": "storybook build -o docs/dist/",
