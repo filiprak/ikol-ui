@@ -1,37 +1,37 @@
 <script lang="ts">
 import '@/styles';
 import './IkGrid.css';
-import { defineComponent, h } from 'vue'
+import { defineComponent, h } from 'vue';
 
 export default defineComponent({
     name: 'IkGridItem',
     props: {
         tag: {
             type: String,
-            default: 'div'
+            default: 'div',
         },
         xs: {
             type: [String, Number],
-            default: null
+            default: null,
         },
         sm: {
             type: [String, Number],
-            default: null
+            default: null,
         },
         md: {
             type: [String, Number],
-            default: null
+            default: null,
         },
         lg: {
             type: [String, Number],
-            default: null
+            default: null,
         },
     },
     setup(props, { attrs, slots }) {
-        const base_class = 'ik-grid-item'
+        const base_class = 'ik-grid-item';
         const brk_classes = Object
             .keys(attrs)
-            .filter(key => key.slice(0, 2) != 'on')
+            .filter(key => key.slice(0, 2) !== 'on')
             .map(key => `${base_class}--col-${key}`);
 
         props.xs && brk_classes.push(`${base_class}--col-xs-${props.xs}`);
@@ -49,6 +49,6 @@ export default defineComponent({
             },
             slots.default?.(),
         );
-    }
-})
+    },
+});
 </script>
