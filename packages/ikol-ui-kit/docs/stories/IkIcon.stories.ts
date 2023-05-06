@@ -47,23 +47,23 @@ export const Disabled = {
 };
 
 export const Size30px = {
-  args: { icon: 'house', size_px: 30 },
+  args: { icon: 'house', sizePx: 30 },
 };
 
 export const CircleSize30px = {
-  args: { icon: 'house', size_px: 30, circle: true },
+  args: { icon: 'house', sizePx: 30, circle: true },
 };
 
 export const FilledCircleVariant = {
-  args: { icon: 'house', size_px: 30, circle: true, variant: 'filled' },
+  args: { icon: 'house', sizePx: 30, circle: true, variant: 'filled' },
 };
 
 export const RegularThicness = {
-  args: { icon: 'user:regular', size_px: 30, circle: true },
+  args: { icon: 'user:regular', sizePx: 30, circle: true },
 };
 
 export const SolidThicness = {
-  args: { icon: 'user', size_px: 30, circle: true },
+  args: { icon: 'user', sizePx: 30, circle: true },
 };
 
 export default meta;

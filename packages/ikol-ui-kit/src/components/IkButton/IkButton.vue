@@ -12,13 +12,13 @@
             </template>
         </template>
         <template v-else>
-            <IkIcon v-if="prepend_icon || icon"
-                    :icon="prepend_icon || icon"
-                    :class="prepend_icon_class" />
+            <IkIcon v-if="prependIcon || icon"
+                    :icon="prependIcon || icon"
+                    :class="prependIcon_class" />
             <slot></slot>
-            <IkIcon v-if="append_icon"
-                    :icon="append_icon"
-                    :class="append_icon_class" />
+            <IkIcon v-if="appendIcon"
+                    :icon="appendIcon"
+                    :class="appendIcon_class" />
         </template>
     </component>
 </template>
@@ -56,11 +56,11 @@ export default defineComponent({
             type: String,
             default: null,
         },
-        prepend_icon: {
+        prependIcon: {
             type: String,
             default: null,
         },
-        append_icon: {
+        appendIcon: {
             type: String,
             default: null,
         },
@@ -154,12 +154,12 @@ export default defineComponent({
                 };
                 return classes;
             }),
-            prepend_icon_class: computed(() => {
+            prependIcon_class: computed(() => {
                 return {
                     'ik-mr-2': !!slots.default?.(),
                 };
             }),
-            append_icon_class: computed(() => {
+            appendIcon_class: computed(() => {
                 return {
                     'ik-ml-2': !!slots.default?.(),
                 };

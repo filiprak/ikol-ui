@@ -19,7 +19,7 @@ export default defineComponent({
             type: [Number, String],
             default: null,
         },
-        size_px: {
+        sizePx: {
             type: [Number, String],
             default: null,
         },
@@ -56,9 +56,9 @@ export default defineComponent({
                     getIconClasses(props.icon),
                 ],
                 style: {
-                    width: props.size_px && props.circle ? formatCssValue(props.size_px, 'px') : null,
-                    height: props.size_px && props.circle ? formatCssValue(props.size_px, 'px') : null,
-                    fontSize: props.size_px ? formatCssValue(props.circle ? (Number(props.size_px) / 2) : props.size_px, 'px') : null,
+                    width: props.sizePx && props.circle ? formatCssValue(props.sizePx, 'px') : null,
+                    height: props.sizePx && props.circle ? formatCssValue(props.sizePx, 'px') : null,
+                    fontSize: props.sizePx ? formatCssValue(props.circle ? (Number(props.sizePx) / 2) : props.sizePx, 'px') : null,
                 },
             });
         };

@@ -175,7 +175,7 @@ describe('IkButton', () => {
     it('renders with prepend icon', () => {
         const wrapper = getInstance({
             props: {
-                prepend_icon: 'home',
+                prependIcon: 'home',
             },
             slots: {
                 default: 'Test',
@@ -203,7 +203,7 @@ describe('IkButton', () => {
     it('renders with append icon', () => {
         const wrapper = getInstance({
             props: {
-                append_icon: 'home',
+                appendIcon: 'home',
             },
             slots: {
                 default: 'Test',

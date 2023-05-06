@@ -106,7 +106,7 @@ describe('IkIcon', () => {
         const wrapper = getInstance({
             props: {
                 icon: 'home',
-                size_px: 37,
+                sizePx: 37,
             },
         });
 
@@ -119,7 +119,7 @@ describe('IkIcon', () => {
         const wrapper = getInstance({
             props: {
                 icon: 'home:light',
-                size_px: 37,
+                sizePx: 37,
                 circle: true,
             },
         });

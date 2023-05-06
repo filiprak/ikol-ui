@@ -4,6 +4,7 @@ import './IkFlex.css';
 import { defineComponent, h } from 'vue';
 
 export default defineComponent({
+    name: 'IkFlex',
     props: {
         tag: {
             type: String,

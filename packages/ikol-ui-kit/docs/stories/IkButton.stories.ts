@@ -71,7 +71,7 @@ export const PrependIcon = {
 };
 
 export const AppendIcon = {
-  args: { append_icon: 'house' },
+  args: { appendIcon: 'house' },
 };
 
 export const SeparateIcon = {
