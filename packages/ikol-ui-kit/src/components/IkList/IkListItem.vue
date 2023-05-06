@@ -37,7 +37,7 @@ export default defineComponent({
     props: {
         icon: {
             type: String,
-            default: null
+            default: null,
         },
         link: {
             type: String,
@@ -45,23 +45,23 @@ export default defineComponent({
         },
         inline: {
             type: Boolean,
-            default: false
+            default: false,
         },
         disabled: {
             type: Boolean,
-            default: false
+            default: false,
         },
         active: {
             type: Boolean,
-            default: false
+            default: false,
         },
         wrapText: {
             type: Boolean,
-            default: false
+            default: false,
         },
         noSelect: {
             type: Boolean,
-            default: false
+            default: false,
         },
         lines: {
             type: [String, Number],
@@ -69,11 +69,11 @@ export default defineComponent({
         },
         alignStart: {
             type: Boolean,
-            default: false
+            default: false,
         },
         borderBottom: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     setup(props, { attrs }) {

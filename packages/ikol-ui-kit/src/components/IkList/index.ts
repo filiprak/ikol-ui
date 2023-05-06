@@ -1,3 +1,3 @@
-import IkList from "./IkList.vue";
-import IkListItem from "./IkListItem.vue";
+import IkList from './IkList.vue';
+import IkListItem from './IkListItem.vue';
 export { IkListItem, IkList };
