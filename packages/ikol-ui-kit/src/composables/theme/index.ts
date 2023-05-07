@@ -1,4 +1,4 @@
-import { InjectionKey, Ref, computed } from 'vue';
+import { InjectionKey, Ref } from 'vue';
 import ColorsLight from './colors/light';
 import ColorsDark from './colors/dark';
 import { useHead } from '@/composables/head';
