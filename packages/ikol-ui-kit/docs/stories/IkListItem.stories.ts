@@ -178,7 +178,7 @@ export const Append: Meta<typeof IkListItem> = {
 };
 
 export const TwoLines: Meta<typeof IkListItem> = {
-  args: {lines: 2},
+  args: { lines: 2 },
   render: (args) => {
     return () => h({
       components: {
@@ -218,7 +218,7 @@ export const TwoLines: Meta<typeof IkListItem> = {
 };
 
 export const Inline: Meta<typeof IkListItem> = {
-  args: {inline: true},
+  args: { inline: true },
   render: (args) => {
     return () => h({
       components: {
@@ -249,7 +249,7 @@ export const Inline: Meta<typeof IkListItem> = {
 };
 
 export const WrapText: Meta<typeof IkListItem> = {
-  args: {wrapText: true},
+  args: { wrapText: true },
   render: (args) => {
     return () => h({
       components: {
@@ -280,7 +280,7 @@ export const WrapText: Meta<typeof IkListItem> = {
 };
 
 export const Disabled: Meta<typeof IkListItem> = {
-  args: {disabled: true},
+  args: { disabled: true },
   render: (args) => {
     return () => h({
       components: {
@@ -373,7 +373,7 @@ export const Active: Meta<typeof IkListItem> = {
 };
 
 export const BorderBottom: Meta<typeof IkListItem> = {
-  args: {borderBottom: true},
+  args: { borderBottom: true },
   render: (args) => {
     return () => h({
       components: {
@@ -413,7 +413,7 @@ export const BorderBottom: Meta<typeof IkListItem> = {
 };
 
 export const AlignStart: Meta<typeof IkListItem> = {
-  args: {alignStart: true, wrapText: true},
+  args: { alignStart: true, wrapText: true },
   render: (args) => {
     return () => h({
       components: {
