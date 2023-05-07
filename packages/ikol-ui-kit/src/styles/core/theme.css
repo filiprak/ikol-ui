@@ -1,7 +1,6 @@
 /* light mode */
-:root,
-.ik-theme--light,
-.ik-theme--light .ik-theme--static {
+.ik-theme--light:root,
+.ik-theme--light {
     --background-color: #fff;
     --on-background-color-1: #1f2c38;
     --on-background-color-2: #222B45;
@@ -88,8 +87,7 @@
 
 /* dark mode */
 .ik-theme--dark:root,
-.ik-theme--dark,
-.ik-theme--dark .ik-theme--static {
+.ik-theme--dark {
     --background-color: #121212;
     --on-background-color-1: #cdc3ba;
     --on-background-color-2: #b6aea4;
@@ -236,9 +234,4 @@
     --primary-color: var(--theme-9-color);
     --on-primary-color: var(--on-theme-color);
     --primary-color-o1: var(--theme-9-color-o1);
-}
-
-.ik-theme {
-    background-color: var(--background-color);
-    color: var(--on-background-color-1);
 }

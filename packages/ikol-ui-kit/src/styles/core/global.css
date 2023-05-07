@@ -6,6 +6,11 @@ body {
     font-size: 13px;
 }
 
+.ik-theme {
+    background-color: var(--background-color);
+    color: var(--on-background-color-1);
+}
+
 ::selection {
     background-color: var(--primary-color) !important;
     color: var(--on-primary-color) !important;

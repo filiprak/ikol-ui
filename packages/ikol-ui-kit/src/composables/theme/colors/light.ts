@@ -1,6 +1,6 @@
 import { ThemeColors } from "@/composables/theme";
 
-export default new ThemeColors({
+const colors: ThemeColors = {
     background_color: '#fff',
     on_background_color_1: '#1f2c38',
     on_background_color_2: '#222B45',
@@ -83,4 +83,6 @@ export default new ThemeColors({
     theme_9_color_o1: 'rgba(58, 170, 220, 0.1)',
 
     on_theme_color: '#fff',
-});
+};
+
+export default colors;
