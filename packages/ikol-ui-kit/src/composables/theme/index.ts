@@ -1,6 +1,6 @@
 import type { InjectionKey, Ref } from 'vue';
-import LightColors from '@/styles/themes/light';
-import DarkColors from '@/styles/themes/dark';
+import ColorsLight from './colors/light';
+import ColorsDark from './colors/dark';
 import { getCurrentInstance, inject, provide, watchEffect, watch, ref } from 'vue';
 
 export enum ThemeType {
@@ -9,8 +9,8 @@ export enum ThemeType {
 }
 
 const COLORS_MAP = {
-    'light': LightColors,
-    'dark': DarkColors,
+    'light': ColorsLight,
+    'dark': ColorsDark,
 };
 
 export type ThemeOptions = {
