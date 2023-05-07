@@ -1,8 +1,8 @@
-import { InjectionKey, Ref } from 'vue';
+import { getCurrentInstance, inject, provide, watch, ref } from 'vue';
+import type { InjectionKey, Ref } from 'vue';
 import ColorsLight from './colors/light';
 import ColorsDark from './colors/dark';
 import { useHead } from '@/composables/head';
-import { getCurrentInstance, inject, provide, watch, ref } from 'vue';
 
 export enum ThemeType {
     DARK = 'dark',
@@ -10,8 +10,8 @@ export enum ThemeType {
 }
 
 const COLORS_MAP: { [k: string]: ThemeColors } = {
-    'light': ColorsLight,
-    'dark': ColorsDark,
+    light: ColorsLight,
+    dark: ColorsDark,
 };
 
 export type ThemeOptions = {
@@ -127,7 +127,7 @@ function createTheme(options?: ThemeOptions): ThemeInstance {
     const variant = ref<number | null>(options?.variant || null);
     const is_dark = ref(type.value === ThemeType.DARK);
     const css_classes = ref<{ [key: string]: boolean }>({});
-    const colors = ref<ThemeColors>(COLORS_MAP['light']);
+    const colors = ref<ThemeColors>(COLORS_MAP.light);
 
     function updateType(new_type?: ThemeType) {
         new_type = new_type || type.value;
@@ -143,7 +143,7 @@ function createTheme(options?: ThemeOptions): ThemeInstance {
 
         css_classes.value = classes;
         type.value = new_type;
-        colors.value = COLORS_MAP[new_type] || COLORS_MAP['light'];
+        colors.value = COLORS_MAP[new_type] || COLORS_MAP.light;
     }
 
     watch(is_dark, (dark) => {
@@ -171,7 +171,7 @@ function generateCssVariables() {
         const map = COLORS_MAP[type];
 
         if (type === 'light') {
-            css += `:root,\n`;
+            css += ':root,\n';
         }
         css += `.ik-theme--${type}:root,\n`;
         css += `.ik-theme--${type} {\n`;
@@ -184,7 +184,7 @@ function generateCssVariables() {
         css += '}\n';
     }
 
-    for (const name in COLORS_MAP['light']) {
+    for (const name in COLORS_MAP.light) {
         const m = name.match(/^theme_(\d+)_color$/);
         if (m) {
             variants.push(m[1]);
@@ -196,7 +196,7 @@ function generateCssVariables() {
         css += `.ik-theme--${variant}:root,\n`;
         css += `.ik-theme--${variant} {\n`;
         css += `    --primary-color: var(--theme-${variant}-color);\n`;
-        css += `    --on-primary-color: var(--on-theme-color);\n`;
+        css += '    --on-primary-color: var(--on-theme-color);\n';
         css += `    --primary-color-o1: var(--theme-${variant}-color-o1);\n`;
         css += '}\n';
     }

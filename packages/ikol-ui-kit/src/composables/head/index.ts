@@ -1,4 +1,5 @@
-import { Ref, watch } from 'vue';
+import type { Ref } from 'vue';
+import { watch } from 'vue';
 
 interface HeadManager {
     htmlAttrs?: {
@@ -35,14 +36,13 @@ export function useHead(options: HeadManager) {
 
             if (!el) {
                 const first = document.querySelector('style');
-                el = document.createElement('style')
+                el = document.createElement('style');
                 el.setAttribute(`data-${style_id}`, '');
                 el.setAttribute('type', 'text/css');
                 first ? document.head.insertBefore(el, first) : document.head.prepend(el);
             }
 
             el.innerHTML = new_opts.css;
-
         }, { immediate: true, deep: true });
     }
 }
