@@ -1,4 +1,4 @@
-import type { ThemeColors } from '@/composables/theme';
+import type { ThemeColors } from './base';
 
 const colors: ThemeColors = {
     background_color: '#121212',
