@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkListItem renders with append slot 1`] = `
+<div
+  class="ik-list-item"
+>
+  <!--v-if-->
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="ik-list-item__append"
+  >
+    
+    <span>
+      Append slot...
+    </span>
+    
+  </div>
+</div>
+`;
+
+exports[`IkListItem renders with correct default state 1`] = `
+<div
+  class="ik-list-item"
+>
+  <!--v-if-->
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkListItem renders with default slot 1`] = `
+<div
+  class="ik-list-item"
+>
+  <!--v-if-->
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      <div
+        class="test"
+      >
+        List item content slot.
+      </div>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkListItem renders with icon prop 1`] = `
+<div
+  class="ik-list-item"
+>
+  <div
+    class="ik-list-item__prepend"
+  >
+    
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="user:light"
+      tag="i"
+    />
+    
+  </div>
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkListItem renders with link option 1`] = `
+<a
+  class="ik-list-item ik-list-item--clickable"
+  href="/test?unit=true"
+>
+  <!--v-if-->
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</a>
+`;
+
+exports[`IkListItem renders with prepend slot 1`] = `
+<div
+  class="ik-list-item"
+>
+  <div
+    class="ik-list-item__prepend"
+  >
+    
+    <span>
+      Prepend slot...
+    </span>
+    
+  </div>
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkListItem renders with secondary slot 1`] = `
+<div
+  class="ik-list-item"
+>
+  <!--v-if-->
+  <div
+    class="ik-list-item__content"
+  >
+    <div
+      class="ik-list-item__title"
+    >
+      
+      
+    </div>
+    <div
+      class="ik-list-item__secondary"
+    >
+      
+      This is secondary content.
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;

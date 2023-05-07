@@ -101,7 +101,7 @@ export default defineComponent({
             classes.push('ik-list-item--active');
         }
 
-        if (attrs.onClick) {
+        if (attrs.onClick || props.link) {
             classes.push('ik-list-item--clickable');
         }
 
