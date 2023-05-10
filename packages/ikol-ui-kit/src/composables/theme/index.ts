@@ -125,9 +125,7 @@ const global = createTheme();
 useHead({
     htmlAttrs: { class: global.css_classes },
     styles: {
-        'ik-colors': ref({
-            css: generateCssVariables(),
-        }),
+        'ik-colors': ref({ css: generateCssVariables() }),
     },
 });
 
