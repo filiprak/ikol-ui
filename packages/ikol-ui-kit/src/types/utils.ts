@@ -11,3 +11,9 @@ export enum UIDesignColor {
     accent = 'accent',
     default = 'default',
 }
+
+export enum UIElemSize {
+    xs = 'xs',
+    md = 'md',
+    lg = 'lg',
+}

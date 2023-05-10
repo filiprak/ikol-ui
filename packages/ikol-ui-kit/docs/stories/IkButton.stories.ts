@@ -1,7 +1,8 @@
 import type { Meta } from '@storybook/vue3';
 import { IkButton } from '@/components/IkButton';
+import { IkButtonGroup } from '@/components/IkButtonGroup';
 import { h } from 'vue';
-import { UIDesignColor } from '@/types/utils';
+import { UIDesignColor, UIElemSize } from '@/types/utils';
 
 
 const meta: Meta<typeof IkButton> = {
@@ -58,8 +59,29 @@ export const Circle = {
   args: { circle: true, icon: 'cog', default: '' },
 };
 
-export const Large = {
-  args: { size: 'lg' },
+export const Size: Meta<typeof IkButton> = {
+  args: {},
+  render: (args) => {
+    return {
+      components: {
+        IkButton,
+        IkButtonGroup,
+      },
+      inheritAttrs: false,
+      template: `
+        <div v-for="size in sizes">
+          <IkButtonGroup>
+            <IkButton :size="size">Button</IkButton>
+            <IkButton :size="size" round>Button</IkButton>
+            <IkButton :size="size" circle icon="cog"></IkButton>
+          </IkButtonGroup>
+        </div>
+      `,
+      setup() {
+        return { args, sizes: UIElemSize };
+      },
+    };
+  }
 };
 
 export const Block = {
