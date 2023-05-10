@@ -107,6 +107,7 @@ export const Append: Meta<typeof IkAlert> = {
             <IkButton design="primary" variant="flat" icon="pen" circle></IkButton>
             <IkButton design="primary" variant="flat" icon="share" circle></IkButton>
             <IkButton design="primary" variant="flat" icon="cog" circle></IkButton>
+            <IkButton design="primary" variant="flat" icon="times" circle></IkButton>
           </template>
         </IkAlert>
       `,
