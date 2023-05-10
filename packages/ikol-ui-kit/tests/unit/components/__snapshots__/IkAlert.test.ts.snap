@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkAlert renders with append slot 1`] = `
+<div
+  class="ik-alert"
+>
+  <!--v-if-->
+  <div
+    class="ik-alert__content"
+  >
+    
+    
+  </div>
+  <div
+    class="ik-alert__append"
+  >
+    
+    <span>
+      Append slot...
+    </span>
+    
+  </div>
+</div>
+`;
+
+exports[`IkAlert renders with correct default state 1`] = `
+<div
+  class="ik-alert"
+>
+  <!--v-if-->
+  <div
+    class="ik-alert__content"
+  >
+    
+    
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkAlert renders with default slot 1`] = `
+<div
+  class="ik-alert"
+>
+  <!--v-if-->
+  <div
+    class="ik-alert__content"
+  >
+    
+    <div
+      class="test"
+    >
+      List item content slot.
+    </div>
+    
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkAlert renders with icon prop 1`] = `
+<div
+  class="ik-alert"
+>
+  <div
+    class="ik-alert__prepend"
+  >
+    
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="user:light"
+      tag="i"
+    />
+    
+  </div>
+  <div
+    class="ik-alert__content"
+  >
+    
+    
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`IkAlert renders with prepend slot 1`] = `
+<div
+  class="ik-alert"
+>
+  <div
+    class="ik-alert__prepend"
+  >
+    
+    <span>
+      Prepend slot...
+    </span>
+    
+  </div>
+  <div
+    class="ik-alert__content"
+  >
+    
+    
+  </div>
+  <!--v-if-->
+</div>
+`;
