@@ -24,7 +24,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'IkAlert',
     components: {
-        IkIcon
+        IkIcon,
     },
     props: {
         tag: {
