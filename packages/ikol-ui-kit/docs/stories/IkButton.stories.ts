@@ -71,9 +71,11 @@ export const Size: Meta<typeof IkButton> = {
       template: `
         <div v-for="size in sizes">
           <IkButtonGroup>
-            <IkButton :size="size">Button</IkButton>
-            <IkButton :size="size" round>Button</IkButton>
-            <IkButton :size="size" circle icon="cog"></IkButton>
+            <IkButton :size="size" design="primary">Button</IkButton>
+            <IkButton :size="size" design="primary" loading>Button</IkButton>
+            <IkButton :size="size" design="success" circle icon="cog"></IkButton>
+            <IkButton :size="size" design="error" round>Button</IkButton>
+            <IkButton :size="size" design="default" separate icon="cog">Button</IkButton>
           </IkButtonGroup>
         </div>
       `,

@@ -51,6 +51,12 @@
     border-radius: 48px;
 }
 
+.ik-button--size-xs {
+    line-height: normal;
+    height: 24px;
+    padding: 2px 12px;
+}
+
 .ik-button--size-lg {
     height: 48px;
     padding: 12px 24px;
@@ -252,6 +258,13 @@
     border-radius: 50%;
 }
 
+.ik-button--circle.ik-button--size-xs {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    line-height: normal;
+}
+
 .ik-button--circle.ik-button--size-lg {
     width: 48px;
     height: 48px;
@@ -291,6 +304,11 @@
     justify-content: center;
     border-radius: 50%;
     background-color: var(--surface-darken-color);
+}
+
+.ik-button--separate.ik-button--size-xs .ik-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .ik-button--separate.ik-button--size-lg .ik-icon {
