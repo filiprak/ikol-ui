@@ -55,7 +55,7 @@ export default defineComponent({
             classes.push(`ik-alert--${props.variant}`);
         }
 
-        return { classes, icon: props.icon };
+        return { classes };
     },
 });
 </script>

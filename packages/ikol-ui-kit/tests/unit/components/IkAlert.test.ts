@@ -74,5 +74,4 @@ describe('IkAlert', () => {
         expect(wrapper.text()).toContain('Prepend slot...');
         expect(wrapper.element).toMatchSnapshot();
     });
-
 });
