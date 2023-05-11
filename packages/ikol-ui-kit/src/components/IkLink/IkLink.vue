@@ -48,12 +48,16 @@ export default defineComponent({
             switch (props.type) {
             case 'url':
                 href = buildUri(props.to);
+                break;
             case 'email':
                 href = buildUri(props.to, { protocol: 'mailto' });
+                break;
             case 'phone':
                 href = buildUri(props.to, { protocol: 'tel' });
+                break;
             default:
                 href = buildUri(props.to);
+                break;
             }
         } else {
             href = 'javascript:void(0);';
