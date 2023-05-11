@@ -1,7 +1,6 @@
 import { buildUri } from '@/utils/helpers';
 
 describe('buildUri', () => {
-
     it('works with empty base', () => {
         const uri = buildUri('');
         expect(uri).toEqual('');
@@ -26,51 +25,51 @@ describe('buildUri', () => {
     });
 
     it('appends query', () => {
-        let uri = buildUri('index.php', {
+        const uri = buildUri('index.php', {
             query: {
                 cse: 30,
                 cmo: 101,
                 stxaction: 'test',
                 empty: '',
                 nulled: null,
-            }
+            },
         });
         expect(uri).toEqual('index.php?cse=30&cmo=101&stxaction=test&empty=&nulled=');
     });
 
     it('appends query when already exists', () => {
-        let uri = buildUri('index.php?t=1', {
+        const uri = buildUri('index.php?t=1', {
             query: {
                 cse: 30,
                 cmo: 101,
                 stxaction: 'test',
-            }
+            },
         });
         expect(uri).toEqual('index.php?t=1&cse=30&cmo=101&stxaction=test');
     });
 
     it('appends hash', () => {
-        let uri = buildUri('index.php', {
+        const uri = buildUri('index.php', {
             query: {
                 cse: 0,
                 cmo: 0,
                 stxaction: 'test',
             },
-            hash: '/path/to/resource'
+            hash: '/path/to/resource',
         });
         expect(uri).toEqual('index.php?cse=0&cmo=0&stxaction=test#/path/to/resource');
     });
 
     it('appends hash when already exists', () => {
-        let uri = buildUri('index.php?t=1#/root', {
-            hash: '/path/to/resource'
+        const uri = buildUri('index.php?t=1#/root', {
+            hash: '/path/to/resource',
         });
         expect(uri).toEqual('index.php?t=1#/root/path/to/resource');
     });
 
     it('appends script', () => {
         let uri = buildUri('www.test.com/', {
-            script: 'script1'
+            script: 'script1',
         });
         expect(uri).toEqual('www.test.com/script1');
         uri = buildUri('www.test.com', {
@@ -79,5 +78,4 @@ describe('buildUri', () => {
         });
         expect(uri).toEqual('www.test.com/script1#foobar');
     });
-
 });

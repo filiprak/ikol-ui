@@ -7,27 +7,27 @@ export default defineComponent({
     props: {
         to: {
             type: String,
-            default: null
+            default: null,
         },
         type: {
             type: String,
-            default: 'url'
+            default: 'url',
         },
         target: {
             type: String,
-            default: null
+            default: null,
         },
         underline: {
             type: Boolean,
-            default: false
+            default: false,
         },
         plain: {
             type: Boolean,
-            default: false
+            default: false,
         },
         design: {
             type: String,
-            default: null
+            default: null,
         },
     },
     setup(props, { slots }) {
@@ -46,20 +46,20 @@ export default defineComponent({
 
         if (props.to) {
             switch (props.type) {
-                case 'url':
-                    href = buildUri(props.to);
-                case 'email':
-                    href = buildUri(props.to, { protocol: 'mailto' });
-                case 'phone':
-                    href = buildUri(props.to, { protocol: 'tel' });
-                default:
-                    href = buildUri(props.to);
+            case 'url':
+                href = buildUri(props.to);
+            case 'email':
+                href = buildUri(props.to, { protocol: 'mailto' });
+            case 'phone':
+                href = buildUri(props.to, { protocol: 'tel' });
+            default:
+                href = buildUri(props.to);
             }
         } else {
             href = 'javascript:void(0);';
         }
 
-        return () => h('a', { class: classes, href: href }, slots.default?.());
+        return () => h('a', { class: classes, href }, slots.default?.());
     },
 });
 </script>
