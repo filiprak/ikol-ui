@@ -57,6 +57,11 @@
     padding: 2px 12px;
 }
 
+.ik-button--size-md {
+    height: 38px;
+    padding: 4px 20px;
+}
+
 .ik-button--size-lg {
     height: 48px;
     padding: 12px 24px;
@@ -265,6 +270,12 @@
     line-height: normal;
 }
 
+.ik-button--circle.ik-button--size-md {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+}
+
 .ik-button--circle.ik-button--size-lg {
     width: 48px;
     height: 48px;
@@ -309,6 +320,11 @@
 .ik-button--separate.ik-button--size-xs .ik-icon {
     width: 24px;
     height: 24px;
+}
+
+.ik-button--separate.ik-button--size-md .ik-icon {
+    width: 38px;
+    height: 38px;
 }
 
 .ik-button--separate.ik-button--size-lg .ik-icon {

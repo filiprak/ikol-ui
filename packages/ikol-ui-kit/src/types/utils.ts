@@ -14,6 +14,7 @@ export enum UIDesignColor {
 
 export enum UIElemSize {
     xs = 'xs',
+    sm = 'sm',
     md = 'md',
     lg = 'lg',
 }
