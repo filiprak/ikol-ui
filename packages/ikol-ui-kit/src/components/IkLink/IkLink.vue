@@ -40,7 +40,7 @@ export default defineComponent({
             classes.push('ik-link--underline');
         }
         if (props.plain) {
-            classes.push('ik-link--underline');
+            classes.push('ik-link--plain');
         }
         if (props.design) {
             classes.push(`ik-link--${props.design}`);
@@ -65,7 +65,7 @@ export default defineComponent({
             href = 'javascript:void(0);';
         }
 
-        return () => h('a', { class: classes, href }, slots.default?.());
+        return () => h('a', { class: classes, href, target: props.target }, slots.default?.());
     },
 });
 </script>
