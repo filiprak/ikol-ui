@@ -7,7 +7,8 @@
   "scripts": {
     "tsc": "vue-tsc --noEmit",
     "eslint": "eslint src/ tests/ --rulesdir ./tests/eslint/rules",
-    "lint": "concurrently 'npm:tsc' 'npm:eslint' --kill-others-on-fail",
+    "stylelint": "stylelint --config stylelint.config.js src/**/*.css",
+    "lint": "concurrently 'npm:tsc' 'npm:eslint' 'npm:stylelint' --kill-others-on-fail",
     "lint:fix": "npm run eslint -- --fix",
     "storybook": "storybook dev -p 6006",
     "test": "jest",
@@ -81,6 +82,8 @@
     "rollup": "^3.20.2",
     "rollup-plugin-multi-input": "^1.4.1",
     "storybook": "^7.0.2",
+    "stylelint": "^15.6.1",
+    "stylelint-config-recommended": "^12.0.0",
     "ts-jest": "^29.1.0",
     "vite": "^4.2.1",
     "vite-plugin-dts": "^2.2.0",

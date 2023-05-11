@@ -87,6 +87,7 @@ code,
 kbd,
 pre,
 samp {
+    /* stylelint-disable-next-line font-family-no-duplicate-names */
     font-family: monospace, monospace;
     /* Specify the font family of code elements */
 }
@@ -267,6 +268,7 @@ legend {
     /* Correct the text wrapping in Edge and IE */
     white-space: normal;
     /* Correct the text wrapping in Edge and IE */
+    /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
     max-width: 100%;
     /* Correct the text wrapping in Edge 18- and IE */
 }
