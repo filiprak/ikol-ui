@@ -1,0 +1,31 @@
+.ik-link:not(.ik-link--underline) {
+    text-decoration: none !important;
+}
+
+.ik-link {
+    color: var(--primary-color);
+}
+
+.ik-link--plain.ik-link {
+    color: inherit !important;
+}
+
+.ik-link--default {
+    color: var(--on-background-color-3) !important;
+}
+
+.ik-link--primary {
+    color: var(--primary-color) !important;
+}
+
+.ik-link--success {
+    color: var(--success-color) !important;
+}
+
+.ik-link--error {
+    color: var(--error-color) !important;
+}
+
+.ik-link--accent {
+    color: var(--accent-color) !important;
+}
