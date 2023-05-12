@@ -48,5 +48,10 @@ inquirer
             NAME_KEBAB: kebabize(name),
         });
 
+        await useTemplateFile('component-story.ts', path.resolve(ROOT_DIR, `docs/stories/${name}.stories.ts`), {
+            NAME: name,
+            NAME_KEBAB: kebabize(name),
+        });
+
         console.log(`Generated new component: ${name}`);
     });
