@@ -35,11 +35,15 @@ inquirer
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
-        await useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/${name}.css`), {
+
+        const css = `.${kebabize(name)} {}\n`;
+        await useTemplate(css, path.resolve(ROOT_DIR, `src/components/${name}/${name}.css`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
-        await useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/index.ts`), {
+
+        const index = `import ${name} from './${name}.vue';\nexport { ${name} };\n`;
+        await useTemplate(index, path.resolve(ROOT_DIR, `src/components/${name}/index.ts`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
