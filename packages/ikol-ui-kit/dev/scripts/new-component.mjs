@@ -53,5 +53,10 @@ inquirer
             NAME_KEBAB: kebabize(name),
         });
 
+        await useTemplateFile('component-test.ts', path.resolve(ROOT_DIR, `tests/unit/components/${name}.test.ts`), {
+            NAME: name,
+            NAME_KEBAB: kebabize(name),
+        });
+
         console.log(`Generated new component: ${name}`);
     });
