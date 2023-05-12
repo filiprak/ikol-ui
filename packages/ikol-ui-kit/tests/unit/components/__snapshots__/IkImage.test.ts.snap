@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkImage renders optimized for window size 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image ik-image--contain"
+  loading="lazy"
+  src="http://image.com/image.png"
+/>
+`;
+
+exports[`IkImage renders rounded 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image ik-image--round"
+  loading="lazy"
+  src="http://image.com/image.png"
+/>
+`;
+
+exports[`IkImage renders with correct default state 1`] = `
+<div
+  alt="{{_*en*Image_}}"
+  class="ik-image ik-image--empty"
+  loading="lazy"
+/>
+`;
+
+exports[`IkImage renders with custom height 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image"
+  loading="lazy"
+  src="http://image.com/image.png"
+  style="height: 59px;"
+/>
+`;
+
+exports[`IkImage renders with custom size 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image"
+  loading="lazy"
+  src="http://image.com/image.png"
+  style="width: 97px; height: 97px;"
+/>
+`;
+
+exports[`IkImage renders with custom width 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image"
+  loading="lazy"
+  src="http://image.com/image.png"
+  style="width: 59px;"
+/>
+`;
+
+exports[`IkImage renders with height attribute 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image"
+  height="59"
+  loading="lazy"
+  src="http://image.com/image.png"
+/>
+`;
+
+exports[`IkImage renders with src and alt prop 1`] = `
+<img
+  alt="Image Alt"
+  class="ik-image"
+  loading="lazy"
+  src="http://image.com/image.png"
+/>
+`;
+
+exports[`IkImage renders with width attribute 1`] = `
+<img
+  alt="{{_*en*Image_}}"
+  class="ik-image"
+  loading="lazy"
+  src="http://image.com/image.png"
+  width="59"
+/>
+`;
