@@ -1,1 +1,29 @@
-.ik-image {}
+.ik-image {
+    position: relative;
+}
+
+.ik-image--round {
+    border-radius: 50%;
+}
+
+.ik-image--contain {
+    object-fit: contain;
+}
+
+.ik-image--cover {
+    object-fit: cover;
+}
+
+.ik-image--loading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ik-image--loading .ik-image {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+}
