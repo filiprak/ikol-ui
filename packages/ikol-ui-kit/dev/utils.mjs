@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { existsSync } from 'fs';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -16,7 +16,7 @@ export async function useTemplate(templateStr, outputFilepath, variables) {
     return variables[key] || match;
   });
 
-  if (!fs.existsSync(path.dirname(outputFilepath))) {
+  if (!existsSync(path.dirname(outputFilepath))) {
     await mkdir(path.dirname(outputFilepath));
   }
   await writeFile(outputFilepath, updatedTemplate);

@@ -3,39 +3,46 @@ import path from 'path';
 import { useTemplate, useTemplateFile, ROOT_DIR } from '../utils.mjs';
 import { kebabize } from '../utils.mjs';
 
+const arg_name = process.argv[2];
+const questions = [
+    {
+        type: 'input',
+        name: 'componentName',
+        message: 'What is the name of component to generate?',
+        validate (input) {
+            return !!(input || '').trim();
+        },
+        _skip: arg_name,
+    },
+    {
+        type: 'list',
+        name: 'renderType',
+        message: 'What component render type to generate?',
+        choices: [
+            'Template',
+            'Render function',
+        ],
+    },
+].filter(i => !i._skip);
+
 inquirer
-    .prompt([
-        {
-            type: 'input',
-            name: 'componentName',
-            message: 'What is the name of component to generate?',
-            validate (input) {
-                return !!(input || '').trim();
-            },
-        },
-        {
-            type: 'list',
-            name: 'renderType',
-            message: 'What component render type to generate?',
-            choices: [
-                'Template',
-                'Render function',
-            ],
-        },
-    ])
-    .then(answers => {
-        const name = answers.componentName;
+    .prompt(questions)
+    .then(async answers => {
+        const name = answers.componentName || arg_name;
+        const template = answers.renderType == 'Template' ? 'component-tpl.vue' : 'component-rdr.vue';
         
-        useTemplateFile('component.vue', path.resolve(ROOT_DIR, `src/components/${name}/${name}.vue`), {
+        await useTemplateFile(template, path.resolve(ROOT_DIR, `src/components/${name}/${name}.vue`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
-        useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/${name}.css`), {
+        await useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/${name}.css`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
-        useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/index.ts`), {
+        await useTemplate('', path.resolve(ROOT_DIR, `src/components/${name}/index.ts`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),
         });
+
+        console.log(`Generated new component: ${name}`);
     });
