@@ -6,7 +6,7 @@ import { defineComponent, h } from 'vue';
 export default defineComponent({
     name: '[[NAME]]',
     props: {
-        
+
     },
     setup(props, { slots }) {
         const classes = ['[[NAME_KEBAB]]'];
