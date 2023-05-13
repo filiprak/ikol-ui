@@ -1,14 +1,14 @@
 import type { Ref } from 'vue';
 import { watch } from 'vue';
 
-interface HeadManager {
+interface HeadOptions {
     htmlAttrs?: {
         class?: Ref<{ [key: string]: boolean }>,
     },
     styles?: { [key: string]: Ref<{ css: string }> },
 }
 
-export function useHead(options: HeadManager) {
+export function useHead(options: HeadOptions) {
     if (options.htmlAttrs?.class) {
         watch(options.htmlAttrs?.class, (new_classes, old_classes = {}) => {
             const el = document.documentElement;
