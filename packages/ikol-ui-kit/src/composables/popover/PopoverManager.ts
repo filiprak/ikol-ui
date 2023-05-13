@@ -4,58 +4,58 @@ import type { IkPopoverT } from '@/components/IkPopover';
 import { getRandomString } from '@/utils/helpers';
 
 export class PopoverManager {
-    private INSTANCES: { [id: string]: IkPopoverT } = {};
+    private instances: { [id: string]: IkPopoverT } = {};
     private activators: Ref<{ [id: string]: HTMLElement[] }> = ref({});
 
-    activate(id: string, activator_id: string) {
-        const popover = this.INSTANCES[id];
+    public activate(id: string, activator_id: string) {
+        const popover = this.instances[id];
         if (popover) {
             popover.activate(activator_id);
         }
     }
-    close(id: string) {
-        const popover = this.INSTANCES[id];
+    public close(id: string) {
+        const popover = this.instances[id];
         if (popover) {
             popover.close();
         }
     }
-    closeAllExcept(except_ids: string[]) {
+    public closeAllExcept(except_ids: string[]) {
         Object
-            .keys(this.INSTANCES)
+            .keys(this.instances)
             .forEach((id) => {
                 if (except_ids.indexOf(id) < 0) {
-                    this.INSTANCES[id].close();
+                    this.instances[id].close();
                 }
             });
     }
-    closeAll() {
+    public closeAll() {
         Object
-            .keys(this.INSTANCES)
+            .keys(this.instances)
             .forEach((id) => {
-                this.INSTANCES[id].close();
+                this.instances[id].close();
             });
     }
-    registerInstance(vm: IkPopoverT) {
+    public registerInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
-                this.INSTANCES[vm.id] = vm;
+                this.instances[vm.id] = vm;
             } else {
                 const random_id = getRandomString(16);
                 (vm as any)._popover_random_id = random_id;
-                this.INSTANCES[random_id] = vm;
+                this.instances[random_id] = vm;
             }
         }
     }
-    unregisterInstance(vm: IkPopoverT) {
+    public unregisterInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
-                delete this.INSTANCES[vm.id];
+                delete this.instances[vm.id];
             } else {
-                delete this.INSTANCES[(vm as any)._popover_random_id];
+                delete this.instances[(vm as any)._popover_random_id];
             }
         }
     }
-    _updateActivator(popover_id: string, activator_id: string, el: HTMLElement) {
+    public updateActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');
 
@@ -70,7 +70,7 @@ export class PopoverManager {
             }
         }
     }
-    _cleanupActivator(popover_id: string, activator_id: string, el: HTMLElement) {
+    public cleanupActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');
 
