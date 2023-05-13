@@ -7,26 +7,26 @@
         <div class="ik-divider__line"></div>
     </div>
 </template>
-  
+
 <script lang="ts">
 import '@/styles';
 import './IkDivider.css';
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'IkDivider',
     props: {
         noBottomMargin: {
             type: Boolean,
-            default: false
+            default: false,
         },
         noMargin: {
             type: Boolean,
-            default: false
+            default: false,
         },
         darken: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     setup(props) {
@@ -42,6 +42,6 @@ export default defineComponent({
         }
 
         return { classes };
-    }
-})
+    },
+});
 </script>

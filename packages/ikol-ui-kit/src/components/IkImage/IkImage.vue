@@ -1,7 +1,8 @@
 <script lang="ts">
 import '@/styles';
 import './IkImage.css';
-import { defineComponent, h, ref, Ref } from 'vue';
+import type { Ref } from 'vue';
+import { defineComponent, h, ref } from 'vue';
 import { IkLoaderCircle } from '@/components/IkLoaderCircle';
 
 export default defineComponent({
@@ -9,47 +10,47 @@ export default defineComponent({
     props: {
         src: {
             type: String,
-            default: null
+            default: null,
         },
         alt: {
             type: String,
-            default: null
+            default: null,
         },
         round: {
             type: Boolean,
-            default: false
+            default: false,
         },
         size: {
             type: Number,
-            default: null
+            default: null,
         },
         width: {
             type: Number,
-            default: null
+            default: null,
         },
         height: {
             type: Number,
-            default: null
+            default: null,
         },
         width_attr: {
             type: Number,
-            default: null
+            default: null,
         },
         height_attr: {
             type: Number,
-            default: null
+            default: null,
         },
         contain: {
             type: Boolean,
-            default: false
+            default: false,
         },
         cover: {
             type: Boolean,
-            default: false
+            default: false,
         },
         loader: {
             type: Boolean,
-            default: false
+            default: false,
         },
     },
     setup(props, { slots }) {
@@ -79,14 +80,18 @@ export default defineComponent({
                 height: props.height_attr || null,
                 style: styles,
 
-                onLoad: props.loader ? () => {
-                    loading.value = false;
-                    error.value = null;
-                } : null,
-                onError: props.loader ? (event: Event) => {
-                    loading.value = false;
-                    error.value = event;
-                } : null,
+                onLoad: props.loader
+                    ? () => {
+                        loading.value = false;
+                        error.value = null;
+                    }
+                    : null,
+                onError: props.loader
+                    ? (event: Event) => {
+                        loading.value = false;
+                        error.value = event;
+                    }
+                    : null,
 
             }, slots.default?.());
 

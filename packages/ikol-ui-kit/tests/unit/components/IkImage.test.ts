@@ -19,8 +19,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                alt: 'Image Alt'
-            }
+                alt: 'Image Alt',
+            },
         });
         expect(wrapper.element.tagName).toBe('IMG');
         expect(wrapper.attributes('src')).toBe('http://image.com/image.png');
@@ -32,8 +32,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                round: true
-            }
+                round: true,
+            },
         });
         expect(wrapper.classes()).toContain('ik-image--round');
         expect(wrapper.element).toMatchSnapshot();
@@ -43,8 +43,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                contain: true
-            }
+                contain: true,
+            },
         });
         expect(wrapper.classes()).toContain('ik-image--contain');
         expect(wrapper.element).toMatchSnapshot();
@@ -54,8 +54,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                size: 97
-            }
+                size: 97,
+            },
         });
         expect(wrapper.attributes('style')).toContain('width: 97px;');
         expect(wrapper.attributes('style')).toContain('height: 97px;');
@@ -66,8 +66,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                width: 59
-            }
+                width: 59,
+            },
         });
         expect(wrapper.attributes('style')).toContain('width: 59px;');
         expect(wrapper.attributes('style')).not.toContain('height');
@@ -78,8 +78,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                height: 59
-            }
+                height: 59,
+            },
         });
         expect(wrapper.attributes('style')).toContain('height: 59px;');
         expect(wrapper.attributes('style')).not.toContain('width');
@@ -90,8 +90,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                contain: true
-            }
+                contain: true,
+            },
         });
         expect(wrapper.classes()).toContain('ik-image--contain');
     });
@@ -100,8 +100,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                cover: true
-            }
+                cover: true,
+            },
         });
         expect(wrapper.classes()).toContain('ik-image--cover');
     });
@@ -112,12 +112,12 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                onClick: clickMock
+                onClick: clickMock,
             },
         });
         wrapper.find('img').trigger('click');
 
-        expect(clickMock).toBeCalled();
+        expect(clickMock).toHaveBeenCalled();
     });
 
     it('adds custom attribute class', () => {
@@ -149,8 +149,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                width_attr: 59
-            }
+                width_attr: 59,
+            },
         });
         expect(wrapper.attributes('width')).toBe('59');
         expect(wrapper.element).toMatchSnapshot();
@@ -160,8 +160,8 @@ describe('IkImage', () => {
         const wrapper = getInstance({
             propsData: {
                 src: 'http://image.com/image.png',
-                height_attr: 59
-            }
+                height_attr: 59,
+            },
         });
         expect(wrapper.attributes('height')).toBe('59');
         expect(wrapper.element).toMatchSnapshot();
