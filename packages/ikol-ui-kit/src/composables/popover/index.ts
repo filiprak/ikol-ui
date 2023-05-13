@@ -1,4 +1,4 @@
-import type { Ref } from 'vue';
+import { Ref, watchEffect } from 'vue';
 import { ref } from 'vue';
 import type { IkPopoverT } from '@/components/IkPopover';
 import { getRandomString } from '@/utils/helpers';
@@ -9,20 +9,24 @@ class PopoverManager {
     private INSTANCES: { [id: string]: IkPopoverT } = {};
     private activators: Ref<{ [id: string]: HTMLElement[] }> = ref({});
 
+    constructor() {
+        watchEffect(() => {
+            console.log(this.INSTANCES)
+        });
+    }
+
     activate(id: string, activator_id: string) {
         const popover = this.INSTANCES[id];
         if (popover) {
             popover.activate(activator_id);
         }
     }
-
     close(id: string) {
         const popover = this.INSTANCES[id];
         if (popover) {
             popover.close();
         }
     }
-
     closeAllExcept(except_ids: string[]) {
         Object
             .keys(this.INSTANCES)
@@ -32,7 +36,6 @@ class PopoverManager {
                 }
             });
     }
-
     closeAll() {
         Object
             .keys(this.INSTANCES)
@@ -40,7 +43,6 @@ class PopoverManager {
                 this.INSTANCES[id].close();
             });
     }
-
     registerInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
@@ -52,7 +54,6 @@ class PopoverManager {
             }
         }
     }
-
     unregisterInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
@@ -62,7 +63,6 @@ class PopoverManager {
             }
         }
     }
-
     _updateActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');
@@ -78,7 +78,6 @@ class PopoverManager {
             }
         }
     }
-
     _cleanupActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');
@@ -95,7 +94,7 @@ class PopoverManager {
     }
 };
 
-const manager = (window.parent as any).w = new PopoverManager();
+const manager = new PopoverManager();
 
 export function usePopover(): PopoverManager {
     return manager;

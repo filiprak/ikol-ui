@@ -14,7 +14,7 @@ import {
 import { DATA_KEY, usePopover } from '@/composables/popover';
 import { clamp, formatCssValue, getZIndex } from '@/utils/helpers';
 
-import { useRender, useInstance } from '@/composables/core';
+import { useRender, useInstance } from '@/composables/helpers';
 import type { IkPopoverT } from '.';
 
 const CONTENT_DATA_KEY = 'ik-popover-content';
