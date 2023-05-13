@@ -13,24 +13,24 @@ export function getIconClasses(icon: string): string[] {
 
     if (parts.length > 1) {
         switch (parts[1]) {
-        case 'thin':
-            prefix = 'fa-thin';
-            break;
-        case 'light':
-            prefix = 'fa-light';
-            break;
-        case 'regular':
-            prefix = 'fa-regular';
-            break;
-        case 'solid':
-            prefix = 'fa-solid';
-            break;
-        case 'duotone':
-            prefix = 'fa-duotone';
-            break;
-        case 'brands':
-            prefix = 'fa-brands';
-            break;
+            case 'thin':
+                prefix = 'fa-thin';
+                break;
+            case 'light':
+                prefix = 'fa-light';
+                break;
+            case 'regular':
+                prefix = 'fa-regular';
+                break;
+            case 'solid':
+                prefix = 'fa-solid';
+                break;
+            case 'duotone':
+                prefix = 'fa-duotone';
+                break;
+            case 'brands':
+                prefix = 'fa-brands';
+                break;
         }
     }
 

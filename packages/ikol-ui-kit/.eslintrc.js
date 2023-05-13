@@ -20,7 +20,7 @@ module.exports = {
     rules: {
         'no-console': 'error',
         'semi': ['warn', 'always'],
-        'indent': ['error', 4],
+        'indent': ['error', 4, { SwitchCase: 1 }],
         'no-var': 'error',
         'no-unused-vars': 'off',
         'no-undef': 'error',
