@@ -1,7 +1,7 @@
 <script lang="ts">
 import '@/styles';
 import './IkPopover.css';
-import type { VNode } from 'vue';
+import { VNode, watchEffect } from 'vue';
 import {
     defineComponent,
     h,
@@ -16,6 +16,7 @@ import { clamp, formatCssValue, getZIndex } from '@/utils/helpers';
 import { useInstance } from '@/composables/instance';
 import { useRender } from '@/composables/render';
 import type { IkPopoverT } from '.';
+import { useDevice } from '@/composables/device';
 
 const CONTENT_DATA_KEY = 'ik-popover-content';
 
@@ -97,6 +98,7 @@ export default defineComponent({
     setup(props, { slots, emit }) {
         const self = useInstance<IkPopoverT>();
         const manager = usePopover();
+        const device = useDevice();
         const root_el = ref<HTMLElement | null>(null);
         const content_el = ref<HTMLElement | null>(null);
         const activator_slot_el = ref<HTMLElement | null>(null);
@@ -140,7 +142,7 @@ export default defineComponent({
                         'ik-popover': true,
                         'ik-popover--pulse': state.value.pulse,
                         'ik-popover--transition': props.transition,
-                        // 'ik-popover--mobile': this.$ikol.mobile,
+                        'ik-popover--mobile': device.mobile.value,
                     },
                     props.content_class,
                 ],
