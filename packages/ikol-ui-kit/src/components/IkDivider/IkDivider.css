@@ -15,9 +15,8 @@
 
 .ik-divider__line {
     flex-grow: 1;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--surface-darken-color);
     margin: 10px 0 8px 0;
-    border-color: var(--surface-darken-color);
 }
 
 .ik-divider--darken .ik-divider__line {
