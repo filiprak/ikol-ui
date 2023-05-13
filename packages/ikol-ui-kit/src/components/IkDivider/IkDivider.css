@@ -20,7 +20,7 @@
     border-color: var(--surface-darken-color);
 }
 
-.ik-divider--on-surface .ik-divider__line {
+.ik-divider--darken .ik-divider__line {
     border-color: var(--border-color-1);
 }
 

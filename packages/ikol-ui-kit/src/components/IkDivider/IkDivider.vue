@@ -24,7 +24,7 @@ export default defineComponent({
             type: Boolean,
             default: false
         },
-        onSurface: {
+        darken: {
             type: Boolean,
             default: false
         },
@@ -37,8 +37,8 @@ export default defineComponent({
         } else if (props.noBottomMargin) {
             classes.push('ik-divider--no-b-margin');
         }
-        if (props.onSurface) {
-            classes.push('ik-divider--on-surface');
+        if (props.darken) {
+            classes.push('ik-divider--darken');
         }
 
         return { classes };

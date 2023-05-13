@@ -12,9 +12,7 @@ const meta: Meta<typeof IkDivider> = {
         IkDivider,
       },
       template: `
-        <IkDivider v-bind="args">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </IkDivider>
+        <IkDivider v-bind="args"></IkDivider>
       `,
       setup() {
         return { args };
@@ -25,6 +23,25 @@ const meta: Meta<typeof IkDivider> = {
 
 export const Default: Meta<typeof IkDivider> = {
   args: {},
+};
+
+export const Text: Meta<typeof IkDivider> = {
+  args: {},
+  render: (args) => {
+    return () => h({
+      components: {
+        IkDivider,
+      },
+      template: `
+        <IkDivider v-bind="args">
+          Lorem ipsum
+        </IkDivider>
+      `,
+      setup() {
+        return { args };
+      },
+    });
+  },
 };
 
 export default meta;
