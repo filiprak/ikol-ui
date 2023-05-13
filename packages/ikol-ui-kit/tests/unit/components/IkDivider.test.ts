@@ -48,6 +48,6 @@ describe('IkDivider', () => {
             },
         });
 
-        expect(wrapper.classes()).toContain('ik-divider--darkenx');
+        expect(wrapper.classes()).toContain('ik-divider--darken');
     });
 });
