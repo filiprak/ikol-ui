@@ -20,4 +20,34 @@ describe('IkDivider', () => {
         });
         expect(wrapper.text()).toContain('Default slot test.');
     });
+
+    it('renders with no bottom margin', () => {
+        const wrapper = getInstance({
+            propsData: {
+                noBottomMargin: true,
+            },
+        });
+
+        expect(wrapper.classes()).toContain('ik-divider--no-b-margin');
+    });
+
+    it('renders with no margin', () => {
+        const wrapper = getInstance({
+            propsData: {
+                noMargin: true,
+            },
+        });
+
+        expect(wrapper.classes()).toContain('ik-divider--no-margin');
+    });
+
+    it('renders darken', () => {
+        const wrapper = getInstance({
+            propsData: {
+                darken: true,
+            },
+        });
+
+        expect(wrapper.classes()).toContain('ik-divider--darken');
+    });
 });
