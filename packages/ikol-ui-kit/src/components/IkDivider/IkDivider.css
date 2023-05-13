@@ -1,1 +1,33 @@
-.ik-divider {}
+.ik-divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ik-divider--no-b-margin {
+    margin-bottom: 0 !important;
+}
+
+.ik-divider--no-margin,
+.ik-divider--no-margin .ik-divider__line {
+    margin: 0 !important;
+}
+
+.ik-divider__line {
+    flex-grow: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0 8px 0;
+    border-color: var(--surface-darken-color);
+}
+
+.ik-divider--on-surface .ik-divider__line {
+    border-color: var(--border-color-1);
+}
+
+.ik-divider__content {
+    flex-grow: 0;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--on-background-color-4);
+}
