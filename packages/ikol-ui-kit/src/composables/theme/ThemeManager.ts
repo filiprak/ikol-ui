@@ -105,5 +105,4 @@ export class ThemeManager {
 
         return css;
     }
-
 }

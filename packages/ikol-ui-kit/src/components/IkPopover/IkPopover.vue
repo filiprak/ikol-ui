@@ -1,8 +1,9 @@
 <script lang="ts">
 import '@/styles';
 import './IkPopover.css';
-import { VNode, watchEffect } from 'vue';
+import type { VNode } from 'vue';
 import {
+    watchEffect,
     defineComponent,
     h,
     onMounted,
@@ -11,6 +12,7 @@ import {
     nextTick,
     watch,
 } from 'vue';
+
 import { DATA_KEY, usePopover } from '@/composables/popover';
 import { clamp, formatCssValue, getZIndex } from '@/utils/helpers';
 import { useInstance } from '@/composables/instance';
@@ -372,48 +374,48 @@ export default defineComponent({
                         let x: number, y: number;
 
                         switch (props.position) {
-                            case 'top':
+                        case 'top':
+                            x = (a_rect.left);
+                            y = (a_rect.top - c_rect.height - offset);
+                            v_pos = false;
+                            break;
+                        case 'bottom':
+                            x = (a_rect.left);
+                            y = (a_rect.bottom + offset);
+                            v_pos = false;
+                            break;
+                        case 'horizontal':
+                            if (t_space > b_space) {
                                 x = (a_rect.left);
                                 y = (a_rect.top - c_rect.height - offset);
-                                v_pos = false;
-                                break;
-                            case 'bottom':
+                            } else {
                                 x = (a_rect.left);
                                 y = (a_rect.bottom + offset);
-                                v_pos = false;
-                                break;
-                            case 'horizontal':
-                                if (t_space > b_space) {
-                                    x = (a_rect.left);
-                                    y = (a_rect.top - c_rect.height - offset);
-                                } else {
-                                    x = (a_rect.left);
-                                    y = (a_rect.bottom + offset);
-                                }
-                                v_pos = false;
-                                break;
-                            case 'vertical':
-                            default:
-                                if (l_space >= r_space) {
-                                    x = (a_rect.left - c_rect.width - offset);
-                                    y = (a_rect.top);
-                                } else {
-                                    x = (a_rect.left + a_rect.width + offset);
-                                    y = (a_rect.top);
-                                }
+                            }
+                            v_pos = false;
+                            break;
+                        case 'vertical':
+                        default:
+                            if (l_space >= r_space) {
+                                x = (a_rect.left - c_rect.width - offset);
+                                y = (a_rect.top);
+                            } else {
+                                x = (a_rect.left + a_rect.width + offset);
+                                y = (a_rect.top);
+                            }
                         }
                         switch (props.align) {
-                            case 'start':
-                                v_pos && (y = a_rect.top);
-                                !v_pos && (x = a_rect.left);
-                                break;
-                            case 'end':
-                                v_pos && (y = a_rect.bottom - c_rect.height);
-                                !v_pos && (x = a_rect.right - c_rect.width);
-                                break;
-                            default:
-                                v_pos && (y = a_rect.top + a_rect.height / 2 - c_rect.height / 2);
-                                !v_pos && (x = a_rect.left + a_rect.width / 2 - c_rect.width / 2);
+                        case 'start':
+                            v_pos && (y = a_rect.top);
+                            !v_pos && (x = a_rect.left);
+                            break;
+                        case 'end':
+                            v_pos && (y = a_rect.bottom - c_rect.height);
+                            !v_pos && (x = a_rect.right - c_rect.width);
+                            break;
+                        default:
+                            v_pos && (y = a_rect.top + a_rect.height / 2 - c_rect.height / 2);
+                            !v_pos && (x = a_rect.left + a_rect.width / 2 - c_rect.width / 2);
                         }
                         if (container_el && _contains(container_el, el)) {
                             const ct_rect = container_el.getBoundingClientRect();

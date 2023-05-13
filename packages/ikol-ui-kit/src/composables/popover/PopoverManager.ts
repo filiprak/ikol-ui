@@ -1,5 +1,6 @@
-import { Ref } from 'vue';
 import { ref } from 'vue';
+import type { Ref } from 'vue';
+
 import type { IkPopoverT } from '@/components/IkPopover';
 import { getRandomString } from '@/utils/helpers';
 
@@ -13,12 +14,14 @@ export class PopoverManager {
             popover.activate(activator_id);
         }
     }
+
     public close(id: string) {
         const popover = this.instances[id];
         if (popover) {
             popover.close();
         }
     }
+
     public closeAllExcept(except_ids: string[]) {
         Object
             .keys(this.instances)
@@ -28,6 +31,7 @@ export class PopoverManager {
                 }
             });
     }
+
     public closeAll() {
         Object
             .keys(this.instances)
@@ -35,6 +39,7 @@ export class PopoverManager {
                 this.instances[id].close();
             });
     }
+
     public registerInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
@@ -46,6 +51,7 @@ export class PopoverManager {
             }
         }
     }
+
     public unregisterInstance(vm: IkPopoverT) {
         if (vm) {
             if (vm.id) {
@@ -55,6 +61,7 @@ export class PopoverManager {
             }
         }
     }
+
     public updateActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');
@@ -70,6 +77,7 @@ export class PopoverManager {
             }
         }
     }
+
     public cleanupActivator(popover_id: string, activator_id: string, el: HTMLElement) {
         if (popover_id && activator_id) {
             const key = [popover_id, activator_id].join('');

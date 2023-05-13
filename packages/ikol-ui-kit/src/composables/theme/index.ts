@@ -1,5 +1,7 @@
-import { InjectionKey, getCurrentInstance, inject, provide } from 'vue';
-import { ThemeManager, ThemeOptions } from './ThemeManager';
+import type { InjectionKey } from 'vue';
+import { getCurrentInstance, inject, provide } from 'vue';
+import type { ThemeOptions } from './ThemeManager';
+import { ThemeManager } from './ThemeManager';
 
 export const THEME_SYMBOL: InjectionKey<ThemeManager> = Symbol.for('ik-theme');
 
