@@ -3,7 +3,6 @@ import '@/styles';
 import './IkPopover.css';
 import type { VNode } from 'vue';
 import {
-    watchEffect,
     defineComponent,
     h,
     onMounted,
