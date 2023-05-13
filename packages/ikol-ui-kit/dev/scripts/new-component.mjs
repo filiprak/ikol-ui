@@ -42,7 +42,7 @@ inquirer
             NAME_KEBAB: kebabize(name),
         });
 
-        const index = `import ${name} from './${name}.vue';\nexport { ${name} };\n`;
+        const index = `import ${name} from './${name}.vue';\nexport type ${name}T = InstanceType<typeof ${name}>;\nexport { ${name} };\n`;
         await useTemplate(index, path.resolve(ROOT_DIR, `src/components/${name}/index.ts`), {
             NAME: name,
             NAME_KEBAB: kebabize(name),

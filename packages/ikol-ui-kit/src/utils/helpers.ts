@@ -83,3 +83,38 @@ export function buildUri(base: string, options: URIOptions = {}) {
 
     return uri;
 }
+
+export function getZIndex(el: HTMLElement) {
+    let current = el;
+
+    if (el) {
+        let max = null;
+
+        while (current.parentElement) {
+            const z_index = parseInt(getComputedStyle(current).getPropertyValue('z-index'));
+
+            if (z_index) {
+                if (max) {
+                    max = Math.max(max, Number(z_index));
+                } else {
+                    max = Number(z_index);
+                }
+            }
+
+            current = current.parentElement;
+        }
+
+        return max;
+    } else {
+        return null;
+    }
+}
+
+export function getRandomString(length: number) {
+    const RAND_STR_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let output = '';
+    for (let i = 0; i < length; i++) {
+        output += RAND_STR_CHARS.charAt(Math.floor(Math.random() * RAND_STR_CHARS.length));
+    }
+    return output;
+}
