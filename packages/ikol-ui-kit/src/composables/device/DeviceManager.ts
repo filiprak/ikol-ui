@@ -1,5 +1,5 @@
+import { Ref } from 'vue';
 import { ref } from 'vue';
-import type { Ref } from 'vue';
 
 const BREAKPOINTS = {
     xs: [null, 576],
@@ -7,7 +7,7 @@ const BREAKPOINTS = {
     md: [992, 1200],
     lg: [1200, 1400],
     xl: [1400, null],
-};
+}
 
 declare type DeviceBreakpoint = keyof typeof BREAKPOINTS;
 
@@ -55,5 +55,5 @@ export class DeviceManager {
         this.height.value = h;
 
         this.mobile.value = this.bp.value.xs || this.bp.value.sm;
-    };
+    }
 };
