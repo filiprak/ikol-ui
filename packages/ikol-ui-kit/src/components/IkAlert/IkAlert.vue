@@ -15,32 +15,41 @@
         </div>
     </div>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 import '@/styles';
 import './IkAlert.css';
 import { IkIcon } from '@/components/IkIcon';
+import { defineComponent } from 'vue';
 
-const props = defineProps({
-    design: {
-        type: String,
-        default: null,
+export default defineComponent({
+    name: 'IkAlert',
+    components: { IkIcon },
+    props: {
+        design: {
+            type: String,
+            default: null,
+        },
+        icon: {
+            type: String,
+            default: null,
+        },
+        variant: {
+            type: String,
+            default: null,
+        },
     },
-    icon: {
-        type: String,
-        default: null,
-    },
-    variant: {
-        type: String,
-        default: null,
+    setup(props) {
+        const classes = ['ik-alert'];
+
+        if (props.design) {
+            classes.push(`ik-alert--${props.design}`);
+        }
+
+        if (props.variant) {
+            classes.push(`ik-alert--${props.variant}`);
+        }
+
+        return { classes };
     },
 });
-const classes = ['ik-alert'];
-
-if (props.design) {
-    classes.push(`ik-alert--${props.design}`);
-}
-
-if (props.variant) {
-    classes.push(`ik-alert--${props.variant}`);
-}
 </script>
