@@ -1,5 +1,5 @@
-import { ComponentInternalInstance, ComponentPublicInstance, markRaw, onBeforeMount, onUnmounted, proxyRefs } from 'vue';
-import { getCurrentInstance } from 'vue';
+import type { ComponentInternalInstance, ComponentPublicInstance } from 'vue';
+import { markRaw, onBeforeMount, onUnmounted, proxyRefs, getCurrentInstance } from 'vue';
 
 function getPublicInstance<T = ComponentPublicInstance>(): T {
     const vm = getCurrentInstance() as ComponentInternalInstance & { __ikolProxy: T };
@@ -10,7 +10,6 @@ function getPublicInstance<T = ComponentPublicInstance>(): T {
             get(target, key) {
                 if (key in target) {
                     return (target as any)[key];
-
                 } else if (key in public_proxy) {
                     return (public_proxy as any)[key];
                 }
@@ -35,8 +34,8 @@ export function useInstance<T = ComponentPublicInstance>() {
     }
 
     let instance: T;
-    let createHook: (instance: T) => void,
-        destroyHook: (instance: T) => void;
+    let create_hook: (instance: T) => void,
+        destroy_hook: (instance: T) => void;
 
     function getInstance(): T {
         if (!instance) {
@@ -46,21 +45,21 @@ export function useInstance<T = ComponentPublicInstance>() {
     }
 
     function onCreate(hook: (instance: T) => void): void {
-        createHook = hook;
+        create_hook = hook;
     }
 
     function onDestroy(hook: (instance: T) => void): void {
-        destroyHook = hook;
+        destroy_hook = hook;
     }
 
     onBeforeMount(() => {
         instance = getPublicInstance<T>();
-        createHook && createHook(instance);
+        create_hook && create_hook(instance);
     });
 
     onUnmounted(() => {
         instance = getPublicInstance<T>();
-        destroyHook && destroyHook(instance);
+        destroy_hook && destroy_hook(instance);
     });
 
     return {

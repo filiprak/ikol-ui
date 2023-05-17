@@ -1,12 +1,3 @@
-<script lang="ts">
-export default {
-    inheritAttrs: false,
-    model: {
-        prop: 'activator_id',
-        event: 'ik-change-activator',
-    },
-};
-</script>
 <script setup lang="ts">
 import '@/styles';
 import './IkPopover.css';
@@ -615,7 +606,6 @@ onBeforeUnmount(() => {
 });
 
 onCreate((instance) => {
-    console.log(window.parent.i = instance)
     manager.registerInstance(instance);
 });
 
@@ -638,4 +628,13 @@ useRender(() => h('div', { ref: root_el, class: 'ik-popover__root' }, [
     _renderActivator(),
     _renderContent(),
 ]));
+</script>
+<script lang="ts">
+export default {
+    inheritAttrs: false,
+    model: {
+        prop: 'activator_id',
+        event: 'ik-change-activator',
+    },
+};
 </script>

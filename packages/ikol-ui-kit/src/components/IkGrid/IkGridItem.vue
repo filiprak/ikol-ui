@@ -25,7 +25,7 @@ const props = defineProps({
         type: [String, Number],
         default: null,
     },
-})
+});
 const slots = useSlots();
 const attrs = useAttrs();
 

@@ -49,6 +49,9 @@ module.exports = {
             files: '**/*.{ts,vue}',
             rules: {
                 'no-redeclare': 'off', // handled by tsc
+                'func-call-spacing': 'off',
+                '@typescript-eslint/func-call-spacing': 'error',
+                '@typescript-eslint/unified-signatures': 'off',
                 '@typescript-eslint/member-ordering': 'error',
                 '@typescript-eslint/type-annotation-spacing': 'error',
                 '@typescript-eslint/no-inferrable-types': 'error',
@@ -57,6 +60,7 @@ module.exports = {
                 '@typescript-eslint/consistent-type-imports': 'error',
                 '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
                 '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+                
             },
         },
         {
@@ -67,6 +71,7 @@ module.exports = {
                 'vue/first-attribute-linebreak': 'off',
                 'vue/html-closing-bracket-newline': 'off',
                 'vue/prop-name-casing': 'off',
+                '@typescript-eslint/unified-signatures': 'off',
             },
         },
         {

@@ -14,7 +14,7 @@ const meta: Meta<typeof IkPopover> = {
         IkButton,
       },
       template: `
-        <IkPopover ref="p" v-bind="args">
+        <IkPopover v-bind="args">
           <template #activator="{ on }">
             <IkButton v-on="on">Open popover</IkButton>
           </template>
@@ -28,9 +28,6 @@ const meta: Meta<typeof IkPopover> = {
       `,
       setup() {
         return { args };
-      },
-      mounted () {
-        window.parent.p = this.$refs.p;
       },
     });
   },
