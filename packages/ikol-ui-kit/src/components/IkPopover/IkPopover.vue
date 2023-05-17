@@ -16,7 +16,7 @@ import { DATA_KEY, usePopover } from '@/composables/popover';
 import { clamp, formatCssValue, getZIndex } from '@/utils/helpers';
 import { useInstance } from '@/composables/instance';
 import { useRender } from '@/composables/render';
-import type { IkPopoverT } from '.';
+import type { IkPopover } from '.';
 import { useDevice } from '@/composables/device';
 
 const CONTENT_DATA_KEY = 'ik-popover-content';
@@ -94,7 +94,7 @@ const emit = defineEmits<{
     (e: 'ik-close'): void,
 }>();
 const slots = useSlots();
-const { getInstance, onCreate, onDestroy } = useInstance<IkPopoverT>();
+const { getInstance, onCreate, onDestroy } = useInstance<IkPopover>();
 const manager = usePopover();
 const device = useDevice();
 const root_el = ref<HTMLElement | null>(null);

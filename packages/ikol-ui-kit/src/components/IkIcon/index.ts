@@ -1,3 +1,3 @@
 import IkIcon from './IkIcon.vue';
-export type IkIconT = InstanceType<typeof IkIcon>;
+export type IkIcon = InstanceType<typeof IkIcon>;
 export { IkIcon };

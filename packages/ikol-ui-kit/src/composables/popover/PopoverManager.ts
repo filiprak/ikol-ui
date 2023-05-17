@@ -1,11 +1,11 @@
 import { ref } from 'vue';
 import type { Ref } from 'vue';
 
-import type { IkPopoverT } from '@/components/IkPopover';
+import type { IkPopover } from '@/components/IkPopover';
 import { getRandomString } from '@/utils/helpers';
 
 export class PopoverManager {
-    private instances: { [id: string]: IkPopoverT } = {};
+    private instances: { [id: string]: IkPopover } = {};
     private activators: Ref<{ [id: string]: HTMLElement[] }> = ref({});
 
     public activate(id: string, activator_id: string) {
@@ -40,7 +40,7 @@ export class PopoverManager {
             });
     }
 
-    public registerInstance(vm: IkPopoverT) {
+    public registerInstance(vm: IkPopover) {
         if (vm) {
             if (vm.id) {
                 this.instances[vm.id] = vm;
@@ -52,7 +52,7 @@ export class PopoverManager {
         }
     }
 
-    public unregisterInstance(vm: IkPopoverT) {
+    public unregisterInstance(vm: IkPopover) {
         if (vm) {
             if (vm.id) {
                 delete this.instances[vm.id];

@@ -1,3 +1,3 @@
 import IkThemeProvider from './IkThemeProvider.vue';
-export type IkThemeProviderT = InstanceType<typeof IkThemeProvider>;
+export type IkThemeProvider = InstanceType<typeof IkThemeProvider>;
 export { IkThemeProvider };

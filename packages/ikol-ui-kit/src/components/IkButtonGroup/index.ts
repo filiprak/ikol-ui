@@ -1,3 +1,3 @@
 import IkButtonGroup from './IkButtonGroup.vue';
-export type IkButtonGroupT = InstanceType<typeof IkButtonGroup>;
+export type IkButtonGroup = InstanceType<typeof IkButtonGroup>;
 export { IkButtonGroup };

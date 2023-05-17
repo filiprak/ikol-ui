@@ -1,3 +1,3 @@
 import IkDivider from './IkDivider.vue';
-export type IkDividerT = InstanceType<typeof IkDivider>;
+export type IkDivider = InstanceType<typeof IkDivider>;
 export { IkDivider };
