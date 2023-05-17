@@ -3,30 +3,23 @@
         <slot></slot>
     </div>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import '@/styles';
 import './IkButtonGroup.css';
-import { defineComponent, computed } from 'vue';
+import { defineProps, computed } from 'vue';
 
-export default defineComponent({
-    name: 'IkButtonGroup',
-    props: {
-        equal: {
-            type: Boolean,
-            default: false,
-        },
+const props = defineProps({
+    equal: {
+        type: Boolean,
+        default: false,
     },
-    setup(props) {
-        return {
-            classes: computed(() => {
-                const classes = ['ik-button-group'];
+});
+const classes = computed(() => {
+    const classes = ['ik-button-group'];
 
-                if (props.equal) {
-                    classes.push('ik-button-group--equal');
-                }
-                return classes;
-            }),
-        };
-    },
+    if (props.equal) {
+        classes.push('ik-button-group--equal');
+    }
+    return classes;
 });
 </script>

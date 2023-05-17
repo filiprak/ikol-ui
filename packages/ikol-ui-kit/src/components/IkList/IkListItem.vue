@@ -23,102 +23,96 @@
         </div>
     </component>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import '@/styles';
 import './IkList.css';
-import { defineComponent } from 'vue';
+import { computed, defineProps, useAttrs } from 'vue';
 import { IkIcon } from '@/components/IkIcon';
 
-export default defineComponent({
-    name: 'IkListItem',
-    components: {
-        IkIcon,
+const props = defineProps({
+    icon: {
+        type: String,
+        default: null,
     },
-    props: {
-        icon: {
-            type: String,
-            default: null,
-        },
-        link: {
-            type: String,
-            default: null,
-        },
-        inline: {
-            type: Boolean,
-            default: false,
-        },
-        disabled: {
-            type: Boolean,
-            default: false,
-        },
-        active: {
-            type: Boolean,
-            default: false,
-        },
-        wrapText: {
-            type: Boolean,
-            default: false,
-        },
-        noSelect: {
-            type: Boolean,
-            default: false,
-        },
-        lines: {
-            type: [String, Number],
-            default: null,
-        },
-        alignStart: {
-            type: Boolean,
-            default: false,
-        },
-        borderBottom: {
-            type: Boolean,
-            default: false,
-        },
+    link: {
+        type: String,
+        default: null,
     },
-    setup(props, { attrs }) {
-        const classes = ['ik-list-item'];
-        const tag = props.link ? 'a' : 'div';
-        const vbind = props.link ? { href: props.link } : {};
-
-        if (props.inline) {
-            classes.push('ik-list-item--inline');
-        }
-
-        if (props.disabled) {
-            classes.push('ik-list-item--disabled');
-        }
-
-        if (props.wrapText) {
-            classes.push('ik-list-item--wrap-text');
-        }
-
-        if (props.noSelect) {
-            classes.push('ik-list-item--no-select');
-        }
-
-        if (props.active) {
-            classes.push('ik-list-item--active');
-        }
-
-        if (attrs.onClick || props.link) {
-            classes.push('ik-list-item--clickable');
-        }
-
-        if (props.lines) {
-            classes.push('ik-list-item--lines');
-            classes.push('ik-list-item--lines-' + String(props.lines));
-        }
-
-        if (props.alignStart) {
-            classes.push('ik-list-item--align-start');
-        }
-
-        if (props.borderBottom) {
-            classes.push('ik-list-item--border-bottom');
-        }
-
-        return { classes, tag, vbind };
+    inline: {
+        type: Boolean,
+        default: false,
     },
+    disabled: {
+        type: Boolean,
+        default: false,
+    },
+    active: {
+        type: Boolean,
+        default: false,
+    },
+    wrapText: {
+        type: Boolean,
+        default: false,
+    },
+    noSelect: {
+        type: Boolean,
+        default: false,
+    },
+    lines: {
+        type: [String, Number],
+        default: null,
+    },
+    alignStart: {
+        type: Boolean,
+        default: false,
+    },
+    borderBottom: {
+        type: Boolean,
+        default: false,
+    },
+});
+const attrs = useAttrs();
+const tag = props.link ? 'a' : 'div';
+const vbind = props.link ? { href: props.link } : {};
+const classes = computed(() => {
+    const classes = ['ik-list-item'];
+
+    if (props.inline) {
+        classes.push('ik-list-item--inline');
+    }
+
+    if (props.disabled) {
+        classes.push('ik-list-item--disabled');
+    }
+
+    if (props.wrapText) {
+        classes.push('ik-list-item--wrap-text');
+    }
+
+    if (props.noSelect) {
+        classes.push('ik-list-item--no-select');
+    }
+
+    if (props.active) {
+        classes.push('ik-list-item--active');
+    }
+
+    if (attrs.onClick || props.link) {
+        classes.push('ik-list-item--clickable');
+    }
+
+    if (props.lines) {
+        classes.push('ik-list-item--lines');
+        classes.push('ik-list-item--lines-' + String(props.lines));
+    }
+
+    if (props.alignStart) {
+        classes.push('ik-list-item--align-start');
+    }
+
+    if (props.borderBottom) {
+        classes.push('ik-list-item--border-bottom');
+    }
+    return classes;
 });
 </script>

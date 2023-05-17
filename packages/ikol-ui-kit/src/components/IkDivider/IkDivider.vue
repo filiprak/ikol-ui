@@ -8,40 +8,37 @@
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import '@/styles';
 import './IkDivider.css';
-import { defineComponent } from 'vue';
+import { computed, defineProps } from 'vue';
 
-export default defineComponent({
-    name: 'IkDivider',
-    props: {
-        noBottomMargin: {
-            type: Boolean,
-            default: false,
-        },
-        noMargin: {
-            type: Boolean,
-            default: false,
-        },
-        darken: {
-            type: Boolean,
-            default: false,
-        },
+const props = defineProps({
+    noBottomMargin: {
+        type: Boolean,
+        default: false,
     },
-    setup(props) {
-        const classes = ['ik-divider'];
-
-        if (props.noMargin) {
-            classes.push('ik-divider--no-margin');
-        } else if (props.noBottomMargin) {
-            classes.push('ik-divider--no-b-margin');
-        }
-        if (props.darken) {
-            classes.push('ik-divider--darken');
-        }
-
-        return { classes };
+    noMargin: {
+        type: Boolean,
+        default: false,
     },
+    darken: {
+        type: Boolean,
+        default: false,
+    },
+});
+const classes = computed(() => {
+    const classes = ['ik-divider'];
+
+    if (props.noMargin) {
+        classes.push('ik-divider--no-margin');
+    } else if (props.noBottomMargin) {
+        classes.push('ik-divider--no-b-margin');
+    }
+    if (props.darken) {
+        classes.push('ik-divider--darken');
+    }
+
+    return classes;
 });
 </script>

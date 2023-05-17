@@ -23,7 +23,7 @@ const meta: Meta<typeof IkButton> = {
           return Object
             .values(UIDesignColor)
             .map(design => {
-              return h(IkButton, { class: 'ik-mr-3', design, ...props }, props.default !== undefined ? props.default : 'Button')
+              return h(IkButton, { class: 'ik-mr-3', design, ...props }, () => 'Button')
             });
         };
       },

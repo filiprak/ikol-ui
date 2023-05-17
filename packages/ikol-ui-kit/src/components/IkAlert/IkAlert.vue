@@ -49,6 +49,3 @@ const classes = computed(() => {
     return result;
 });
 </script>
-<script lang="ts">
-export default { name: 'IkAlert' };
-</script>

@@ -20,10 +20,10 @@ const meta: Meta<typeof IkButtonGroup> = {
         return () => {
           const props = args;
 
-          return h(IkButtonGroup, props, [
-            h(IkButton, {}, 'Buttom 1'),
-            h(IkButton, {}, 'Buttom 2'),
-            h(IkButton, {}, 'Buttom 3'),
+          return h(IkButtonGroup, props, () => [
+            h(IkButton, {}, () => 'Buttom 1'),
+            h(IkButton, {}, () => 'Buttom 2'),
+            h(IkButton, {}, () => 'Buttom 3'),
           ]);
         };
       },
