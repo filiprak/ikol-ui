@@ -39,11 +39,11 @@ const props = defineProps({
         type: String,
         default: 'auto',
     },
-    can_close: {
+    canClose: {
         type: [Function, Boolean],
         default: true,
     },
-    open_on_click: {
+    openOnClick: {
         type: Boolean,
         default: false,
     },
@@ -55,31 +55,31 @@ const props = defineProps({
         type: [String, Number],
         default: 5,
     },
-    min_width: {
+    minWidth: {
         type: [String, Number],
         default: 40,
     },
-    max_width: {
+    maxWidth: {
         type: [String, Number],
         default: null,
     },
-    min_height: {
+    minHeight: {
         type: [String, Number],
         default: null,
     },
-    delay_miliseconds: {
+    delayMiliseconds: {
         type: Number,
         default: 200,
     },
-    use_activator_width: {
+    useActivatorWidth: {
         type: Boolean,
         default: false,
     },
-    content_class: {
+    contentClass: {
         type: [String, Object, Array],
         default: null,
     },
-    activator_id: {
+    activatorId: {
         type: String,
         default: null,
     },
@@ -129,7 +129,7 @@ function _renderContent() {
     //         listeners = {};
     //     }
     // }
-    if (props.open_on_click) {
+    if (props.openOnClick) {
         listeners = {};
     }
 
@@ -142,18 +142,18 @@ function _renderContent() {
                 'ik-popover--transition': props.transition,
                 'ik-popover--mobile': device.mobile.value,
             },
-            props.content_class,
+            props.contentClass,
         ],
         ...listeners,
         style: {
             zIndex: state.value.z_index,
-            width: props.use_activator_width && state.value.dimensions.width
+            width: props.useActivatorWidth && state.value.dimensions.width
                 ? formatCssValue(state.value.dimensions.width)
                 : null,
-            minWidth: formatCssValue(props.min_width),
+            minWidth: formatCssValue(props.minWidth),
             maxHeight: 'calc(100% - 60px)',
-            minHeight: props.min_height ? formatCssValue(props.min_height) : null,
-            maxWidth: props.max_width ? formatCssValue(props.max_width) : null,
+            minHeight: props.minHeight ? formatCssValue(props.minHeight) : null,
+            maxWidth: props.maxWidth ? formatCssValue(props.maxWidth) : null,
             display: state.value.visible ? null : 'none',
             transform: [
                 'translate(' + state.value.dimensions.x + 'px, ' + state.value.dimensions.y + 'px)',
@@ -169,7 +169,7 @@ function _renderActivator() {
     if (slots.activator) {
         let a_on = {};
 
-        if (props.open_on_click) {
+        if (props.openOnClick) {
             a_on = {
                 click: _onActivatorClick,
             };
@@ -280,7 +280,7 @@ function _scheduleOpen() {
     _open_timeout = setTimeout(() => {
         open();
         _unscheduleOpen();
-    }, props.delay_miliseconds);
+    }, props.delayMiliseconds);
 }
 function _unscheduleOpen() {
     clearTimeout(_open_timeout);
@@ -291,7 +291,7 @@ function _scheduleClose() {
     _close_timeout = setTimeout(() => {
         close();
         _unscheduleClose();
-    }, props.delay_miliseconds);
+    }, props.delayMiliseconds);
 }
 function _unscheduleClose() {
     clearTimeout(_close_timeout);
@@ -303,10 +303,10 @@ function _getContentZIndex(el: HTMLElement | null) {
     return Math.max(800, z_index);
 }
 function _canClose() {
-    if (typeof props.can_close === 'function') {
-        return props.can_close();
+    if (typeof props.canClose === 'function') {
+        return props.canClose();
     } else {
-        return props.can_close;
+        return props.canClose;
     }
 }
 function _bindWindowListeners() {
@@ -507,8 +507,8 @@ function _onActivatorClick(event: MouseEvent) {
     if (el) {
         const d_state = el[DATA_KEY];
         if (d_state && (!state.value.visible || (state.value.visible && _canClose()))) {
-            if (d_state.activator_id !== props.activator_id) {
-                emit('ik-change-activator', d_state.activator_id, props.activator_id);
+            if (d_state.activator_id !== props.activatorId) {
+                emit('ik-change-activator', d_state.activator_id, props.activatorId);
             }
             nextTick(open);
         } else {
@@ -522,8 +522,8 @@ function _onActivatorMouseEnter(event: MouseEvent) {
     if (el) {
         const d_state = el[DATA_KEY];
         if (d_state && (!state.value.visible || (state.value.visible && _canClose()))) {
-            if (d_state.activator_id !== props.activator_id) {
-                emit('ik-change-activator', d_state.activator_id, props.activator_id);
+            if (d_state.activator_id !== props.activatorId) {
+                emit('ik-change-activator', d_state.activator_id, props.activatorId);
             }
             nextTick(_scheduleOpen);
         } else {
@@ -633,7 +633,7 @@ useRender(() => h('div', { ref: root_el, class: 'ik-popover__root' }, [
 export default {
     inheritAttrs: false,
     model: {
-        prop: 'activator_id',
+        prop: 'activatorId',
         event: 'ik-change-activator',
     },
 };
