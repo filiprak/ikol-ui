@@ -1,5 +1,5 @@
 {
-  "name": "ikol-js-sdk",
+  "name": "ikol-ui",
   "author": "IKOL",
   "license": "MIT",
   "version": "0.0.1",
@@ -11,6 +11,7 @@
   "scripts": {
     "build:test": "npm run build --workspace=ikol-ui-kit --workspace=test",
     "lint": "npm run lint --workspace=ikol-ui-kit",
+    "storybook": "npm run storybook --workspace=@ikol/ui-kit",
     "test": "npm run test --workspace=ikol-ui-kit",
     "lint:fix": "npm run lint:fix --workspace=ikol-ui-kit"
   },

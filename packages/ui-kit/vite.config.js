@@ -50,7 +50,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@ui': path.resolve(__dirname, 'src'),
-      'moment-timezone': path.resolve(__dirname, 'node_modules/moment-timezone/builds/moment-timezone-with-data.min.js'),
+      'moment-timezone': 'moment-timezone/builds/moment-timezone-with-data.min.js',
     },
   },
 });
