@@ -1,0 +1,33 @@
+.ik-picker-field-item--default,
+.ik-picker-field-item--empty {
+    background-color: var(--surface-darken-color);
+    color: var(--primary-color);
+}
+
+.ik-picker-field-item--empty .ik-list-item__content {
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-picker-field-item--default .ik-list-item__content {
+    color: var(--on-surface-darken-color-1);
+}
+
+.ik-picker-field-item--disabled {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.ik-picker-field-item {
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ik-picker-field__item {
+    cursor: pointer;
+}
+
+.ik-picker-field__item:hover {
+    background-color: var(--primary-color-o1);
+    color: var(--primary-color);
+}

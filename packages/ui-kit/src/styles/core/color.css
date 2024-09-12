@@ -1,0 +1,19 @@
+.ik-color--primary {
+    color: var(--primary-color);
+}
+
+.ik-color--secondary {
+    color: var(--secondary-color);
+}
+
+.ik-color--success {
+    color: var(--success-color);
+}
+
+.ik-color--error {
+    color: var(--error-color);
+}
+
+.ik-color--accent {
+    color: var(--accent-color);
+}

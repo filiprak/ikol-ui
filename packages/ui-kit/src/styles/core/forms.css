@@ -1,0 +1,78 @@
+.ik-f-input {
+    display: block;
+    border-color: var(--on-background-color-4);
+    color: var(--on-background-color-1);
+    padding: 4px 8px;
+    font-size: 13px;
+    line-height: 24px;
+    height: 34px;
+    width: 100%;
+}
+
+.ik-f-input--size-xs {
+    height: 28px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.ik-f-input--size-sm {
+    height: 34px;
+    font-size: 13px;
+}
+
+.ik-f-input--size-md {
+    height: 38px;
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+.ik-f-input--size-lg {
+    height: 42px;
+    padding: 9px 12px;
+    font-size: 16px;
+}
+
+/* flat form control */
+.ik-f-input--flat {
+    padding-left: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--on-background-color-4);
+}
+
+.ik-f-input--flat:focus,
+.ik-f-input--flat:focus-within {
+    border-color: var(--primary-color);
+}
+
+/* filled */
+.ik-f-input--filled {
+    border-radius: 8px;
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-1);
+}
+
+/* outline */
+.ik-f-input--outline {
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+}
+
+.ik-f-input--outline:focus,
+.ik-f-input--outline:focus-within {
+    color: var(--on-background-color-1);
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-o1);
+}
+
+/* pill */
+.ik-f-input--pill {
+    border-radius: 25px;
+    background-color: var(--surface-color);
+    box-shadow: 0 5px 10px 0 rgba(31, 44, 56, 0.15);
+}
+
+.ik-f-input[disabled] {
+    opacity: 0.65;
+    pointer-events: none;
+    user-select: none;
+}

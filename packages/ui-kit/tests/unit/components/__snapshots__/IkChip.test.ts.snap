@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkChip renders with correct default state 1`] = `
+<div
+  class="ik-chip ik-chip--size-md"
+>
+  <div
+    class="ik-chip__content"
+    style="padding: 4px 16px;"
+  >
+    
+    
+  </div>
+  <!--v-if-->
+</div>
+`;

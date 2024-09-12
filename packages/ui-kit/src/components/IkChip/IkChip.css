@@ -1,0 +1,80 @@
+.ik-chip {
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-3);
+
+    border-radius: 50px;
+    height: 32px;
+    line-height: 24px;
+    max-width: 100%;
+
+    display: inline-flex;
+}
+
+.ik-chip--disabled {
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.ik-chip--primary {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-chip--success {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
+}
+
+.ik-chip--error {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+}
+
+.ik-chip--accent {
+    background-color: var(--accent-color);
+    color: var(--on-accent-color);
+}
+
+.ik-chip__content:not(:last-child) {
+    padding-right: 2px;
+}
+
+.ik-chip__actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 6px 0 4px;
+}
+
+.ik-chip--size-sm .ik-chip__actions {
+    padding: 0 2px 0 3px;
+}
+
+.ik-chip--size-sm {
+    font-size: 12px;
+    font-weight: 400;
+    height: 20px;
+}
+
+.ik-chip__content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.ik-chip--size-sm .ik-chip__actions .ik-icon {
+    font-size: 10px !important;
+}
+
+.ik-chip--size-md .ik-chip__actions .ik-icon {
+    font-size: 12px !important;
+}

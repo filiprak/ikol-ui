@@ -1,0 +1,15 @@
+.ik-textarea {
+    height: auto;
+}
+
+.ik-textarea--no-resize {
+    resize: none !important;
+}
+
+.ik-textarea--no-resize-x {
+    resize: vertical;
+}
+
+.ik-textarea--no-resize-y {
+    resize: horizontal;
+}

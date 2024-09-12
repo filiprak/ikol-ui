@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkLayoutGridItem renders with correct default state 1`] = `
+<div
+  class="ik-layout-grid-item"
+>
+  
+  
+</div>
+`;
+
+exports[`IkLayoutGridItem renders with default slot 1`] = `
+<div
+  class="ik-layout-grid-item"
+>
+  
+  This is default slot...
+  
+</div>
+`;

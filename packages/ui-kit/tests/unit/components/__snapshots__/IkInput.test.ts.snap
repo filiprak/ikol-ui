@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkInput renders with append icon 1`] = `
+<div
+  class="ik-input ik-input--append"
+>
+  <!---->
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <div
+    class="ik-input__append"
+  >
+    <i
+      class="ik-icon ik-icon--clickable fa-light fa-times"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkInput renders with append slot 1`] = `
+<div
+  class="ik-input ik-input--append"
+>
+  <!---->
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <div
+    class="ik-input__append"
+  >
+    
+    Unit test...
+    
+  </div>
+</div>
+`;
+
+exports[`IkInput renders with correct custom state 1`] = `
+<div
+  class="ik-input ik-input--disabled"
+>
+  <!---->
+  <input
+    autocomplete="on"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    disabled=""
+    max="15"
+    maxlength="100"
+    min="0"
+    minlength="4"
+    name="unit-test"
+    placeholder="Test placeholder..."
+    readonly=""
+    required=""
+    step="55"
+    type="password"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkInput renders with correct default state 1`] = `
+<div
+  class="ik-input"
+>
+  <!---->
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkInput renders with icon 1`] = `
+<div
+  class="ik-input ik-input--prepend"
+>
+  <div
+    class="ik-input__prepend"
+  >
+    <i
+      class="ik-icon fa-light fa-times"
+    />
+  </div>
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkInput renders with prepend icon 1`] = `
+<div
+  class="ik-input ik-input--prepend"
+>
+  <div
+    class="ik-input__prepend"
+  >
+    <i
+      class="ik-icon fa-light fa-times"
+    />
+  </div>
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkInput renders with prepend slot 1`] = `
+<div
+  class="ik-input ik-input--prepend"
+>
+  <div
+    class="ik-input__prepend"
+  >
+    
+    Unit test...
+    
+  </div>
+  <input
+    autocomplete="off"
+    class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+    type="text"
+  />
+  <!---->
+</div>
+`;

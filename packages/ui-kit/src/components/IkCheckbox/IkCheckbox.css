@@ -1,0 +1,109 @@
+.ik-checkbox__label {
+    min-height: 20px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.ik-checkbox--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.ik-checkbox__label input {
+    visibility: hidden;
+    display: none;
+}
+
+.ik-checkbox__label input:checked + .ik-checbox__icon {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.ik-checbox__icon {
+    color: rgba(143, 155, 179, 0.5);
+    font-size: 13px;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    border: 2px solid rgba(143, 155, 179, 0.5);
+    border-radius: 3px;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.ik-checkbox__text {
+    font-weight: normal;
+}
+
+/* basic variant styles */
+.ik-checkbox--basic .ik-checkbox__label input:checked + .ik-checbox__icon {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* switch variant styles */
+.ik-checkbox--switch {
+    line-height: 28px;
+}
+
+.ik-checkbox__switch {
+    position: relative;
+    flex: 0 0 auto;
+    height: 28px;
+    width: 56px;
+    border-radius: 56px;
+    padding: 4px;
+    cursor: pointer;
+    background-color: rgba(143, 155, 179, 0.3);
+
+    transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -webkit-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -moz-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -o-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.ik-checkbox__text:not(:empty) {
+    margin-left: 10px;
+}
+
+.ik-checkbox--switch .ik-checkbox__label {
+    margin: 0;
+    display: inline-flex;
+}
+
+.ik-checkbox--switch .ik-checkbox__label input:checked + .ik-checkbox__switch {
+    background-color: var(--primary-color);
+}
+
+.ik-checkbox--switch .ik-checkbox__label input:checked + .ik-checkbox__switch > div {
+    left: calc(100% - 24px);
+}
+
+.ik-checkbox__switch > div {
+    top: 4px;
+    left: 4px;
+    position: absolute;
+    background-color: var(--on-primary-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+    transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -webkit-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -moz-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -o-transition: 0.2s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.ik-checkbox--basic .ik-checkbox__text,
+.ik-checkbox--switch .ik-checkbox__text {
+    font-weight: 600;
+}
+
+.ik-checkbox--no-margin .ik-checkbox__label {
+    margin-bottom: 0;
+}

@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkImageStack correct default state 1`] = `
+<div
+  class="ik-image-stack ik-image-stack--view"
+>
+  
+  
+  <div
+    class="ik-image-stack__image-wrapper ik-image-stack__add"
+    style="z-index: 5; border-width: 1px; width: 24px; height: 24px; font-size: 10px;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="plus"
+      tag="i"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkImageStack renders with less then max items 1`] = `
+<div
+  class="ik-image-stack ik-image-stack--view"
+>
+  
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="z-index: 5; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image1"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 4; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image2"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 3; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image3"
+    />
+  </div>
+  
+  <div
+    class="ik-image-stack__image-wrapper ik-image-stack__add"
+    style="margin-left: -7px; z-index: 2; border-width: 1px; width: 24px; height: 24px; font-size: 10px;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="plus"
+      tag="i"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkImageStack renders with more then max items 1`] = `
+<div
+  class="ik-image-stack ik-image-stack--view"
+>
+  
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="z-index: 5; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image1"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 4; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image2"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 3; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image3"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 2; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image4"
+    />
+  </div>
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 1; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image5"
+    />
+  </div>
+  
+  <div
+    class="ik-image-stack__image-wrapper"
+    style="margin-left: -7px; z-index: 0; border-width: 1px;"
+  >
+    <ik-image-stub
+      contain="false"
+      cover="false"
+      loader="false"
+      round="true"
+      size="24"
+      src="http://test.com/image6"
+    />
+    <div
+      class="ik-image-stack__image--dark"
+    />
+    <span
+      class="ik-image-stack__count ik-noselect"
+      style="font-size: 8px;"
+    >
+      +2
+    </span>
+  </div>
+</div>
+`;

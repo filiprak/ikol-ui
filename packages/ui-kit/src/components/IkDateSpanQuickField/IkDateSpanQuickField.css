@@ -1,0 +1,16 @@
+.ik-date-span-quick-field__row {
+    display: flex;
+    padding-bottom: 7px;
+}
+
+.ik-date-span-quick-field__label {
+    display: flex;
+    align-items: center;
+    width: 85px;
+    flex: 0 0 85px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--on-background-color-3);
+    padding-right: 5px;
+}

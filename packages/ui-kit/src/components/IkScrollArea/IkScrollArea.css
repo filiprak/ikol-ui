@@ -1,0 +1,97 @@
+/* stylelint-disable selector-class-pattern */
+
+.ik-scroll-area {
+    width: 100%;
+    min-height: 0;
+    max-height: 100%;
+}
+
+.ik-scroll-area--no-auto-anchor > div > div > div > .simplebar-content-wrapper {
+    /* fixes SimpleBar invalid scroll behaviour bug #3961 */
+    overflow-anchor: none !important;
+}
+
+.ik-scroll-area--native {
+    position: relative;
+    overflow: auto;
+}
+
+.ik-scroll-area--hide-x > .simplebar-track.simplebar-horizontal,
+.ik-scroll-area--hide-y > .simplebar-track.simplebar-vertical {
+    display: none;
+}
+
+.ik-scroll-area--hide-y {
+    overflow: auto hidden;
+}
+
+.ik-scroll-area__loader {
+    margin: 10px;
+    text-align: center;
+}
+
+.ik-scroll-area > .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.25;
+    background-color: var(--scrollbar-color);
+}
+
+.ik-scroll-area > .simplebar-track.simplebar-vertical.simplebar-hover {
+    width: 17px;
+    background-color: var(--scrollbar-track-color);
+}
+
+.ik-scroll-area > .simplebar-track.simplebar-horizontal.simplebar-hover {
+    height: 17px;
+    background-color: var(--scrollbar-track-color);
+}
+
+.ik-scroll-area > .simplebar-track.simplebar-horizontal.simplebar-hover .simplebar-scrollbar:before {
+    height: 13px;
+}
+
+.ik-scroll-area__shadow-right,
+.ik-scroll-area__shadow-left {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+    padding: 0 10px;
+}
+
+.ik-scroll-area__shadow-right .ik-button,
+.ik-scroll-area__shadow-left .ik-button {
+    pointer-events: all;
+    box-shadow: 1px 2px 3px 0 var(--shadow-color-1);
+}
+
+.ik-scroll-area__shadow-right {
+    -webkit-box-shadow: inset -45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: inset -45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    box-shadow: inset -45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    justify-content: flex-end;
+    right: 0;
+}
+
+
+.ik-scroll-area__shadow-left {
+    -webkit-box-shadow: inset 45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    ;
+    -moz-box-shadow: inset 45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    ;
+    box-shadow: inset 45px 0 25px -10px rgba(255, 255, 255, 0.8);
+    justify-content: flex-start;
+    left: 0;
+}
+
+.ik-scroll-area .fade-enter-active,
+.ik-scroll-area .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.ik-scroll-area .fade-enter,
+.ik-scroll-area .fade-leave-to {
+    opacity: 0;
+}

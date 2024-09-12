@@ -1,0 +1,107 @@
+.ik-layout-grid {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ik-layout-grid .ik-layout-grid-window:not(:last-of-type),
+.ik-layout-grid-window--border {
+    border-right: 1px solid var(--surface-darken-color);
+}
+
+.ik-layout-grid-item {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ik-layout-grid-item--row {
+    flex-direction: row;
+}
+
+.ik-layout-grid-window {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1 1 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ik-layout-grid-window--static {
+    flex: 0 0 auto;
+}
+
+.ik-layout-grid-window__header {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 24px 25px 16px 25px;
+    line-height: 32px;
+}
+
+.ik-layout-grid-window--dense .ik-layout-grid-window__header {
+    padding: 15px;
+    line-height: 24px;
+}
+
+.ik-layout-grid-window--no-header-pad .ik-layout-grid-window__header {
+    padding: 0;
+}
+
+.ik-layout-grid-window__title {
+    flex: 1 1 auto;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.ik-layout-grid-window__actions {
+    flex: 0 0 auto;
+    font-size: 18px;
+}
+
+.ik-layout-grid-window__actions .ik-button {
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.ik-layout-grid-window__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ik-layout-grid-window__top,
+.ik-layout-grid-window__bottom {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.ik-layout-grid-window__action {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    margin-left: 2px;
+    color: var(--on-background-color-3);
+    cursor: pointer;
+}
+
+.ik-layout-grid-window__action:hover {
+    color: var(--on-background-color-2);
+}

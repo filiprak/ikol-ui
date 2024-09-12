@@ -1,0 +1,43 @@
+{
+    "include": [
+        "src",
+        "docs",
+        "tests"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "./lib",
+        "types": [
+            "jest",
+            "node"
+        ],
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowJs": false,
+        "jsx": "preserve",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "strictBindCallApply": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "@ui/tests/*": [
+                "tests/*"
+            ],
+            "@ui/*": [
+                "src/*"
+            ]
+        }
+    }
+}

@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+import { PaddingItem } from './utils/mdx/PaddingItem';
+import { MarginItem } from './utils/mdx/MarginItem';
+
+<Meta title="Theme/Spacing" />
+
+<style>
+  {`
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 50px;
+      font-weight: normal;
+    }
+  `}
+</style>
+
+<h1 className="ik-mb-6">Spacing</h1>
+
+<h3 className="ik-mb-5">Padding</h3>
+
+<div className="grid">
+  {['t', 'r', 'b', 'l', 'x', 'y', 'a'].map(dir => (
+    [0, 1, 2, 3, 4, 5, 6].map(i => <PaddingItem dir={dir} level={i} key={i + dir}/>)
+  ))}
+</div>
+
+<h3 className="ik-mb-5" style={{marginTop: 150}}>Margin</h3>
+
+<div className="grid">
+  {['t', 'r', 'b', 'l', 'x', 'y', 'a'].map(dir => (
+    [0, 1, 2, 3, 4, 5, 6].map(i => <MarginItem dir={dir} level={i} key={i + dir}/>)
+  ))}
+</div>

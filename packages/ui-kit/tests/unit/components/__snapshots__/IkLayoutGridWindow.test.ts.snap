@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkLayoutGridWindow renders with actions slot 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    />
+    <div
+      class="ik-layout-grid-window__actions"
+    >
+      <div
+        class="ik-layout-grid-window__action"
+      >
+        <div>
+          This is actions slot...
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with bottom slot 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__top"
+  >
+    This is bottom slot...
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with correct default state 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with default slot 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__content"
+  >
+    This is default slot...
+  </div>
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with edit action 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    />
+    <div
+      class="ik-layout-grid-window__actions"
+    >
+      <div
+        class="ik-layout-grid-window__action"
+      >
+        <ik-button-stub
+          active="false"
+          block="false"
+          circle="false"
+          design="default"
+          disabled="false"
+          fab="false"
+          filled="false"
+          flat="true"
+          icon="pen:light"
+          loading="false"
+          outline="false"
+          round="false"
+          separate="false"
+          skeleton="false"
+          tag="button"
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with header prop 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    >
+      This is header slot...
+    </div>
+    <div
+      class="ik-layout-grid-window__actions"
+    />
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with header slot 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    >
+      This is header slot...
+    </div>
+    <div
+      class="ik-layout-grid-window__actions"
+    />
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with new action 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    />
+    <div
+      class="ik-layout-grid-window__actions"
+    >
+      <div
+        class="ik-layout-grid-window__action"
+      >
+        <ik-button-stub
+          active="false"
+          block="false"
+          circle="false"
+          class="ik-mr-2"
+          design="accent"
+          disabled="false"
+          fab="false"
+          filled="true"
+          flat="false"
+          icon="plus"
+          loading="false"
+          outline="false"
+          round="false"
+          separate="false"
+          skeleton="false"
+          tag="button"
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with remove action 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__header"
+  >
+    <div
+      class="ik-layout-grid-window__title"
+    />
+    <div
+      class="ik-layout-grid-window__actions"
+    >
+      <div
+        class="ik-layout-grid-window__action"
+      >
+        <ik-button-stub
+          active="false"
+          block="false"
+          circle="false"
+          design="default"
+          disabled="false"
+          fab="false"
+          filled="false"
+          flat="true"
+          icon="trash-alt:light"
+          loading="false"
+          outline="false"
+          round="false"
+          separate="false"
+          skeleton="false"
+          tag="button"
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;
+
+exports[`IkLayoutGridWindow renders with top slot 1`] = `
+<div
+  class="ik-layout-grid-window"
+>
+  <div
+    class="ik-layout-grid-window__top"
+  >
+    This is top slot...
+  </div>
+  <div
+    class="ik-layout-grid-window__content"
+  />
+</div>
+`;

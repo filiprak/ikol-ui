@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkResource renders as uri link 1`] = `
+<div
+  class="ik-resource"
+>
+  <div
+    class="ik-resource__content"
+  >
+    
+    
+  </div>
+  <div
+    class="ik-resource__actions"
+  >
+    <!--v-if-->
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="external-link:regular"
+      tag="i"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkResource renders copyable 1`] = `
+<div
+  class="ik-resource"
+>
+  <div
+    class="ik-resource__content"
+  >
+    
+    
+  </div>
+  <div
+    class="ik-resource__actions"
+  >
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="copy:regular"
+      tag="i"
+    />
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`IkResource renders copyable and as uri link 1`] = `
+<div
+  class="ik-resource"
+>
+  <div
+    class="ik-resource__content"
+  >
+    
+    
+  </div>
+  <div
+    class="ik-resource__actions"
+  >
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="copy:regular"
+      tag="i"
+    />
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="external-link:regular"
+      tag="i"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkResource renders in no wrap mode 1`] = `
+<div
+  class="ik-resource ik-resource--no-wrap"
+>
+  <div
+    class="ik-resource__content"
+  >
+    
+    Uri test
+    
+  </div>
+  <div
+    class="ik-resource__actions"
+  >
+    <!--v-if-->
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="external-link:regular"
+      tag="i"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkResource renders with correct default state 1`] = `
+<div
+  class="ik-resource ik-resource--empty"
+>
+  <!--v-if-->
+  
+  
+</div>
+`;
+
+exports[`IkResource renders with default slot 1`] = `
+<div
+  class="ik-resource"
+>
+  <div
+    class="ik-resource__content"
+  >
+    
+    <span>
+      This is
+    </span>
+    Resource
+    <b>
+      Component
+    </b>
+    
+  </div>
+  <div
+    class="ik-resource__actions"
+  >
+    <ik-icon-stub
+      circle="false"
+      class="ik-resource__action"
+      disabled="false"
+      icon="copy:regular"
+      tag="i"
+    />
+    <!--v-if-->
+  </div>
+</div>
+`;

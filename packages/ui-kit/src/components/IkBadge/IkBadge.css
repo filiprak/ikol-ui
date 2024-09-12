@@ -1,0 +1,74 @@
+.ik-badge {
+    position: relative;
+    display: inline-block;
+}
+
+.ik-badge--outer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ik-badge__dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.ik-badge--outer .ik-badge__dot {
+    position: static;
+    margin-left: 5px;
+    flex: 0 0 auto;
+}
+
+.ik-badge--outer .ik-badge__content {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ik-badge--top .ik-badge__dot {
+    top: 0;
+    bottom: auto;
+}
+
+.ik-badge--left .ik-badge__dot {
+    left: 0;
+    right: auto;
+}
+
+.ik-badge--success .ik-badge__dot {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
+}
+
+.ik-badge--error .ik-badge__dot {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+}
+
+.ik-badge--accent .ik-badge__dot {
+    background-color: var(--accent-color);
+    color: var(--on-accent-color);
+}
+
+.ik-badge--primary .ik-badge__dot {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-badge__dot,
+.ik-badge--default .ik-badge__dot {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+
+.ik-badge--transparent .ik-badge__dot {
+    background-color: transparent;
+    color: inherit;
+}

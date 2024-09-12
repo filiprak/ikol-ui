@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkSVGIcon renders clickable 1`] = `
+<div
+  class="ik-svg-icon ik-svg-icon--clickable ik-svg-icon--default"
+  style="width: 28px; height: 28px;"
+/>
+`;
+
+exports[`IkSVGIcon renders disabled 1`] = `
+<div
+  class="ik-svg-icon ik-svg-icon--disabled ik-svg-icon--default"
+  style="width: 28px; height: 28px;"
+/>
+`;
+
+exports[`IkSVGIcon renders with correct default state 1`] = `
+<div
+  class="ik-svg-icon ik-svg-icon--default"
+  style="width: 28px; height: 28px;"
+/>
+`;

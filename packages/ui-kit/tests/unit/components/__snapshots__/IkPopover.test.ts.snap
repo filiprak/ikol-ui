@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkPopover renders with activator slot 1`] = `
+<body>
+  <div
+    data-v-app=""
+  >
+    <div
+      class="ik-popover__root"
+    >
+      <span>
+        Activator...
+      </span>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IkPopover renders with correct default state 1`] = `
+<body>
+  <div
+    data-v-app=""
+  >
+    <div
+      class="ik-popover__root"
+    >
+      <!---->
+    </div>
+  </div>
+</body>
+`;

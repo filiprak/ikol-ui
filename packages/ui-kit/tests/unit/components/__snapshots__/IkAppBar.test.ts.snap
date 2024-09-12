@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkAppBar renders with correct default mobile state 1`] = `
+<header
+  class="ik-app-bar"
+  style="left: 0px; height: 56px;"
+>
+  <div
+    class="ik-app-bar__burger"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="bars:light"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__back"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="long-arrow-left:regular"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__title"
+    style="display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-app-bar__content"
+  >
+    <!---->
+  </div>
+</header>
+`;
+
+exports[`IkAppBar renders with correct default state 1`] = `
+<header
+  class="ik-app-bar"
+  style="left: 0px; height: 56px;"
+>
+  <div
+    class="ik-app-bar__burger"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="bars:light"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__back"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="long-arrow-left:regular"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__title"
+    style="display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-app-bar__content"
+  >
+    <!---->
+  </div>
+</header>
+`;
+
+exports[`IkAppBar renders with custom width 1`] = `
+<header
+  class="ik-app-bar"
+  style="left: 0px; height: 77px;"
+>
+  <div
+    class="ik-app-bar__burger"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="bars:light"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__back"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="long-arrow-left:regular"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__title"
+    style="display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-app-bar__content"
+  >
+    <!---->
+  </div>
+</header>
+`;
+
+exports[`IkAppBar renders with default slot 1`] = `
+<header
+  class="ik-app-bar"
+  style="left: 0px; height: 56px;"
+>
+  <div
+    class="ik-app-bar__burger"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="bars:light"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__back"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="long-arrow-left:regular"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__title"
+    style="display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-app-bar__content"
+  >
+    
+    This is app bar content...
+    
+  </div>
+</header>
+`;
+
+exports[`IkAppBar renders with title slot 1`] = `
+<header
+  class="ik-app-bar"
+  style="left: 0px; height: 56px;"
+>
+  <div
+    class="ik-app-bar__burger"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="bars:light"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__back"
+    style="display: none;"
+  >
+    <ik-icon-stub
+      circle="false"
+      disabled="false"
+      icon="long-arrow-left:regular"
+      tag="i"
+    />
+  </div>
+  <div
+    class="ik-app-bar__title"
+  >
+    
+    This is title...
+    
+  </div>
+  <div
+    class="ik-app-bar__content"
+  >
+    <!---->
+  </div>
+</header>
+`;

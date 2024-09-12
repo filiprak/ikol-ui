@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkCheckbox renders checked 1`] = `
+<div
+  class="ik-checkbox ik-checkbox--basic"
+>
+  <label
+    class="ik-checkbox__label"
+  >
+    <input
+      type="checkbox"
+    />
+    <div
+      class="ik-checbox__icon"
+    >
+      <ik-icon-stub
+        circle="false"
+        disabled="false"
+        icon="check"
+        tag="i"
+      />
+    </div>
+    <div
+      class="ik-checkbox__text"
+    >
+      
+      
+    </div>
+  </label>
+</div>
+`;
+
+exports[`IkCheckbox renders disabled 1`] = `
+<div
+  class="ik-checkbox ik-checkbox--disabled ik-checkbox--basic"
+>
+  <label
+    class="ik-checkbox__label"
+  >
+    <input
+      type="checkbox"
+    />
+    <div
+      class="ik-checbox__icon"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="ik-checkbox__text"
+    >
+      
+      
+    </div>
+  </label>
+</div>
+`;
+
+exports[`IkCheckbox renders indeterminate 1`] = `
+<div
+  class="ik-checkbox ik-checkbox--basic"
+>
+  <label
+    class="ik-checkbox__label"
+  >
+    <input
+      type="checkbox"
+    />
+    <div
+      class="ik-checbox__icon"
+    >
+      <ik-icon-stub
+        circle="false"
+        disabled="false"
+        icon="minus"
+        tag="i"
+      />
+    </div>
+    <div
+      class="ik-checkbox__text"
+    >
+      
+      
+    </div>
+  </label>
+</div>
+`;
+
+exports[`IkCheckbox renders with correct default state 1`] = `
+<div
+  class="ik-checkbox ik-checkbox--basic"
+>
+  <label
+    class="ik-checkbox__label"
+  >
+    <input
+      type="checkbox"
+    />
+    <div
+      class="ik-checbox__icon"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="ik-checkbox__text"
+    >
+      
+      
+    </div>
+  </label>
+</div>
+`;
+
+exports[`IkCheckbox renders with default slot 1`] = `
+<div
+  class="ik-checkbox ik-checkbox--basic"
+>
+  <label
+    class="ik-checkbox__label"
+  >
+    <input
+      type="checkbox"
+    />
+    <div
+      class="ik-checbox__icon"
+    >
+      <!--v-if-->
+    </div>
+    <div
+      class="ik-checkbox__text"
+    >
+      
+      <span>
+        This is checkbox text...
+      </span>
+      
+    </div>
+  </label>
+</div>
+`;

@@ -1,0 +1,73 @@
+.ik-svg-icon {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.ik-svg-icon--clickable {
+    cursor: pointer;
+}
+
+.ik-svg-icon--clickable:hover {
+    opacity: 0.75;
+}
+
+.ik-svg-icon--disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* circle */
+.ik-svg-icon--circle {
+    /* padding: 4px 5px 4px 5px; */
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: var(--surface-darken-color);
+}
+
+.ik-svg-icon--circle.ik-svg-icon--default {
+    background-color: var(--surface-darken-color);
+}
+
+.ik-svg-icon--circle.ik-svg-icon--primary {
+    background-color: var(--primary-color-o1);
+}
+
+.ik-svg-icon--circle.ik-svg-icon--success {
+    background-color: var(--success-color-o1);
+}
+
+.ik-svg-icon--circle.ik-svg-icon--accent {
+    background-color: var(--accent-color-o1);
+}
+
+.ik-svg-icon--circle.ik-svg-icon--error {
+    background-color: var(--error-color-o1);
+}
+
+/* filled */
+.ik-svg-icon--filled.ik-svg-icon--default {
+    background-color: var(--surface-darken-color);
+    color: var(--on-surface-darken-color-3);
+}
+
+.ik-svg-icon--filled.ik-svg-icon--primary {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-svg-icon--filled.ik-svg-icon--success {
+    background-color: var(--success-color);
+    color: var(--on-success-color);
+}
+
+.ik-svg-icon--filled.ik-svg-icon--accent {
+    background-color: var(--accent-color);
+    color: var(--on-accent-color);
+}
+
+.ik-svg-icon--filled.ik-svg-icon--error {
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+}

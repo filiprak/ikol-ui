@@ -1,0 +1,9 @@
+.ik-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ik-chip-list > .ik-chip {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

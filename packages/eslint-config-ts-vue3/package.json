@@ -1,0 +1,29 @@
+{
+  "name": "@ikol/eslint-config-ts-vue3",
+  "version": "0.0.1",
+  "author": "IKOL",
+  "license": "MIT",
+  "description": "IKOL Linter for typescript with Vue 3 projects.",
+  "main": ".eslintrc.base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ikol",
+    "linter"
+  ],
+  "exports": {
+    ".": "./.eslintrc.base.js",
+    "./extend": "./index.js"
+  },
+  "peerDependencies": {
+    "eslint": "^8.38.0"
+  },
+  "dependencies": {
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-vue": "^9.10.0",
+    "@rushstack/eslint-patch": "^1.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.57.1"
+  }
+}

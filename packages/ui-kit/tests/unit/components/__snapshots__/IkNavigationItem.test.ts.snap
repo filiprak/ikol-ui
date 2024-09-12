@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkNavigationItem renders linked 1`] = `
+<div
+  class="ik-navigation-item ik-navigation-item--clickable"
+>
+  <a
+    class="ik-navigation-item__link"
+    href="www.test.com/test"
+    target="_blank"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkNavigationItem renders with append_icon param 1`] = `
+<div
+  class="ik-navigation-item"
+>
+  <div
+    class="ik-navigation-item__link"
+  >
+    <div
+      class="ik-navigation-item__content"
+    >
+      <div
+        class="ik-flex ik-flex--justify-space"
+      >
+        
+        Unit test
+        
+        <ik-icon-stub
+          circle="false"
+          class="ik-ml-3"
+          disabled="false"
+          icon="chevron-right:light"
+          tag="i"
+        />
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`IkNavigationItem renders with children in normal variant 1`] = `
+<div
+  class="ik-navigation-item"
+>
+  <div
+    class="ik-navigation-item__link"
+  >
+    <div
+      class="ik-navigation-item__content"
+    >
+      
+      Unit test
+      
+    </div>
+    <ik-button-stub
+      active="false"
+      block="false"
+      circle="true"
+      class="ik-navigation-item__arrow"
+      design="accent"
+      disabled="false"
+      fab="false"
+      filled="false"
+      flat="true"
+      icon="chevron-down:light"
+      loading="false"
+      outline="false"
+      round="false"
+      separate="false"
+      skeleton="false"
+      tag="button"
+      type="button"
+    />
+  </div>
+  <div
+    class="ik-navigation-item__children"
+    style="display: none;"
+  >
+    
+    This is children slot
+    
+  </div>
+</div>
+`;
+
+exports[`IkNavigationItem renders with default and icon slots 1`] = `
+<div
+  class="ik-navigation-item"
+>
+  <div
+    class="ik-navigation-item__link"
+  >
+    <div
+      class="ik-navigation-item__icon"
+    >
+      
+      <i>
+        Test
+      </i>
+      
+    </div>
+    <div
+      class="ik-navigation-item__content"
+    >
+      
+      This is unit test
+      
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`IkNavigationItem renders with default state 1`] = `
+<div
+  class="ik-navigation-item"
+>
+  <div
+    class="ik-navigation-item__link"
+  />
+  <!---->
+</div>
+`;
+
+exports[`IkNavigationItem renders with icon prop 1`] = `
+<div
+  class="ik-navigation-item"
+>
+  <div
+    class="ik-navigation-item__link"
+  >
+    <div
+      class="ik-navigation-item__icon"
+    >
+      <ik-icon-stub
+        circle="false"
+        disabled="false"
+        icon="home:regular"
+        tag="i"
+      />
+    </div>
+  </div>
+  <!---->
+</div>
+`;

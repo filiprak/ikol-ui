@@ -1,0 +1,44 @@
+.ik-input {
+    position: relative;
+}
+
+.ik-input__append,
+.ik-input__prepend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 24px;
+    width: 32px;
+    padding: 4px 8px;
+    color: var(--on-background-color-3);
+}
+
+.ik-input__prepend {
+    left: 0;
+}
+
+.ik-input__append {
+    right: 0;
+}
+
+.ik-input--prepend > .ik-input__native {
+    padding-left: 32px !important;
+}
+
+.ik-input--append > .ik-input__native {
+    padding-right: 32px !important;
+}
+
+.ik-input:focus-within > .ik-input__prepend,
+.ik-input:focus-within > .ik-input__append {
+    color: var(--primary-color);
+}
+
+.ik-input--disabled > .ik-input__prepend,
+.ik-input--disabled > .ik-input__append {
+    opacity: 0.65;
+    pointer-events: none;
+}

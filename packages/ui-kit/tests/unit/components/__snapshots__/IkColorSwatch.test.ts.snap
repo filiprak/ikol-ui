@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkColorSwatch has correct classes and style when round 1`] = `
+<div
+  class="ik-color-swatch ik-color-swatch--round"
+/>
+`;
+
+exports[`IkColorSwatch has correct classes, style and default props 1`] = `
+<div
+  class="ik-color-swatch"
+/>
+`;
+
+exports[`IkColorSwatch has correct style for hex color 1`] = `
+<div
+  class="ik-color-swatch ik-color-swatch--round"
+  style="background-color: rgb(255, 0, 170);"
+/>
+`;

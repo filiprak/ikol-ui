@@ -1,0 +1,10 @@
+@import url('https://res.stikol.com/fonts/opensans/css/load.css');
+@import url('https://res.stikol.com/icons/fa/v6.4.2/css/fontawesome.min.css');
+@import url('https://res.stikol.com/icons/fa/v6.4.2/css/light.min.css');
+@import url('https://res.stikol.com/icons/fa/v6.4.2/css/regular.min.css');
+@import url('https://res.stikol.com/icons/fa/v6.4.2/css/solid.min.css');
+@import url('https://res.stikol.com/icons/fa/v6.4.2/css/brands.min.css');
+
+.docs-story {
+    background-color: var(--background-color);
+}

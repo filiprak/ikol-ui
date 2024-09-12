@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkButtonGroup renders reverse 1`] = `
+"<div class="ik-button-group">
+  <div class="child-3"></div>
+  <div class="child-2"></div>
+  <div class="child-1"></div>
+</div>"
+`;

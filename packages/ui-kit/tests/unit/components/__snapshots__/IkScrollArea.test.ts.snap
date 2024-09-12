@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkScrollArea renders loader when loading and not all items loaded 1`] = `
+<div
+  class="ik-scroll-area"
+  data-simplebar=""
+  data-simplebar-auto-hide="false"
+>
+  <div
+    class="simplebar-wrapper"
+  >
+    <!--v-if-->
+    <div
+      class="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        class="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      class="simplebar-mask"
+    >
+      <div
+        class="simplebar-offset"
+      >
+        <div
+          class="simplebar-content-wrapper"
+        >
+          <div
+            class="simplebar-content"
+          >
+            
+            <div
+              class="test"
+            >
+              Infinite scroll content...
+            </div>
+            
+            <div
+              class="ik-scroll-area__loader"
+            >
+              <ik-loader-circle-stub
+                design="default"
+                indeterminate="true"
+                rotate="0"
+                size="20"
+                thickness="2"
+                value="0"
+              />
+            </div>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="simplebar-placeholder"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-horizontal"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-vertical"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkScrollArea renders loading in reverse mode 1`] = `
+<div
+  class="ik-scroll-area"
+  data-simplebar=""
+  data-simplebar-auto-hide="false"
+>
+  <div
+    class="simplebar-wrapper"
+  >
+    <!--v-if-->
+    <div
+      class="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        class="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      class="simplebar-mask"
+    >
+      <div
+        class="simplebar-offset"
+      >
+        <div
+          class="simplebar-content-wrapper"
+        >
+          <div
+            class="simplebar-content"
+          >
+            <!--v-if-->
+            <div
+              class="ik-scroll-area__loader"
+            >
+              <ik-loader-circle-stub
+                design="default"
+                indeterminate="true"
+                rotate="0"
+                size="20"
+                thickness="2"
+                value="0"
+              />
+            </div>
+            
+            <div
+              class="test"
+            >
+              Infinite scroll content...
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="simplebar-placeholder"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-horizontal"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-vertical"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkScrollArea renders with correct default state 1`] = `
+<div
+  class="ik-scroll-area"
+  data-simplebar=""
+  data-simplebar-auto-hide="false"
+>
+  <div
+    class="simplebar-wrapper"
+  >
+    <!--v-if-->
+    <div
+      class="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        class="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      class="simplebar-mask"
+    >
+      <div
+        class="simplebar-offset"
+      >
+        <div
+          class="simplebar-content-wrapper"
+        >
+          <div
+            class="simplebar-content"
+          >
+            
+            
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="simplebar-placeholder"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-horizontal"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-vertical"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;
+
+exports[`IkScrollArea renders with default slot 1`] = `
+<div
+  class="ik-scroll-area"
+  data-simplebar=""
+  data-simplebar-auto-hide="false"
+>
+  <div
+    class="simplebar-wrapper"
+  >
+    <!--v-if-->
+    <div
+      class="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        class="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      class="simplebar-mask"
+    >
+      <div
+        class="simplebar-offset"
+      >
+        <div
+          class="simplebar-content-wrapper"
+        >
+          <div
+            class="simplebar-content"
+          >
+            
+            <div
+              class="test"
+            >
+              Area scroll content...
+            </div>
+            
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="simplebar-placeholder"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-horizontal"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    class="simplebar-track simplebar-vertical"
+  >
+    <div
+      class="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;

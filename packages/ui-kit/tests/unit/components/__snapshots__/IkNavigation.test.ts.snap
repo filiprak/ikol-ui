@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkNavigation renders as secondary navigation 1`] = `
+<nav
+  class="ik-navigation ik-navigation--secondary"
+>
+  <div
+    class="ik-navigation__top"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-navigation__content"
+  >
+    <ik-scroll-area-stub
+      bound_threshold="20"
+      disable_auto_anchoring="false"
+      hide_loader="false"
+      hide_x="false"
+      hide_y="false"
+      horizontal_arrows="false"
+      loading="false"
+      pagination="[object Object]"
+      reverse="false"
+    />
+  </div>
+  <div
+    class="ik-navigation__bottom"
+  >
+    <!---->
+  </div>
+</nav>
+`;
+
+exports[`IkNavigation renders with bottom slot 1`] = `
+<nav
+  class="ik-navigation"
+  style="height: 100vh; top: 0px; max-height: 100%; transform: translateX(0%); width: 256px;"
+>
+  <div
+    class="ik-navigation__top"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-navigation__content"
+  >
+    <ik-scroll-area-stub
+      bound_threshold="20"
+      disable_auto_anchoring="false"
+      hide_loader="false"
+      hide_x="false"
+      hide_y="false"
+      horizontal_arrows="false"
+      loading="false"
+      pagination="[object Object]"
+      reverse="false"
+    />
+  </div>
+  <div
+    class="ik-navigation__bottom"
+  >
+    
+    <div>
+      Nav bottom content...
+    </div>
+    
+  </div>
+</nav>
+`;
+
+exports[`IkNavigation renders with default slot 1`] = `
+<nav
+  class="ik-navigation"
+  style="height: 100vh; top: 0px; max-height: 100%; transform: translateX(0%); width: 256px;"
+>
+  <div
+    class="ik-navigation__top"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-navigation__content"
+  >
+    <ik-scroll-area-stub
+      bound_threshold="20"
+      disable_auto_anchoring="false"
+      hide_loader="false"
+      hide_x="false"
+      hide_y="false"
+      horizontal_arrows="false"
+      loading="false"
+      pagination="[object Object]"
+      reverse="false"
+    >
+      <div>
+        Nav content...
+      </div>
+    </ik-scroll-area-stub>
+  </div>
+  <div
+    class="ik-navigation__bottom"
+  >
+    <!---->
+  </div>
+</nav>
+`;
+
+exports[`IkNavigation renders with default state 1`] = `
+<nav
+  class="ik-navigation"
+  style="height: 100vh; top: 0px; max-height: 100%; transform: translateX(-100%); width: 256px;"
+>
+  <div
+    class="ik-navigation__top"
+  >
+    <!---->
+  </div>
+  <div
+    class="ik-navigation__content"
+  >
+    <ik-scroll-area-stub
+      bound_threshold="20"
+      disable_auto_anchoring="false"
+      hide_loader="false"
+      hide_x="false"
+      hide_y="false"
+      horizontal_arrows="false"
+      loading="false"
+      pagination="[object Object]"
+      reverse="false"
+    />
+  </div>
+  <div
+    class="ik-navigation__bottom"
+  >
+    <!---->
+  </div>
+</nav>
+`;
+
+exports[`IkNavigation renders with top slot 1`] = `
+<nav
+  class="ik-navigation"
+  style="height: 100vh; top: 0px; max-height: 100%; transform: translateX(0%); width: 256px;"
+>
+  <div
+    class="ik-navigation__top"
+  >
+    
+    <div>
+      Nav top content...
+    </div>
+    
+  </div>
+  <div
+    class="ik-navigation__content"
+  >
+    <ik-scroll-area-stub
+      bound_threshold="20"
+      disable_auto_anchoring="false"
+      hide_loader="false"
+      hide_x="false"
+      hide_y="false"
+      horizontal_arrows="false"
+      loading="false"
+      pagination="[object Object]"
+      reverse="false"
+    />
+  </div>
+  <div
+    class="ik-navigation__bottom"
+  >
+    <!---->
+  </div>
+</nav>
+`;

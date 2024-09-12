@@ -1,0 +1,122 @@
+.ik-date {
+    display: flex;
+    flex-direction: row;
+}
+
+.ik-date__day-input {
+    flex: 1 1 auto;
+    min-width: 110px;
+    max-width: 130px;
+}
+
+.ik-date__day-input:not(:last-child) {
+    margin-right: 7px;
+}
+
+.ik-date--full-width .ik-date__day-input {
+    max-width: 100%;
+}
+
+.ik-date__hour-input {
+    flex: 0 1 auto;
+    min-width: 50px;
+    max-width: 80px;
+}
+
+.ik-date__calendar {
+    padding: 13px;
+    font-weight: 600;
+}
+
+.ik-date__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ik-date__cell {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 36px;
+    text-align: center;
+}
+
+.ik-date__cell--weekday {
+    height: 24px;
+    font-size: 11px;
+    color: var(--on-surface-color-4);
+}
+
+.ik-date__cell--offset {
+    color: var(--on-surface-color-3);
+}
+
+.ik-date__cell--active > div {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+
+.ik-date__cell--today:not(.ik-date__cell--active) > div {
+    color: var(--accent-color);
+}
+
+.ik-date__cell > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.ik-date__cell:not(.ik-date__cell--active) > div:hover {
+    background-color: var(--primary-color-o1);
+}
+
+.ik-date__cell--disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.ik-date__nav {
+    display: flex;
+    padding-bottom: 7px;
+}
+
+.ik-date__nav-month {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.ik-date__nav-btn {
+    flex: 0 0 auto;
+}
+
+.ik-date__select {
+    min-width: 120px;
+    height: 200px;
+    font-weight: 600;
+    overflow: auto;
+}
+
+.ik-date__select-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 12px;
+    height: 40px;
+}
+
+.ik-date__select-item:hover {
+    background-color: var(--primary-color-o1);
+    color: var(--primary-color);
+}

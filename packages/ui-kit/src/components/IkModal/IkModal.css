@@ -1,0 +1,150 @@
+.ik-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+body.ik-modal-open {
+    overflow: hidden;
+}
+
+.ik-modal__dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+@media (min-width: 768px) {
+    .ik-modal__dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    .ik-modal--size-sm .ik-modal__dialog {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .ik-modal--size-lg .ik-modal__dialog {
+        width: 900px;
+    }
+}
+
+.ik-modal-content {
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--on-background-color-1);
+    border-radius: 8px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px var(--shadow-color-2);
+    box-shadow: 0 3px 9px var(--shadow-color-2);
+}
+
+.ik-modal-header,
+.ik-modal-body,
+.ik-modal-footer {
+    padding: 25px;
+}
+
+.ik-modal-header {
+    display: grid;
+    grid-template-areas: "content append";
+    grid-template-columns: auto max-content;
+}
+
+.ik-modal-header__title {
+    grid-area: content;
+    align-self: center;
+    font-size: 18px;
+}
+
+.ik-modal-header__append {
+    grid-area: append;
+}
+
+.ik-modal-body {
+    overflow: auto;
+    padding: 0 25px;
+    max-height: calc(100% - 230px);
+}
+
+.ik-modal--fill-body .ik-modal-body {
+    height: 100%;
+}
+
+.ik-modal--fill-viewport {
+    padding: 0;
+}
+
+.ik-modal--fill-viewport .ik-modal__dialog {
+    margin: 0;
+    width: 100svw;
+}
+
+.ik-modal--fill-viewport .ik-modal-content {
+    border-radius: 0;
+}
+
+.ik-modal-header--primary .ik-modal-header__title {
+    color: var(--primary-color);
+}
+
+.ik-modal-header--success .ik-modal-header__title {
+    color: var(--success-color);
+}
+
+.ik-modal-header--error .ik-modal-header__title {
+    color: var(--error-color);
+}
+
+.ik-modal-header--accent .ik-modal-header__title {
+    color: var(--accent-color);
+}
+
+.ik-modal-footer {
+    display: grid;
+    justify-items: end;
+}
+
+.ik-modal-footer > .ik-button-group {
+    margin-bottom: -5px;
+}
+
+.ik-modal--mobile .ik-modal-footer > .ik-button-group {
+    width: 100%;
+}
+
+.ik-modal--no-scroll .ik-modal-body {
+    max-height: max-content;
+}
+
+.ik-modal__backdrop {
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.ik-modal,
+.ik-modal__backdrop {
+    z-index: var(--z-index-modal);
+}
+
+.ik-theme--dark .ik-modal__backdrop {
+    background-color: #4e4e4e;
+}

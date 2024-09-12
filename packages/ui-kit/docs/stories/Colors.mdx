@@ -1,0 +1,53 @@
+import { DocsContext, Meta } from '@storybook/blocks';
+import { Fragment, useEffect, useContext } from 'react';
+import { IkThemeManager, COLORS_MAP } from '@ui/composables/theme/IkThemeManager';
+
+export const ColorsPalette = () => {
+  const ctx = useContext(DocsContext);
+  const theme = ctx.store.globals.globals.theme || 'light';
+  const colors = COLORS_MAP[theme];
+
+  return <div className="grid">
+    <h3 className="ik-mb-4">JS Variable</h3>
+    <h3 className="ik-mb-4">CSS Variable</h3>
+    <h3 className="ik-mb-4">Preview</h3>
+    <h3 className="ik-mb-4">CSS Value</h3>
+    {Object.entries(colors).filter(([name]) => name !== 'palette').map(([name, value]) => {
+      return <Fragment key={name}>
+        <div key={name + '1'}><code>{name}</code></div>
+        <div key={name + '2'}><code>{IkThemeManager.jsColorToCssVar(name)}</code></div>
+        <div key={name + '3'} className="color" style={{ backgroundColor: `${IkThemeManager.jsColorToCssValue(value)}` }}></div>
+        <div key={name + '4'}><code>{IkThemeManager.jsColorToCssValue(value)}</code></div>
+      </Fragment>
+    })}
+  </div>;
+}
+
+<Meta title="Theme/Colors" />
+
+<style>
+  {`
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      column-gap: 10px;
+      align-items: center;
+      margin-bottom: 50px;
+      font-weight: normal;
+    }
+
+    .grid > div {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+    }
+
+    .color {
+      outline: 1px dotted #bbb;
+    }
+  `}
+</style>
+
+<h1 className="ik-mb-6">Colors</h1>
+
+<ColorsPalette/>

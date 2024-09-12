@@ -1,0 +1,35 @@
+.ik-resource:not(.ik-resource--empty) {
+    display: inline-flex;
+    max-width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ik-resource__content {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    border-bottom: 1px solid transparent;
+}
+
+.ik-resource:hover > .ik-resource__content {
+    border-bottom: 1px dotted;
+}
+
+.ik-resource__actions {
+    flex-grow: 0;
+    display: none;
+}
+
+.ik-resource__actions > .ik-resource__action {
+    padding: 0 1px 0 5px;
+}
+
+.ik-resource:hover > .ik-resource__actions {
+    display: inline-flex;
+}
+
+.ik-resource--no-wrap .ik-resource__content {
+    white-space: nowrap;
+  }

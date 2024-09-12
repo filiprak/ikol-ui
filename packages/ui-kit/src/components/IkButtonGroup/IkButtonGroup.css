@@ -1,0 +1,34 @@
+.ik-button-group {
+    display: inline-block;
+}
+
+.ik-button-group > .ik-button {
+    margin: 0 5px 5px 0;
+}
+
+.ik-button-group--equal {
+    display: grid;
+    margin: 0;
+    grid-auto-flow: column;
+    column-gap: 5px;
+    max-width: 100%;
+}
+
+.ik-button-group--equal > .ik-button {
+    margin: 0 0 5px 0;
+    min-width: 0;
+}
+
+.ik-button-group--stack {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.ik-button-group--stack > .ik-button:not(.ik-button--circle) {
+    width: 100%;
+}
+
+.ik-button-group--stack > .ik-button {
+    margin: 0 0 5px 0;
+    min-width: 0;
+}

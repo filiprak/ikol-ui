@@ -1,0 +1,105 @@
+/* field */
+.ik-form-field {
+    margin-bottom: 15px;
+}
+
+.ik-form-field--no-margin {
+    margin: 0 !important;
+}
+
+.ik-form-field__label {
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: left;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--on-background-color-3)
+}
+
+.ik-form-field:focus-within .ik-form-field__label {
+    color: var(--primary-color);
+}
+
+.ik-form-field__required {
+    font-size: 9px;
+    width: 100%;
+    float: left;
+    text-align: right;
+}
+
+.ik-form-field__error {
+    margin: 5px 0 0 0;
+    padding: 0;
+    border-radius: 0;
+    font-size: 12px;
+    color: var(--error-color);
+}
+
+.ik-form-field__subtext {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--on-background-color-3);
+    width: 100%;
+    text-align: left;
+}
+
+.ik-form-field__required-dot {
+    color: var(--error-color);
+}
+
+.ik-form-field__content {
+    position: relative;
+}
+
+.ik-form-field--pad .ik-form-field__label,
+.ik-form-field--pad .ik-form-field__content {
+    padding-left: 40px;
+}
+
+.ik-form-field__icon {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--on-background-color-3);
+}
+
+.ik-form-field--skeleton {
+    user-select: none !important;
+}
+
+.ik-form-field--skeleton .ik-form-field__label,
+.ik-form-field--skeleton .ik-form-field__content {
+    border-radius: 8px;
+    color: transparent !important;
+}
+
+.ik-form-field--skeleton .ik-form-field__label {
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+.ik-form-field--skeleton > .ik-form-field__label > * {
+    visibility: hidden;
+}
+
+.ik-form-field--skeleton > .ik-form-field__content > * {
+    visibility: hidden;
+}
+
+.ik-form-field__help {
+    margin-left: 2px;
+}
+
+/* view mode */
+.ik-form-field-view-mode {
+    display: grid;
+    justify-items: start;
+    color: var(--on-background-color-1);
+    line-height: 24px;
+    min-height: 34px;
+    padding: 4px 8px 4px 0;
+    font-size: 13px;
+}

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkDate renders with default state 1`] = `
+<div
+  class="ik-date"
+>
+  <div
+    class="ik-date__day-input"
+  >
+    <div
+      class="ik-popover__root"
+    >
+      <div
+        class="ik-input"
+      >
+        <!---->
+        <input
+          autocomplete="off"
+          class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
+          placeholder="{{_*en*Choose date_}}"
+          type="text"
+        />
+        <!---->
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;

@@ -1,0 +1,8 @@
+.ik-form-submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ik-form-submit__icon {
+    padding-left: 16px !important;
+}

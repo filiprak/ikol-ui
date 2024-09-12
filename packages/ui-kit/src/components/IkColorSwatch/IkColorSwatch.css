@@ -1,0 +1,29 @@
+.ik-color-swatch {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+}
+
+.ik-color-swatch--round {
+    border-radius: 50%;
+}
+
+.ik-color-swatch--xs {
+    width: 12px;
+    height: 12px;
+}
+
+.ik-color-swatch--sm {
+    width: 16px;
+    height: 16px;
+}
+
+.ik-color-swatch--md {
+    width: 20px;
+    height: 20px;
+}
+
+.ik-color-swatch--lg {
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IkPickerFieldItem renders correctly with disabled property 1`] = `
+<div
+  class="ik-form-field ik-picker-field"
+>
+  <div
+    class="ik-form-field__label"
+  >
+     
+    <!--v-if-->
+    
+    
+  </div>
+  <div
+    class="ik-form-field__content"
+  >
+    <!--v-if-->
+    
+    <div
+      class="ik-select"
+    >
+      <div
+        class="ik-popover__root"
+      >
+        <div
+          class="ik-list-item ik-list-item--disabled ik-list-item--clickable ik-picker-field-item ik-picker-field-item--disabled"
+          grow_content=""
+          no_wrap=""
+        >
+          <div
+            class="ik-list-item__prepend"
+          >
+            
+            
+            <div
+              class="ik-color-swatch ik-color-swatch--round ik-color-swatch--md"
+              style="background-color: rgb(255, 255, 255);"
+            />
+            
+            
+          </div>
+          <div
+            class="ik-list-item__content"
+          >
+            <div
+              class="ik-list-item__title"
+            >
+              
+              
+              Test 13
+              
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="ik-list-item__append"
+          >
+            
+            
+            [[_*en*UPDATE_]]
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="ik-form-field__errors"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`IkPickerFieldItem renders with default state 1`] = `
+<div
+  class="ik-form-field ik-picker-field"
+>
+  <div
+    class="ik-form-field__label"
+  >
+     
+    <!--v-if-->
+    
+    
+  </div>
+  <div
+    class="ik-form-field__content"
+  >
+    <!--v-if-->
+    
+    <div
+      class="ik-select"
+    >
+      <div
+        class="ik-popover__root"
+      >
+        <div
+          class="ik-list-item ik-list-item--clickable ik-picker-field-item"
+          grow_content=""
+          no_wrap=""
+        >
+          <div
+            class="ik-list-item__prepend"
+          >
+            
+            
+            <div
+              class="ik-color-swatch ik-color-swatch--round ik-color-swatch--md"
+              style="background-color: rgb(255, 255, 255);"
+            />
+            
+            
+          </div>
+          <div
+            class="ik-list-item__content"
+          >
+            <div
+              class="ik-list-item__title"
+            >
+              
+              
+              Test 13
+              
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="ik-list-item__append"
+          >
+            
+            
+            [[_*en*UPDATE_]]
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="ik-form-field__errors"
+    >
+      
+      
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
