@@ -9,21 +9,24 @@
   "description": "IKOL JavaScript Software Development Kit",
   "main": "index.ts",
   "scripts": {
-    "build:test": "npm run build --workspace=ikol-ui-kit --workspace=test",
-    "lint": "npm run lint --workspace=ikol-ui-kit",
-    "storybook": "npm run storybook --workspace=@ikol/ui-kit",
-    "test": "npm run test --workspace=ikol-ui-kit",
-    "lint:fix": "npm run lint:fix --workspace=ikol-ui-kit"
+    "build": "npm run build --workspace=@ikol/ui-kit",
+    "build:test": "npm run build --workspace=test",
+    "build:docs": "npm run build:storybook --workspace=@ikol/ui-kit",
+    "lint": "npm run lint --workspace=@ikol/ui-kit",
+    "lint:fix": "npm run lint:fix --workspace=@ikol/ui-kit",
+    "docs": "npm run storybook --workspace=@ikol/ui-kit",
+    "test": "npm run test --workspace=@ikol/ui-kit",
+    "typecheck": "npm run typecheck --workspace=@ikol/ui-kit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/filiprak/ikol-js-sdk.git"
+    "url": "git+https://github.com/filiprak/ikol-ui.git"
   },
   "keywords": [
     "ikol"
   ],
   "bugs": {
-    "url": "https://github.com/filiprak/ikol-js-sdk/issues"
+    "url": "https://github.com/filiprak/ikol-ui/issues"
   },
-  "homepage": "https://github.com/filiprak/ikol-js-sdk#readme"
+  "homepage": "https://github.com/filiprak/ikol-ui#readme"
 }
