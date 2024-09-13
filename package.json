@@ -18,7 +18,7 @@
     "test": "npm run test --workspace=@ikol/ui-kit",
     "typecheck": "npm run typecheck --workspace=@ikol/ui-kit",
     "repo:sync": "bash .release/sync.sh",
-    "release": "npm run typecheck --workspace=@ikol/ui-kit"
+    "release": "npm run build && npm publish --access=public --workspace=@ikol/ui-kit"
   },
   "repository": {
     "type": "git",
