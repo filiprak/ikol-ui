@@ -1,9 +1,9 @@
 {
   "name": "@ikol/ui-kit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "IKOL",
   "license": "MIT",
-  "description": "IKOL JavaScript Software Development Kit UI framework",
+  "description": "IKOL UI Framework",
   "scripts": {
     "typecheck": "vue-tsc --noEmit",
     "eslint": "eslint src/ tests/ --rulesdir ../eslint-config-ts-vue3/src/rules",
@@ -32,21 +32,23 @@
     ".": "./lib/index.mjs",
     "./components/*": "./lib/components/*/index.mjs",
     "./composables": "./lib/composables/index.mjs",
+    "./directives": "./lib/directives/index.mjs",
+    "./classes": "./lib/classes/index.mjs",
     "./utils/*": "./lib/utils/*.mjs",
     "./styles": {
       "default": "./lib/styles/index.mjs"
     }
   },
-  "types": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
   "typesVersions": {
     "*": {
       "lib/index.mjs": [
-        "lib/index.mjs"
+        "lib/index.d.ts"
       ],
       "*": [
         "*",
-        "lib/*.mjs",
-        "lib/*/index.mjs"
+        "lib/*.d.ts",
+        "lib/*/index.d.ts"
       ]
     }
   },

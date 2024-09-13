@@ -1,4 +1,9 @@
 export { useTheme } from './theme';
+export { useForm, useFormField, makeFieldProps, useFormRadio } from './form';
+export { useHead } from './head';
+export { useInstance } from './instance';
+export { useMemoize } from './memoize';
+export { showModal, useModal, useModalManager, showConfirmModal, showQuickModal } from './modal';
 export { createRouter, useRoute, useRouter } from './router';
 export { useDevice } from './device';
 export { usePopover } from './popover';

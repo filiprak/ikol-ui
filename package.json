@@ -16,7 +16,9 @@
     "lint:fix": "npm run lint:fix --workspace=@ikol/ui-kit",
     "docs": "npm run storybook --workspace=@ikol/ui-kit",
     "test": "npm run test --workspace=@ikol/ui-kit",
-    "typecheck": "npm run typecheck --workspace=@ikol/ui-kit"
+    "typecheck": "npm run typecheck --workspace=@ikol/ui-kit",
+    "repo:sync": "bash .release/sync.sh",
+    "release": "npm run typecheck --workspace=@ikol/ui-kit"
   },
   "repository": {
     "type": "git",
