@@ -9,6 +9,7 @@ exports[`IkInput renders with append icon 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <div
     class="ik-input__append"
@@ -29,6 +30,7 @@ exports[`IkInput renders with append slot 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <div
     class="ik-input__append"
@@ -59,6 +61,7 @@ exports[`IkInput renders with correct custom state 1`] = `
     required=""
     step="55"
     type="password"
+    value="Test value."
   />
   <!---->
 </div>
@@ -73,6 +76,7 @@ exports[`IkInput renders with correct default state 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <!---->
 </div>
@@ -93,6 +97,7 @@ exports[`IkInput renders with icon 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <!---->
 </div>
@@ -113,6 +118,7 @@ exports[`IkInput renders with prepend icon 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <!---->
 </div>
@@ -133,6 +139,7 @@ exports[`IkInput renders with prepend slot 1`] = `
     autocomplete="off"
     class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
     type="text"
+    value=""
   />
   <!---->
 </div>

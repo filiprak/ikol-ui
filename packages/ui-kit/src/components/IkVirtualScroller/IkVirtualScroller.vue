@@ -11,6 +11,7 @@
             <slot name="item"
                   :item="item.raw"></slot>
         </IkVirtualScrollerItem>
+        <slot v-if="visible_items.length < 1"></slot>
         <div class="ik-virtual-scroller__spacer"
              :style="{ paddingBottom: toCssUnits(padding_bottom, 'px') }"></div>
     </IkScrollArea>
@@ -48,7 +49,7 @@ const padding_top = shallowRef(0);
 const padding_bottom = shallowRef(0);
 
 const first_idx = shallowRef(0);
-const last_idx = shallowRef(1);
+const last_idx = shallowRef(25);
 
 let sizes = Array.from<number | null>({ length: props.items.length });
 let offsets = Array.from<number>({ length: props.items.length });
@@ -166,7 +167,7 @@ function onScrollEnd() {
 }
 
 function onItemResize(index: number, rect: DOMRectReadOnly) {
-    if (rect.height !== null) {
+    if (rect.height !== null && rect.height > 0) {
         const prev_h = sizes[index];
         const prev_min_h = item_min_height.value;
 
@@ -217,6 +218,14 @@ function scrollToIndex(index: number) {
     }
 }
 
+function getContentHeight() {
+    return scrollarea.value?.getContentHeight() ?? undefined;
+}
+
+function scrollTop(offset: number) {
+    scrollarea.value?.scrollTop(offset);
+}
+
 // https://gist.github.com/robertleeplummerjr/1cc657191d34ecd0a324
 function binaryClosest(arr: ArrayLike<number>, val: number) {
     let high = arr.length - 1;
@@ -249,6 +258,8 @@ function binaryClosest(arr: ArrayLike<number>, val: number) {
 }
 
 defineExpose({
+    getContentHeight,
+    scrollTop,
     scrollToIndex,
 });
 </script>

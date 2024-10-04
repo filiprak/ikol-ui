@@ -91,7 +91,7 @@ export default defineComponent({
                 'ik-navigation-item--circle-icon': this.circle_icon,
             };
         },
-        route_object(): RouteLocationRaw | null {
+        route_object() {
             if (this.route) {
                 const route = typeof this.route === 'string' ? { name: this.route } : this.route;
                 return { params: this.current_route.params, ...route };

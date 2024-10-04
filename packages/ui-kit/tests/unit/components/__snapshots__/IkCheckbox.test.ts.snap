@@ -8,6 +8,7 @@ exports[`IkCheckbox renders checked 1`] = `
     class="ik-checkbox__label"
   >
     <input
+      checked=""
       type="checkbox"
     />
     <div

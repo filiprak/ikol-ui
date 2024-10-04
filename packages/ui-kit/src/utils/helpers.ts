@@ -284,12 +284,42 @@ export function getRandomString(length: number) {
 export function debounce<F extends (...args: any[]) => any>(func: F, wait = 400, immediate = false) { // eslint-disable-line @typescript-eslint/no-explicit-any
     let timeout: ReturnType<typeof setTimeout> | null;
 
+    let queue: Promise<unknown> | undefined;
+    let pending_args: Parameters<F> | undefined;
+
     return (...args: Parameters<F>): void => {
+        const run = () => {
+            if (!queue) {
+                const r = func(...args);
+
+                if (r instanceof Promise) {
+                    queue = r;
+                }
+            } else {
+                const flush = pending_args === undefined;
+
+                pending_args = args;
+
+                if (flush) {
+                    queue.finally(() => {
+                        queue = undefined;
+
+                        const r = func(...(pending_args || []));
+
+                        pending_args = undefined;
+
+                        if (r instanceof Promise) {
+                            queue = r;
+                        }
+                    });
+                }
+            }
+        };
         const later = () => {
             timeout = null;
 
             if (!immediate) {
-                func(...args);
+                run();
             }
         };
         const call_now = immediate && !timeout;
@@ -298,7 +328,7 @@ export function debounce<F extends (...args: any[]) => any>(func: F, wait = 400,
         timeout = setTimeout(later, wait);
 
         if (call_now) {
-            func(...args);
+            run();
         }
     };
 }

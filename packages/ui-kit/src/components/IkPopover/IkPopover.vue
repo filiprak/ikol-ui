@@ -396,6 +396,8 @@ function _preview(callback: Function) {
 
 function _updateDimensions(el?: HTMLElement | null, container_el?: HTMLElement | null, callback?: Function) {
     if (el) {
+        state.value.z_index = _getZIndex();
+
         _preview(() => {
             if (content_el.value) {
                 const mr = 10;

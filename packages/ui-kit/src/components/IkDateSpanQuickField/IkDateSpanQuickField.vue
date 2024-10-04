@@ -104,7 +104,7 @@ defineOptions({
     inheritAttrs: false,
 });
 
-const emit = defineEmits<{
+defineEmits<{
     (e: 'update:modelValue', value?: IkValueT): void,
 }>();
 

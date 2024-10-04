@@ -19,6 +19,7 @@ exports[`IkDate renders with default state 1`] = `
           class="ik-input__native ik-f-input ik-f-input--size-sm ik-f-input--flat"
           placeholder="{{_*en*Choose date_}}"
           type="text"
+          value=""
         />
         <!---->
       </div>

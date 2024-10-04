@@ -43,6 +43,12 @@ const asyncItemsPaginated = async (request = { offset: 0, limit: 15, search_stri
 
     return result;
 };
+const getVirtualItems = (n = 400) => new Array(n).fill(0).map((_, index) => {
+    return {
+        name: `Virtual Item ${index + 1}`,
+        code: index + 1,
+    };
+});
 </script>
 <template>
     <Stories title="Components/Inputs/IkSelect"
@@ -242,6 +248,16 @@ const asyncItemsPaginated = async (request = { offset: 0, limit: 15, search_stri
                       unique_key="code"
                       placeholder="Select item"
                       :items="asyncItemsPaginated">
+            </IkSelect>
+        </Story>
+        <Story title="Virtual Scroller Items">
+            <IkSelect v-model="vmodel_obj"
+                      filter
+                      virtual_scroller
+                      text_key="name"
+                      unique_key="code"
+                      placeholder="Select item"
+                      :items="getVirtualItems(1000)">
             </IkSelect>
         </Story>
     </Stories>

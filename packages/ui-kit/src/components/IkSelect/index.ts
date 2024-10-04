@@ -2,6 +2,7 @@ import type { IkExtractExposed } from '@ui/types/utils';
 import IkSelect from './IkSelect.vue';
 import IkSelectChip from './IkSelectChip.vue';
 import IkSelectItem from './IkSelectItem.vue';
+import IkSelectScroll from './IkSelectScroll.vue';
 
 export interface IkSelectItemsChunkRequest {
     offset: number,
@@ -19,5 +20,6 @@ export type IkSelectItemLoader<T extends object> = (req?: IkSelectItemsChunkRequ
 export interface IkSelect extends IkExtractExposed<typeof IkSelect> { };
 export interface IkSelectChip extends InstanceType<typeof IkSelectChip> { };
 export interface IkSelectItem extends InstanceType<typeof IkSelectItem> { };
+export interface IkSelectScroll extends IkExtractExposed<typeof IkSelectScroll> { };
 
-export { IkSelect, IkSelectChip, IkSelectItem };
+export { IkSelect, IkSelectChip, IkSelectItem, IkSelectScroll };

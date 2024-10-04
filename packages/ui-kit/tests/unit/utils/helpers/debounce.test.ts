@@ -85,4 +85,48 @@ describe('debounce', () => {
 
         expect(this_mock.signal).toHaveBeenCalledTimes(1);
     });
+
+    it('prevents race conditions when function returns a promise', async () => {
+        const results: string[] = [];
+        const func = jest.fn(
+            (r: string, t: number) => (new Promise<string>((resolve) => { setTimeout(() => resolve(r), t); }))
+                .then(r => results.push(r))
+        );
+        const debounc_func = debounce(func, 100);
+
+        debounc_func('call-1', 300);
+
+        await wait(150);
+
+        debounc_func('call-2', 100);
+
+        await wait(500);
+
+        expect(results).toStrictEqual([
+            'call-1',
+            'call-2',
+        ]);
+    });
+
+    it('prevents race conditions when function returns a promise - immediate option', async () => {
+        const results: string[] = [];
+        const func = jest.fn(
+            (r, t) => (new Promise<string>((resolve) => { setTimeout(() => resolve(r), t); }))
+                .then(r => results.push(r))
+        );
+        const debounc_func = debounce(func, 100, true);
+
+        debounc_func('call-1', 300);
+
+        await wait(150);
+
+        debounc_func('call-2', 100);
+
+        await wait(500);
+
+        expect(results).toStrictEqual([
+            'call-1',
+            'call-2',
+        ]);
+    });
 });

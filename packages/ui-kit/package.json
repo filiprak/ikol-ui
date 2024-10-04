@@ -6,6 +6,7 @@
   "description": "IKOL UI Framework",
   "scripts": {
     "typecheck": "vue-tsc --noEmit",
+    "tsc": "vue-tsc --noEmit",
     "eslint": "eslint src/ tests/ --rulesdir ../eslint-config-ts-vue3/src/rules",
     "stylelint": "stylelint --config stylelint.config.js src/**/*.css",
     "lint": "concurrently 'npm:eslint' 'npm:stylelint' --kill-others-on-fail",
@@ -56,7 +57,7 @@
     "moment": "2.29.4",
     "moment-timezone": "0.5.43",
     "simplebar": "6.2.5",
-    "vue": "3.3.7",
+    "vue": "3.5.10",
     "scroll-into-view-if-needed": "3.1.0"
   },
   "devDependencies": {
@@ -93,7 +94,7 @@
     "ts-jest": "^29.1.0",
     "vite": "^4.5.0",
     "vite-plugin-dts": "^3.6.3",
-    "vue-router": "4.2.5",
+    "vue-router": "4.4.5",
     "vue-router-mock": "^1.0.0",
     "vue-tsc": "2.0.29"
   }

@@ -3,7 +3,7 @@ import '@ui/styles';
 import './IkApp.css';
 import { defineComponent, h, unref, inject } from 'vue';
 
-import type { IkApp } from '@ui/components/IkApp';
+import type { IkApp, IkAppBar } from '@ui/components/IkApp';
 import { IkIcon } from '@ui/components/IkIcon';
 import { toCssUnits } from '@ui/utils/helpers';
 import { useRouter } from '@ui/composables/router';
@@ -56,7 +56,7 @@ export default defineComponent({
         },
     },
     created() {
-        this.app && this.app.registerBar(this);
+        this.app && this.app.registerBar(this as IkAppBar);
     },
     beforeUnmount() {
         this.app && this.app.unregisterBar();

@@ -5,6 +5,7 @@ import type { PropType } from 'vue';
 import { defineComponent, h, unref, inject } from 'vue';
 
 import type { IkApp } from '@ui/components/IkApp';
+import type { IkNavigation } from '@ui/components/IkNavigation';
 import { toCssUnits } from '@ui/utils/helpers';
 import { IkScrollArea } from '@ui/components/IkScrollArea';
 import { useDevice } from '@ui/composables/device';
@@ -122,7 +123,7 @@ export default defineComponent({
     },
     created() {
         if (!this.secondary) {
-            this.app && this.app.registerNav(this);
+            this.app && this.app.registerNav(this as IkNavigation);
         }
     },
     mounted() {

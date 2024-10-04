@@ -8,3 +8,7 @@
 .docs-story {
     background-color: var(--background-color);
 }
+
+#storybook-root {
+    min-height: 400px;
+}

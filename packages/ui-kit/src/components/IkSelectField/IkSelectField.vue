@@ -80,6 +80,7 @@
                   :disabled_items="disabled_items"
                   :inline="inline"
                   :skip_tab="skip_tab"
+                  :virtual_scroller="virtual_scroller"
                   :size="size"
                   v-bind="{
                       onIkOpen,
@@ -140,6 +141,7 @@ const props = withDefaults(
         disabled_items?: (item: ItemT) => boolean;
         inline?: boolean;
         skip_tab?: boolean;
+        virtual_scroller?: boolean;
     }>(),
     {
         ...getFieldPropDefaults(),

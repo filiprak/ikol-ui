@@ -97,34 +97,37 @@
             </template>
             <div class="ik-select__items"
                  :style="{ height: popover_height_px }">
-                <IkScrollArea ref="list_ref"
-                              :pagination="pagination"
-                              :loading="loading_more"
-                              @ik-load-more="loadMoreItems">
-                    <div v-for="item in filtered_items"
-                         :key="toKey(item)"
-                         class="ik-select__item-wrapper"
-                         @click="!isItemDisabled(item) ? onOptionClick(item) : null">
-                        <slot name="item"
-                              :item="item">
-                            <IkSelectItem :disabled="isItemDisabled(item)">
-                                <template v-if="show_img"
-                                          #prepend>
-                                    <slot name="image"
-                                          :item="item">
-                                        <IkImage :size="dropdown_img_size || img_size"
-                                                 :round="round_img"
-                                                 :src="toImage(item)" />
-                                    </slot>
-                                </template>
-                                {{ toText(item) }}
-                                <template v-if="show_subtext"
-                                          #subtext>
-                                    {{ toSubtext(item) }}
-                                </template>
-                            </IkSelectItem>
-                        </slot>
-                    </div>
+                <IkSelectScroll ref="list_ref"
+                                :virtual="!!virtual_scroller"
+                                :items="filtered_items"
+                                :pagination="pagination"
+                                :loading="loading_more"
+                                @ik-load-more="loadMoreItems">
+                    <template #item="{ item }">
+                        <div :key="toKey(item)"
+                             class="ik-select__item-wrapper"
+                             @click="!isItemDisabled(item) ? onOptionClick(item) : null">
+                            <slot name="item"
+                                  :item="item">
+                                <IkSelectItem :disabled="isItemDisabled(item)">
+                                    <template v-if="show_img"
+                                              #prepend>
+                                        <slot name="image"
+                                              :item="item">
+                                            <IkImage :size="dropdown_img_size || img_size"
+                                                     :round="round_img"
+                                                     :src="toImage(item)" />
+                                        </slot>
+                                    </template>
+                                    {{ toText(item) }}
+                                    <template v-if="show_subtext"
+                                              #subtext>
+                                        {{ toSubtext(item) }}
+                                    </template>
+                                </IkSelectItem>
+                            </slot>
+                        </div>
+                    </template>
                     <div v-if="error"
                          class="ik-select__error">
                         [[_*en*Failed to load results_]].
@@ -144,7 +147,7 @@
                             </template>
                         </slot>
                     </div>
-                </IkScrollArea>
+                </IkSelectScroll>
             </div>
         </IkPopover>
     </div>
@@ -159,11 +162,11 @@ import { IkImage } from '@ui/components/IkImage';
 import { IkLoaderCircle } from '@ui/components/IkLoaderCircle';
 import type { IkSelectItemLoader } from '@ui/components/IkSelect';
 import { IkSelectItem, IkSelectChip } from '@ui/components/IkSelect';
+import IkSelectScroll from './IkSelectScroll.vue';
 import { IkListItem } from '@ui/components/IkList';
-import { IkScrollArea } from '@ui/components/IkScrollArea';
 
 import { toCssUnits, isFunction, debounce } from '@ui/utils/helpers';
-import type { IkKeysByType } from '@ui/types/utils';
+import type { IkExtractExposed, IkKeysByType } from '@ui/types/utils';
 
 const props = withDefaults(
     defineProps<{
@@ -196,6 +199,7 @@ const props = withDefaults(
         disabled_items?: (item: ItemT) => boolean;
         inline?: boolean;
         skip_tab?: boolean;
+        virtual_scroller?: boolean;
     }>(),
     {
         variant: 'flat',
@@ -212,9 +216,10 @@ const emit = defineEmits<{
     (e: 'ik-close'): void,
 }>();
 
+const MAX_POPOVER_HEIGHT = 264;
 const dropdown_ref = ref<IkPopover>();
 const search_ref = ref<HTMLInputElement>();
-const list_ref = ref<IkScrollArea>();
+const list_ref = ref<IkExtractExposed<typeof IkSelectScroll>>();
 const opened = ref(false);
 const search = ref('');
 const loading = ref(false);
@@ -426,13 +431,11 @@ function onDropdownClose() {
 }
 
 function refreshDropdown() {
-    if (list_ref.value) {
-        const c_height = list_ref.value.getContentHeight();
-        popover_height_px.value = c_height ? toCssUnits(Math.min(c_height, 264)) : undefined;
-    } else {
-        popover_height_px.value = undefined;
-    }
+    let c_height = list_ref.value?.getContentHeight() ?? undefined;
 
+    c_height = c_height ?? MAX_POPOVER_HEIGHT;
+
+    popover_height_px.value = toCssUnits(Math.min(c_height, MAX_POPOVER_HEIGHT));
     dropdown_ref.value?.recalculate();
 }
 

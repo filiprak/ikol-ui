@@ -72,7 +72,7 @@ import { isFunction } from '@ui/utils/helpers';
 
 const SCROLL_EL_DATA_KEY = 'ik-scroll-area';
 
-interface HTMLIkScrollElement extends HTMLElement {
+export interface HTMLIkScrollElement extends HTMLElement {
     [SCROLL_EL_DATA_KEY]?: {
         is_bottom?: boolean,
         last_offset?: number | null,
